@@ -1,0 +1,481 @@
+# Select qa or prod. Passwords are read from .env, never stored in this file.
+environment: prod
+
+environments:
+  qa:
+    aurora:
+      host: usqa-rds-analytics-new-cluster.cluster-ro-cepdepk4o3on.us-east-1.rds.amazonaws.com
+      port: 3306
+      user: analytics_svc
+      database: staging
+      password_env: AURORA_PASSWORD
+      ssl:
+        ca: ./certs/global-bundle.pem
+      connect_timeout: 10
+      read_timeout: 300
+    clickhouse:
+      host: 101.0.181.108
+      port: 8123
+      user: readonly_user
+      password_env: CLICKHOUSE_PASSWORD
+      secure: false
+      connect_timeout: 10
+      read_timeout: 300
+  prod:
+    aurora:
+      host: usprod-analytics-aurora-db-cluster.cluster-cepdepk4o3on.us-east-1.rds.amazonaws.com
+      port: 3306
+      user: vruturajsinh-jadeja
+      database: staging
+      password_env: AURORA_PROD_PASSWORD
+      ssl:
+        ca: ./certs/global-bundle.pem
+      connect_timeout: 10
+      read_timeout: 300
+    clickhouse:
+      host: 101.0.133.2
+      port: 8123
+      user: vruturajsinhjadeja
+      password_env: CLICKHOUSE_PROD_PASSWORD
+      # This production endpoint uses HTTP; prefer HTTPS or a trusted tunnel.
+      secure: false
+      connect_timeout: 10
+      read_timeout: 300
+
+output_dir: ./comparison_reports
+queries_file: queries.yaml
+
+# Set count_only to true globally or per table to only count total records across chunks (smoke test)
+# count_only: true
+
+# Optional filters: for tables where querying the full dump takes too long,
+# specify bot_ids, bot_reference_ids, and/or env ('SANDBOX' or 'LIVE').
+# If multiple filters are present, they are combined with AND.
+# BotIDs [P0] - a10f500d-750b-4f35-a5ff-223754569b8e, 78dab978-3136-42cf-958f-23753a3ce29e, f140e569-5196-42f0-86de-7c9e5ca3f211
+# BotIDs [P1] - 239e1c1f-b918-4c07-851e-726ee94ac762, 5b378263-826b-46a8-9de2-73ab713b3b24, 79d06964-7c53-4527-ad7b-42ee51464e00
+
+# Chat - 
+# Voice - 
+# Email -
+
+bot_filters:
+  bot_ids: []
+  bot_reference_ids: []
+  # env: 'LIVE' # 'SANDBOX' or 'LIVE'
+
+tables:
+  - table_name: bot_conversationIds
+    primary_keys: [botId, conversationId, env, feature]
+    count_duplicate_records: true
+    exclude_null_primary_key_rows: true
+    chunking:
+      start: '2024-10-08 00:00:00'
+      end_exclusive: '2026-10-08 00:00:00'
+      chunk_size_days: 1
+
+  # - table_name: transformed_data
+  #   primary_keys: [uuid]
+  #   chunking:
+  #     start: '2026-08-01 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 1
+
+  # - table_name: asset_data
+  #   primary_keys: [id]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+  # - table_name: answernet_actions
+  #   primary_keys: [botId, conversationId, messageId, id]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2026-09-01 00:00:00'
+  #     end_exclusive: '2026-09-02 00:00:00'
+  #     chunk_size_days: 1
+
+  # - table_name: transformed_data
+  #   primary_keys: [uuid]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2026-10-07 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  - table_name: conversation_metadata
+    primary_keys: [conversationId, botId, channel, env]
+    count_duplicate_records: true
+    chunking:
+      start: '2026-09-01 00:00:00'
+      end_exclusive: '2026-10-08 00:00:00'
+      chunk_size_days: 5
+
+  # - table_name: voice_billing
+  #   primary_keys: [sessionId]
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 15
+
+  # - table_name: feedback_survey
+  #   primary_keys: [uuid]
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: transformed_multi_intent_data
+  #   primary_keys: [uuid]
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+  # - table_name: transformed_answernet_variants
+  #   primary_keys: [requestId]
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+  # - table_name: topic_workflow_diagnostics
+  #   primary_keys: [id]
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+  # - table_name: query_classification_data
+  #   primary_keys: [Id]
+  #   chunking:
+  #     start: '2026-06-30 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 2
+
+  # - table_name: message_aggregate_raw
+  #   primary_keys: [dateHour, botId, channel, exchangeType, totalMsgsCnt]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: agent_action_mapping
+  #   primary_keys: [id]
+
+  # - table_name: agent_file_mapping
+  #   primary_keys: [id]
+
+  # - table_name: audiocodes_botname_env_mapping
+  #   primary_keys: [botName, env, region]
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+  # - table_name: agent_details
+  #   count_duplicate_records: true
+  #   exclude_null_primary_key_rows: true
+  #   primary_keys: [agentId, agentName, botId, botReferenceId, env, channel]
+
+  # - table_name: agent_user_interaction
+  #   count_duplicate_records: true
+  #   primary_keys: [requestId]
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 15
+
+  # - table_name: action_survey
+  #   count_duplicate_records: true
+  #   primary_keys: [requestId]
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: gen_bi_interaction_logs
+  #   primary_keys: [id]
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: voice_bill_metadata
+  #   primary_keys: [id]
+
+  # - table_name: bot_dashboard_association
+  #   primary_keys: [botId, dashboardId]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: botId_timezone_mapping
+  #   primary_keys: [id]
+
+  # - table_name: exchange_category
+  #   primary_keys: [Id]
+
+  # - table_name: exchange_subcategory
+  #   primary_keys: [Id]
+
+  # - table_name: gen_bi_conversation
+  #   primary_keys: [conversation_id]
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: sp_filters
+  #   primary_keys: [id]
+
+  # - table_name: keywords_aggregate_raw
+  #   primary_keys: [botId, channel, env, keyword]
+  #   count_duplicate_records: true
+  #   exclude_null_primary_key_rows: true 
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 15
+
+  # - table_name: guardrails_aggregate_raw
+  #   primary_keys: [botReferenceId, dateHour, name, triggeredCnt]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2026-09-07 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: themes_aggregate_raw
+  #   primary_keys: [botReferenceId, date, theme]
+  #   count_duplicate_records: true
+  #   exclude_null_primary_key_rows: true 
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: conv_themes_aggregate
+  #   primary_keys: [botReferenceId, dateHour, category, theme, isHandoff, triggerCnt, offlineHandoffCnt]
+  #   exclude_null_primary_key_rows: true 
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2026-09-28 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 2
+
+
+  # - table_name: sop_aggregates
+  #   primary_keys: [botReferenceId, dateHour]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: sop_execution_aggregates
+  #   primary_keys: [botReferenceId, conversationId]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2026-07-01 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 15
+
+
+  # - table_name: sop_tool_aggregates
+  #   primary_keys: [botReferenceId, dateHour]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2026-06-30 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 10
+
+
+  # - table_name: topic_handoff_aggregate
+  #   primary_keys: [botId, dateHour, channel, env]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: topic_analysis_aggregate
+  #   primary_keys: [botId, dateHour, channel]
+  #   exclude_null_primary_key_rows: true 
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: classification_aggregate
+  #   primary_keys: [botReferenceId, dateHour, classificationAttributionId]
+  #   exclude_null_primary_key_rows: true 
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: voice_call_metadata
+  #   primary_keys: [botReferenceId, dateHour, callResult]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: response_links_shared_aggregate
+  #   primary_keys: [botReferenceId, dateHour, exchangeSubCategory]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: bot_conversation_metrics
+  #   primary_keys: [requestId, observationId, botId, botReferenceId, conversationId, traceId]
+  #   count_duplicate_records: true
+  #   exclude_null_primary_key_rows: true 
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: bot_conversation_metrics_aggregate
+  #   primary_keys: [botId, dateHour, feature, useCase, modelName]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+
+  # - table_name: conversation_aggregate
+  #   primary_keys: [botId, dateHour, conversationId, channel, env]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+  # - table_name: conversation_aggregate_v2
+  #   primary_keys: [botReferenceId, dateHour]
+  #   count_duplicate_records: true
+  #   exclude_null_primary_key_rows: true 
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+  # - table_name: user_identity
+  #   primary_keys: [botReferenceId, externalUserId]
+  #   count_duplicate_records: true
+
+  # - table_name: user_lifecycle
+  #   primary_keys: [botReferenceId, externalUserId]
+  #   # count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-20 00:00:00'
+  #     chunk_size_days: 80
+
+  # - table_name: user_memory
+  #   primary_keys: [botReferenceId, conversationId, memoryId]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-20 00:00:00'
+  #     chunk_size_days: 100
+
+  # - table_name: bot_agent_memory_retention_config
+  #   primary_keys: [botReferenceId]
+    # count_duplicate_records: true
+
+  # - table_name: widget_query
+  #   primary_keys: [id]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+  # - table_name: widget_configuration
+  #   primary_keys: [id]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+  # - table_name: voice_tier_assignment_rules
+  #   primary_keys: [id]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+  # - table_name: voice_call_result_tier_mapping
+  #   primary_keys: [botId, callResult]
+  #   count_duplicate_records: true
+
+  # - table_name: conversation_purge_requests
+  #   primary_keys: [claimId]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30
+
+  # - table_name: reports_job
+  #   primary_keys: [id]
+  #   count_duplicate_records: true
+    # chunking:
+    #   start: '2024-10-08 00:00:00'
+    #   end_exclusive: '2026-10-08 00:00:00'
+    #   chunk_size_days: 30
+
+  # - table_name: widget_profile
+  #   primary_keys: [botId, profileId, moduleId]
+    # count_duplicate_records: true
+    # chunking:
+    #   start: '2024-10-08 00:00:00'
+    #   end_exclusive: '2026-10-08 00:00:00'
+    #   chunk_size_days: 30
+
+  # - table_name: skills
+  #   primary_keys: [uuid]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 180
+
+  # - table_name: intents
+  #   primary_keys: [id]
+  #   count_duplicate_records: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 30

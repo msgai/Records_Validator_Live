@@ -1,0 +1,638 @@
+table_name,chunk_index,chunk_label,chunk_start,chunk_end_exclusive,evaluation_mode,status,sql_rows,ch_rows,applied_filters,sql_query,clickhouse_query,sql_base_query,clickhouse_base_query
+voice_billing,1,"chunk 1/49 [2024-10-08 00:00:00, 2024-10-23 00:00:00)",2024-10-08 00:00:00,2024-10-23 00:00:00,FULL_VALIDATION,INTERRUPTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-10-08 00:00:00'
+  AND startTime < '2024-10-23 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-10-08 00:00:00')
+  AND startTime < toDateTime('2024-10-23 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-10-08 00:00:00'
+  AND startTime < '2024-10-23 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-10-08 00:00:00')
+  AND startTime < toDateTime('2024-10-23 00:00:00')"
+voice_billing,2,"chunk 2/49 [2024-10-23 00:00:00, 2024-11-07 00:00:00)",2024-10-23 00:00:00,2024-11-07 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-10-23 00:00:00'
+  AND startTime < '2024-11-07 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-10-23 00:00:00')
+  AND startTime < toDateTime('2024-11-07 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-10-23 00:00:00'
+  AND startTime < '2024-11-07 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-10-23 00:00:00')
+  AND startTime < toDateTime('2024-11-07 00:00:00')"
+voice_billing,3,"chunk 3/49 [2024-11-07 00:00:00, 2024-11-22 00:00:00)",2024-11-07 00:00:00,2024-11-22 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-11-07 00:00:00'
+  AND startTime < '2024-11-22 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-11-07 00:00:00')
+  AND startTime < toDateTime('2024-11-22 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-11-07 00:00:00'
+  AND startTime < '2024-11-22 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-11-07 00:00:00')
+  AND startTime < toDateTime('2024-11-22 00:00:00')"
+voice_billing,4,"chunk 4/49 [2024-11-22 00:00:00, 2024-12-07 00:00:00)",2024-11-22 00:00:00,2024-12-07 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-11-22 00:00:00'
+  AND startTime < '2024-12-07 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-11-22 00:00:00')
+  AND startTime < toDateTime('2024-12-07 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-11-22 00:00:00'
+  AND startTime < '2024-12-07 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-11-22 00:00:00')
+  AND startTime < toDateTime('2024-12-07 00:00:00')"
+voice_billing,5,"chunk 5/49 [2024-12-07 00:00:00, 2024-12-22 00:00:00)",2024-12-07 00:00:00,2024-12-22 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-12-07 00:00:00'
+  AND startTime < '2024-12-22 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-12-07 00:00:00')
+  AND startTime < toDateTime('2024-12-22 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-12-07 00:00:00'
+  AND startTime < '2024-12-22 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-12-07 00:00:00')
+  AND startTime < toDateTime('2024-12-22 00:00:00')"
+voice_billing,6,"chunk 6/49 [2024-12-22 00:00:00, 2025-01-06 00:00:00)",2024-12-22 00:00:00,2025-01-06 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-12-22 00:00:00'
+  AND startTime < '2025-01-06 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-12-22 00:00:00')
+  AND startTime < toDateTime('2025-01-06 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2024-12-22 00:00:00'
+  AND startTime < '2025-01-06 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2024-12-22 00:00:00')
+  AND startTime < toDateTime('2025-01-06 00:00:00')"
+voice_billing,7,"chunk 7/49 [2025-01-06 00:00:00, 2025-01-21 00:00:00)",2025-01-06 00:00:00,2025-01-21 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-01-06 00:00:00'
+  AND startTime < '2025-01-21 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-01-06 00:00:00')
+  AND startTime < toDateTime('2025-01-21 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-01-06 00:00:00'
+  AND startTime < '2025-01-21 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-01-06 00:00:00')
+  AND startTime < toDateTime('2025-01-21 00:00:00')"
+voice_billing,8,"chunk 8/49 [2025-01-21 00:00:00, 2025-02-05 00:00:00)",2025-01-21 00:00:00,2025-02-05 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-01-21 00:00:00'
+  AND startTime < '2025-02-05 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-01-21 00:00:00')
+  AND startTime < toDateTime('2025-02-05 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-01-21 00:00:00'
+  AND startTime < '2025-02-05 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-01-21 00:00:00')
+  AND startTime < toDateTime('2025-02-05 00:00:00')"
+voice_billing,9,"chunk 9/49 [2025-02-05 00:00:00, 2025-02-20 00:00:00)",2025-02-05 00:00:00,2025-02-20 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-02-05 00:00:00'
+  AND startTime < '2025-02-20 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-02-05 00:00:00')
+  AND startTime < toDateTime('2025-02-20 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-02-05 00:00:00'
+  AND startTime < '2025-02-20 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-02-05 00:00:00')
+  AND startTime < toDateTime('2025-02-20 00:00:00')"
+voice_billing,10,"chunk 10/49 [2025-02-20 00:00:00, 2025-03-07 00:00:00)",2025-02-20 00:00:00,2025-03-07 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-02-20 00:00:00'
+  AND startTime < '2025-03-07 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-02-20 00:00:00')
+  AND startTime < toDateTime('2025-03-07 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-02-20 00:00:00'
+  AND startTime < '2025-03-07 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-02-20 00:00:00')
+  AND startTime < toDateTime('2025-03-07 00:00:00')"
+voice_billing,11,"chunk 11/49 [2025-03-07 00:00:00, 2025-03-22 00:00:00)",2025-03-07 00:00:00,2025-03-22 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-03-07 00:00:00'
+  AND startTime < '2025-03-22 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-03-07 00:00:00')
+  AND startTime < toDateTime('2025-03-22 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-03-07 00:00:00'
+  AND startTime < '2025-03-22 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-03-07 00:00:00')
+  AND startTime < toDateTime('2025-03-22 00:00:00')"
+voice_billing,12,"chunk 12/49 [2025-03-22 00:00:00, 2025-04-06 00:00:00)",2025-03-22 00:00:00,2025-04-06 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-03-22 00:00:00'
+  AND startTime < '2025-04-06 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-03-22 00:00:00')
+  AND startTime < toDateTime('2025-04-06 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-03-22 00:00:00'
+  AND startTime < '2025-04-06 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-03-22 00:00:00')
+  AND startTime < toDateTime('2025-04-06 00:00:00')"
+voice_billing,13,"chunk 13/49 [2025-04-06 00:00:00, 2025-04-21 00:00:00)",2025-04-06 00:00:00,2025-04-21 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-04-06 00:00:00'
+  AND startTime < '2025-04-21 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-04-06 00:00:00')
+  AND startTime < toDateTime('2025-04-21 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-04-06 00:00:00'
+  AND startTime < '2025-04-21 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-04-06 00:00:00')
+  AND startTime < toDateTime('2025-04-21 00:00:00')"
+voice_billing,14,"chunk 14/49 [2025-04-21 00:00:00, 2025-05-06 00:00:00)",2025-04-21 00:00:00,2025-05-06 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-04-21 00:00:00'
+  AND startTime < '2025-05-06 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-04-21 00:00:00')
+  AND startTime < toDateTime('2025-05-06 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-04-21 00:00:00'
+  AND startTime < '2025-05-06 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-04-21 00:00:00')
+  AND startTime < toDateTime('2025-05-06 00:00:00')"
+voice_billing,15,"chunk 15/49 [2025-05-06 00:00:00, 2025-05-21 00:00:00)",2025-05-06 00:00:00,2025-05-21 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-05-06 00:00:00'
+  AND startTime < '2025-05-21 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-05-06 00:00:00')
+  AND startTime < toDateTime('2025-05-21 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-05-06 00:00:00'
+  AND startTime < '2025-05-21 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-05-06 00:00:00')
+  AND startTime < toDateTime('2025-05-21 00:00:00')"
+voice_billing,16,"chunk 16/49 [2025-05-21 00:00:00, 2025-06-05 00:00:00)",2025-05-21 00:00:00,2025-06-05 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-05-21 00:00:00'
+  AND startTime < '2025-06-05 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-05-21 00:00:00')
+  AND startTime < toDateTime('2025-06-05 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-05-21 00:00:00'
+  AND startTime < '2025-06-05 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-05-21 00:00:00')
+  AND startTime < toDateTime('2025-06-05 00:00:00')"
+voice_billing,17,"chunk 17/49 [2025-06-05 00:00:00, 2025-06-20 00:00:00)",2025-06-05 00:00:00,2025-06-20 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-06-05 00:00:00'
+  AND startTime < '2025-06-20 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-06-05 00:00:00')
+  AND startTime < toDateTime('2025-06-20 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-06-05 00:00:00'
+  AND startTime < '2025-06-20 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-06-05 00:00:00')
+  AND startTime < toDateTime('2025-06-20 00:00:00')"
+voice_billing,18,"chunk 18/49 [2025-06-20 00:00:00, 2025-07-05 00:00:00)",2025-06-20 00:00:00,2025-07-05 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-06-20 00:00:00'
+  AND startTime < '2025-07-05 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-06-20 00:00:00')
+  AND startTime < toDateTime('2025-07-05 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-06-20 00:00:00'
+  AND startTime < '2025-07-05 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-06-20 00:00:00')
+  AND startTime < toDateTime('2025-07-05 00:00:00')"
+voice_billing,19,"chunk 19/49 [2025-07-05 00:00:00, 2025-07-20 00:00:00)",2025-07-05 00:00:00,2025-07-20 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-07-05 00:00:00'
+  AND startTime < '2025-07-20 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-07-05 00:00:00')
+  AND startTime < toDateTime('2025-07-20 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-07-05 00:00:00'
+  AND startTime < '2025-07-20 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-07-05 00:00:00')
+  AND startTime < toDateTime('2025-07-20 00:00:00')"
+voice_billing,20,"chunk 20/49 [2025-07-20 00:00:00, 2025-08-04 00:00:00)",2025-07-20 00:00:00,2025-08-04 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-07-20 00:00:00'
+  AND startTime < '2025-08-04 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-07-20 00:00:00')
+  AND startTime < toDateTime('2025-08-04 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-07-20 00:00:00'
+  AND startTime < '2025-08-04 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-07-20 00:00:00')
+  AND startTime < toDateTime('2025-08-04 00:00:00')"
+voice_billing,21,"chunk 21/49 [2025-08-04 00:00:00, 2025-08-19 00:00:00)",2025-08-04 00:00:00,2025-08-19 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-08-04 00:00:00'
+  AND startTime < '2025-08-19 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-08-04 00:00:00')
+  AND startTime < toDateTime('2025-08-19 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-08-04 00:00:00'
+  AND startTime < '2025-08-19 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-08-04 00:00:00')
+  AND startTime < toDateTime('2025-08-19 00:00:00')"
+voice_billing,22,"chunk 22/49 [2025-08-19 00:00:00, 2025-09-03 00:00:00)",2025-08-19 00:00:00,2025-09-03 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-08-19 00:00:00'
+  AND startTime < '2025-09-03 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-08-19 00:00:00')
+  AND startTime < toDateTime('2025-09-03 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-08-19 00:00:00'
+  AND startTime < '2025-09-03 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-08-19 00:00:00')
+  AND startTime < toDateTime('2025-09-03 00:00:00')"
+voice_billing,23,"chunk 23/49 [2025-09-03 00:00:00, 2025-09-18 00:00:00)",2025-09-03 00:00:00,2025-09-18 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-09-03 00:00:00'
+  AND startTime < '2025-09-18 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-09-03 00:00:00')
+  AND startTime < toDateTime('2025-09-18 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-09-03 00:00:00'
+  AND startTime < '2025-09-18 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-09-03 00:00:00')
+  AND startTime < toDateTime('2025-09-18 00:00:00')"
+voice_billing,24,"chunk 24/49 [2025-09-18 00:00:00, 2025-10-03 00:00:00)",2025-09-18 00:00:00,2025-10-03 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-09-18 00:00:00'
+  AND startTime < '2025-10-03 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-09-18 00:00:00')
+  AND startTime < toDateTime('2025-10-03 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-09-18 00:00:00'
+  AND startTime < '2025-10-03 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-09-18 00:00:00')
+  AND startTime < toDateTime('2025-10-03 00:00:00')"
+voice_billing,25,"chunk 25/49 [2025-10-03 00:00:00, 2025-10-18 00:00:00)",2025-10-03 00:00:00,2025-10-18 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-10-03 00:00:00'
+  AND startTime < '2025-10-18 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-10-03 00:00:00')
+  AND startTime < toDateTime('2025-10-18 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-10-03 00:00:00'
+  AND startTime < '2025-10-18 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-10-03 00:00:00')
+  AND startTime < toDateTime('2025-10-18 00:00:00')"
+voice_billing,26,"chunk 26/49 [2025-10-18 00:00:00, 2025-11-02 00:00:00)",2025-10-18 00:00:00,2025-11-02 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-10-18 00:00:00'
+  AND startTime < '2025-11-02 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-10-18 00:00:00')
+  AND startTime < toDateTime('2025-11-02 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-10-18 00:00:00'
+  AND startTime < '2025-11-02 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-10-18 00:00:00')
+  AND startTime < toDateTime('2025-11-02 00:00:00')"
+voice_billing,27,"chunk 27/49 [2025-11-02 00:00:00, 2025-11-17 00:00:00)",2025-11-02 00:00:00,2025-11-17 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-11-02 00:00:00'
+  AND startTime < '2025-11-17 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-11-02 00:00:00')
+  AND startTime < toDateTime('2025-11-17 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-11-02 00:00:00'
+  AND startTime < '2025-11-17 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-11-02 00:00:00')
+  AND startTime < toDateTime('2025-11-17 00:00:00')"
+voice_billing,28,"chunk 28/49 [2025-11-17 00:00:00, 2025-12-02 00:00:00)",2025-11-17 00:00:00,2025-12-02 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-11-17 00:00:00'
+  AND startTime < '2025-12-02 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-11-17 00:00:00')
+  AND startTime < toDateTime('2025-12-02 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-11-17 00:00:00'
+  AND startTime < '2025-12-02 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-11-17 00:00:00')
+  AND startTime < toDateTime('2025-12-02 00:00:00')"
+voice_billing,29,"chunk 29/49 [2025-12-02 00:00:00, 2025-12-17 00:00:00)",2025-12-02 00:00:00,2025-12-17 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-12-02 00:00:00'
+  AND startTime < '2025-12-17 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-12-02 00:00:00')
+  AND startTime < toDateTime('2025-12-17 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-12-02 00:00:00'
+  AND startTime < '2025-12-17 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-12-02 00:00:00')
+  AND startTime < toDateTime('2025-12-17 00:00:00')"
+voice_billing,30,"chunk 30/49 [2025-12-17 00:00:00, 2026-01-01 00:00:00)",2025-12-17 00:00:00,2026-01-01 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-12-17 00:00:00'
+  AND startTime < '2026-01-01 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-12-17 00:00:00')
+  AND startTime < toDateTime('2026-01-01 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2025-12-17 00:00:00'
+  AND startTime < '2026-01-01 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2025-12-17 00:00:00')
+  AND startTime < toDateTime('2026-01-01 00:00:00')"
+voice_billing,31,"chunk 31/49 [2026-01-01 00:00:00, 2026-01-16 00:00:00)",2026-01-01 00:00:00,2026-01-16 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-01-01 00:00:00'
+  AND startTime < '2026-01-16 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-01-01 00:00:00')
+  AND startTime < toDateTime('2026-01-16 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-01-01 00:00:00'
+  AND startTime < '2026-01-16 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-01-01 00:00:00')
+  AND startTime < toDateTime('2026-01-16 00:00:00')"
+voice_billing,32,"chunk 32/49 [2026-01-16 00:00:00, 2026-01-31 00:00:00)",2026-01-16 00:00:00,2026-01-31 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-01-16 00:00:00'
+  AND startTime < '2026-01-31 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-01-16 00:00:00')
+  AND startTime < toDateTime('2026-01-31 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-01-16 00:00:00'
+  AND startTime < '2026-01-31 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-01-16 00:00:00')
+  AND startTime < toDateTime('2026-01-31 00:00:00')"
+voice_billing,33,"chunk 33/49 [2026-01-31 00:00:00, 2026-02-15 00:00:00)",2026-01-31 00:00:00,2026-02-15 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-01-31 00:00:00'
+  AND startTime < '2026-02-15 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-01-31 00:00:00')
+  AND startTime < toDateTime('2026-02-15 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-01-31 00:00:00'
+  AND startTime < '2026-02-15 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-01-31 00:00:00')
+  AND startTime < toDateTime('2026-02-15 00:00:00')"
+voice_billing,34,"chunk 34/49 [2026-02-15 00:00:00, 2026-03-02 00:00:00)",2026-02-15 00:00:00,2026-03-02 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-02-15 00:00:00'
+  AND startTime < '2026-03-02 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-02-15 00:00:00')
+  AND startTime < toDateTime('2026-03-02 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-02-15 00:00:00'
+  AND startTime < '2026-03-02 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-02-15 00:00:00')
+  AND startTime < toDateTime('2026-03-02 00:00:00')"
+voice_billing,35,"chunk 35/49 [2026-03-02 00:00:00, 2026-03-17 00:00:00)",2026-03-02 00:00:00,2026-03-17 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-03-02 00:00:00'
+  AND startTime < '2026-03-17 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-03-02 00:00:00')
+  AND startTime < toDateTime('2026-03-17 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-03-02 00:00:00'
+  AND startTime < '2026-03-17 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-03-02 00:00:00')
+  AND startTime < toDateTime('2026-03-17 00:00:00')"
+voice_billing,36,"chunk 36/49 [2026-03-17 00:00:00, 2026-04-01 00:00:00)",2026-03-17 00:00:00,2026-04-01 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-03-17 00:00:00'
+  AND startTime < '2026-04-01 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-03-17 00:00:00')
+  AND startTime < toDateTime('2026-04-01 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-03-17 00:00:00'
+  AND startTime < '2026-04-01 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-03-17 00:00:00')
+  AND startTime < toDateTime('2026-04-01 00:00:00')"
+voice_billing,37,"chunk 37/49 [2026-04-01 00:00:00, 2026-04-16 00:00:00)",2026-04-01 00:00:00,2026-04-16 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-04-01 00:00:00'
+  AND startTime < '2026-04-16 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-04-01 00:00:00')
+  AND startTime < toDateTime('2026-04-16 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-04-01 00:00:00'
+  AND startTime < '2026-04-16 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-04-01 00:00:00')
+  AND startTime < toDateTime('2026-04-16 00:00:00')"
+voice_billing,38,"chunk 38/49 [2026-04-16 00:00:00, 2026-05-01 00:00:00)",2026-04-16 00:00:00,2026-05-01 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-04-16 00:00:00'
+  AND startTime < '2026-05-01 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-04-16 00:00:00')
+  AND startTime < toDateTime('2026-05-01 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-04-16 00:00:00'
+  AND startTime < '2026-05-01 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-04-16 00:00:00')
+  AND startTime < toDateTime('2026-05-01 00:00:00')"
+voice_billing,39,"chunk 39/49 [2026-05-01 00:00:00, 2026-05-16 00:00:00)",2026-05-01 00:00:00,2026-05-16 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-05-01 00:00:00'
+  AND startTime < '2026-05-16 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-05-01 00:00:00')
+  AND startTime < toDateTime('2026-05-16 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-05-01 00:00:00'
+  AND startTime < '2026-05-16 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-05-01 00:00:00')
+  AND startTime < toDateTime('2026-05-16 00:00:00')"
+voice_billing,40,"chunk 40/49 [2026-05-16 00:00:00, 2026-05-31 00:00:00)",2026-05-16 00:00:00,2026-05-31 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-05-16 00:00:00'
+  AND startTime < '2026-05-31 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-05-16 00:00:00')
+  AND startTime < toDateTime('2026-05-31 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-05-16 00:00:00'
+  AND startTime < '2026-05-31 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-05-16 00:00:00')
+  AND startTime < toDateTime('2026-05-31 00:00:00')"
+voice_billing,41,"chunk 41/49 [2026-05-31 00:00:00, 2026-06-15 00:00:00)",2026-05-31 00:00:00,2026-06-15 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-05-31 00:00:00'
+  AND startTime < '2026-06-15 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-05-31 00:00:00')
+  AND startTime < toDateTime('2026-06-15 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-05-31 00:00:00'
+  AND startTime < '2026-06-15 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-05-31 00:00:00')
+  AND startTime < toDateTime('2026-06-15 00:00:00')"
+voice_billing,42,"chunk 42/49 [2026-06-15 00:00:00, 2026-06-30 00:00:00)",2026-06-15 00:00:00,2026-06-30 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-06-15 00:00:00'
+  AND startTime < '2026-06-30 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-06-15 00:00:00')
+  AND startTime < toDateTime('2026-06-30 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-06-15 00:00:00'
+  AND startTime < '2026-06-30 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-06-15 00:00:00')
+  AND startTime < toDateTime('2026-06-30 00:00:00')"
+voice_billing,43,"chunk 43/49 [2026-06-30 00:00:00, 2026-07-15 00:00:00)",2026-06-30 00:00:00,2026-07-15 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-06-30 00:00:00'
+  AND startTime < '2026-07-15 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-06-30 00:00:00')
+  AND startTime < toDateTime('2026-07-15 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-06-30 00:00:00'
+  AND startTime < '2026-07-15 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-06-30 00:00:00')
+  AND startTime < toDateTime('2026-07-15 00:00:00')"
+voice_billing,44,"chunk 44/49 [2026-07-15 00:00:00, 2026-07-30 00:00:00)",2026-07-15 00:00:00,2026-07-30 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-07-15 00:00:00'
+  AND startTime < '2026-07-30 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-07-15 00:00:00')
+  AND startTime < toDateTime('2026-07-30 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-07-15 00:00:00'
+  AND startTime < '2026-07-30 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-07-15 00:00:00')
+  AND startTime < toDateTime('2026-07-30 00:00:00')"
+voice_billing,45,"chunk 45/49 [2026-07-30 00:00:00, 2026-08-14 00:00:00)",2026-07-30 00:00:00,2026-08-14 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-07-30 00:00:00'
+  AND startTime < '2026-08-14 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-07-30 00:00:00')
+  AND startTime < toDateTime('2026-08-14 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-07-30 00:00:00'
+  AND startTime < '2026-08-14 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-07-30 00:00:00')
+  AND startTime < toDateTime('2026-08-14 00:00:00')"
+voice_billing,46,"chunk 46/49 [2026-08-14 00:00:00, 2026-08-29 00:00:00)",2026-08-14 00:00:00,2026-08-29 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-08-14 00:00:00'
+  AND startTime < '2026-08-29 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-08-14 00:00:00')
+  AND startTime < toDateTime('2026-08-29 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-08-14 00:00:00'
+  AND startTime < '2026-08-29 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-08-14 00:00:00')
+  AND startTime < toDateTime('2026-08-29 00:00:00')"
+voice_billing,47,"chunk 47/49 [2026-08-29 00:00:00, 2026-09-13 00:00:00)",2026-08-29 00:00:00,2026-09-13 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-08-29 00:00:00'
+  AND startTime < '2026-09-13 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-08-29 00:00:00')
+  AND startTime < toDateTime('2026-09-13 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-08-29 00:00:00'
+  AND startTime < '2026-09-13 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-08-29 00:00:00')
+  AND startTime < toDateTime('2026-09-13 00:00:00')"
+voice_billing,48,"chunk 48/49 [2026-09-13 00:00:00, 2026-09-28 00:00:00)",2026-09-13 00:00:00,2026-09-28 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-09-13 00:00:00'
+  AND startTime < '2026-09-28 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-09-13 00:00:00')
+  AND startTime < toDateTime('2026-09-28 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-09-13 00:00:00'
+  AND startTime < '2026-09-28 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-09-13 00:00:00')
+  AND startTime < toDateTime('2026-09-28 00:00:00')"
+voice_billing,49,"chunk 49/49 [2026-09-28 00:00:00, 2026-10-08 00:00:00)",2026-09-28 00:00:00,2026-10-08 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-09-28 00:00:00'
+  AND startTime < '2026-10-08 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-09-28 00:00:00')
+  AND startTime < toDateTime('2026-10-08 00:00:00')","SELECT *
+FROM staging.voice_billing
+WHERE startTime >= '2026-09-28 00:00:00'
+  AND startTime < '2026-10-08 00:00:00';","SELECT *
+FROM ch_facts.voice_billing
+WHERE startTime >= toDateTime('2026-09-28 00:00:00')
+  AND startTime < toDateTime('2026-10-08 00:00:00')"

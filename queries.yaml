@@ -1,0 +1,770 @@
+# SQL statements, keyed by the matching table_name in config.yaml.
+queries:
+  topic_handoff_aggregate:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.transformed_data
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_facts.transformed_data__new
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+
+  message_aggregate_raw:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.message_aggregate
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}'
+      ORDER BY dateHour ASC, botId ASC, totalMsgsCnt DESC;
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.message_aggregate
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+      ORDER BY dateHour ASC, botId ASC, totalMsgsCnt DESC
+
+  conversation_metadata:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.conversation_metadata
+      WHERE startTime >= '{{chunk_start}}'
+        AND startTime < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.conversation_metadata
+      WHERE startTime >= toDateTime('{{chunk_start}}')
+        AND startTime < toDateTime('{{chunk_end}}')
+
+  voice_billing:
+    sql_query: |
+      SELECT *
+      FROM staging.voice_billing
+      WHERE startTime >= '{{chunk_start}}'
+        AND startTime < '{{chunk_end}}';
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.voice_billing
+      WHERE startTime >= toDateTime('{{chunk_start}}')
+        AND startTime < toDateTime('{{chunk_end}}')
+
+  transformed_multi_intent_data:
+    sql_query: |
+      SELECT *
+      FROM staging.transformed_multi_intent_data
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.transformed_multi_intent_data
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+
+  transformed_answernet_variants:
+    sql_query: |
+      SELECT *
+      FROM staging.transformed_answernet_variants
+      WHERE timestamp >= '{{chunk_start}}'
+        AND timestamp < '{{chunk_end}}';
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.transformed_answernet_variants
+      WHERE timestamp >= toDateTime('{{chunk_start}}')
+        AND timestamp < toDateTime('{{chunk_end}}')
+
+  topic_workflow_diagnostics:
+    sql_query: |
+      SELECT *
+      FROM staging.topic_workflow_diagnostics
+      WHERE tzTime >= '{{chunk_start}}'
+        AND tzTime < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.topic_workflow_diagnostics
+      WHERE tzTime >= toDateTime('{{chunk_start}}')
+        AND tzTime < toDateTime('{{chunk_end}}')
+
+  query_classification_data:
+    sql_query: |
+      SELECT *
+      FROM staging.query_classification_data
+      WHERE tzTime >= '{{chunk_start}}'
+        AND tzTime < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.query_classification_data
+      WHERE tzTime >= toDateTime('{{chunk_start}}')
+        AND tzTime < toDateTime('{{chunk_end}}')
+
+  feedback_survey:
+    sql_query: |
+      SELECT *
+      FROM staging.feedback_survey
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.feedback_survey
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+
+  bot_conversationIds:
+    sql_query: |
+      SELECT
+        *
+      FROM netomi_cost.bot_conversationIds
+      WHERE timestamp >= '{{chunk_start}}'
+        AND timestamp < '{{chunk_end}}';
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_facts.bot_conversationIds
+      WHERE timestamp >= toDateTime('{{chunk_start}}')
+        AND timestamp < toDateTime('{{chunk_end}}')
+
+  asset_data:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.asset_data
+      WHERE timestamp >= '{{chunk_start}}'
+        AND timestamp < '{{chunk_end}}';
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_facts.asset_data
+      WHERE timestamp >= toDateTime('{{chunk_start}}')
+        AND timestamp < toDateTime('{{chunk_end}}')
+
+  answernet_actions:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.answernet_actions
+      WHERE timestamp >= '{{chunk_start}}'
+        AND timestamp < '{{chunk_end}}';
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_facts.answernet_actions
+      WHERE timestamp >= toDateTime('{{chunk_start}}')
+        AND timestamp < toDateTime('{{chunk_end}}')
+
+  transformed_data:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.transformed_data
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}'
+      ORDER BY uuid ASC;
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_facts.transformed_data
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+      ORDER BY uuid ASC
+  keywords_aggregate_raw:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.keywords_aggregate
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.keywords_aggregate
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+
+  guardrails_aggregate_raw:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.guardrails_aggregate
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}'
+      ORDER BY botReferenceId ASC;
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.guardrails_aggregate
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+      ORDER BY botReferenceId ASC
+
+  themes_aggregate_raw:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.themes_aggregate
+      WHERE date >= '{{chunk_start}}'
+        AND date < '{{chunk_end}}'
+      ORDER BY date ASC, botReferenceId ASC;
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.themes_aggregate
+      WHERE date >= toDate('{{chunk_start}}')
+        AND date < toDate('{{chunk_end}}')
+      ORDER BY date ASC, botReferenceId ASC
+
+  conv_themes_aggregate:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.conv_themes_aggregate
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.conv_themes_aggregate
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+
+  sop_aggregates:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.sop_aggregates
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}'
+      ORDER BY dateHour ASC, botReferenceId ASC, sopId ASC, sopName ASC;
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.sop_aggregates
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+      ORDER BY dateHour ASC, botReferenceId ASC, sopId ASC, sopName ASC
+
+  sop_execution_aggregates:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.sop_execution_aggregates
+      WHERE startTime >= '{{chunk_start}}'
+        AND startTime < '{{chunk_end}}'
+      ORDER BY botReferenceId ASC, conversationId ASC, sopId ASC, sopExecutionId ASC;
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.sop_execution_aggregates
+      WHERE startTime >= toDateTime('{{chunk_start}}')
+        AND startTime < toDateTime('{{chunk_end}}')
+      ORDER BY botReferenceId ASC, conversationId ASC, sopId ASC, sopExecutionId ASC
+
+  sop_tool_aggregates:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.sop_tool_aggregates
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}'
+      ORDER BY dateHour ASC, botReferenceId ASC, sopId ASC, toolName ASC,
+        toolType ASC, triggerCount ASC, failedCount ASC, updatedAt ASC;
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.sop_tool_aggregates
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+      ORDER BY dateHour ASC, botReferenceId ASC, sopId ASC, toolName ASC,
+        toolType ASC, triggerCount ASC, failedCount ASC, updatedAt ASC
+
+  topic_handoff_aggregate:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.topic_handoff_aggregate
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}'
+      ORDER BY dateHour ASC, botId ASC, channel ASC, env ASC,
+        intentId ASC, exchangeType ASC;
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.topic_handoff_aggregate
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+      ORDER BY dateHour ASC, botId ASC, channel ASC, env ASC,
+        intentId ASC, exchangeType ASC
+
+  topic_analysis_aggregate:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.topic_analysis_aggregate
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}';
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.topic_analysis_aggregate
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+
+  classification_aggregate:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.classification_aggregate
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}'
+      ORDER BY botReferenceId ASC, dateHour ASC, classificationAttributionId ASC;
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.classification_aggregate
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+      ORDER BY botReferenceId ASC, dateHour ASC, classificationAttributionId ASC
+
+  voice_call_metadata:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.voice_call_metadata
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}'
+      ORDER BY botReferenceId ASC, dateHour ASC, callResult ASC;
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.voice_call_metadata
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+      ORDER BY botReferenceId ASC, dateHour ASC, callResult ASC
+
+  response_links_shared_aggregate:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.response_links_shared_aggregate
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}'
+      ORDER BY botReferenceId ASC, dateHour ASC, link ASC, link_hash ASC,
+        sharedCount ASC;
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.response_links_shared_aggregate
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+      ORDER BY botReferenceId ASC, dateHour ASC, link ASC, link_hash ASC,
+        sharedCount ASC
+
+  bot_conversation_metrics:
+    sql_query: |
+      SELECT
+        *
+      FROM netomi_cost.bot_conversation_metrics
+      WHERE traceTimestamp >= '{{chunk_start}}'
+        AND traceTimestamp < '{{chunk_end}}';
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_facts.bot_conversation_metrics
+      WHERE traceTimestamp >= toDateTime('{{chunk_start}}')
+        AND traceTimestamp < toDateTime('{{chunk_end}}')
+
+  bot_conversation_metrics_aggregate:
+    sql_query: |
+      SELECT
+        *
+      FROM netomi_cost.bot_conversation_metrics_aggregate
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}';
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.bot_conversation_metrics_aggregate
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+
+  conversation_aggregate:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.conversation_aggregate
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.conversation_aggregate
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+
+  conversation_aggregate_v2:
+    sql_query: |
+      SELECT
+        *
+      FROM staging.conversation_aggregate_v2
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT
+        *
+      FROM ch_agg.conversation_aggregate_v2
+      WHERE dateHour >= toDateTime('{{chunk_start}}')
+        AND dateHour < toDateTime('{{chunk_end}}')
+
+  agent_action_mapping:
+    sql_query: |
+      SELECT *
+      FROM staging.agent_action_mapping
+      ORDER BY id ASC;
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.agent_action_mapping
+      ORDER BY id ASC
+
+  agent_file_mapping:
+    sql_query: |
+      SELECT *
+      FROM staging.agent_file_mapping
+      ORDER BY id ASC;
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.agent_file_mapping
+      ORDER BY id ASC
+
+  audiocodes_botname_env_mapping:
+    sql_query: |
+      SELECT *
+      FROM staging.audiocodes_botname_env_mapping
+      WHERE createdAt >= '{{chunk_start}}'
+        AND createdAt < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.audiocodes_botname_env_mapping
+      WHERE createdAt >= '{{chunk_start}}'
+        AND createdAt < '{{chunk_end}}'
+
+  agent_details:
+    sql_query: |
+      SELECT *
+      FROM staging.agent_details
+      ORDER BY agentId ASC;
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.agent_details
+      ORDER BY agentId ASC
+
+  agent_user_interaction:
+    sql_query: |
+      SELECT *
+      FROM staging.agent_user_interaction
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.agent_user_interaction
+      WHERE dateHour  >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}'
+
+  action_survey:
+    sql_query: |
+      SELECT *
+      FROM staging.action_survey
+      WHERE dateHour >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}';
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.action_survey
+      WHERE dateHour  >= '{{chunk_start}}'
+        AND dateHour < '{{chunk_end}}'
+
+  gen_bi_interaction_logs:
+    sql_query: |
+      SELECT *
+      FROM staging.gen_bi_interaction_logs 
+      WHERE created_at >= '{{chunk_start}}'
+        AND created_at < '{{chunk_end}}';
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.gen_bi_interaction_logs
+      WHERE created_at >= toDateTime('{{chunk_start}}')
+        AND created_at < toDateTime('{{chunk_end}}')
+
+  voice_bill_metadata:
+    sql_query: |
+      SELECT *
+      FROM staging.voice_bill_metadata
+      ORDER BY id ASC;
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_agg.voice_bill_metadata
+      ORDER BY id ASC
+
+  bot_dashboard_association:
+    sql_query: |
+      SELECT *
+      FROM staging.bot_dashboard_association
+      WHERE createdAt >= '{{chunk_start}}'
+        AND createdAt < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.bot_dashboard_association
+      WHERE createdAt >= toDateTime('{{chunk_start}}')
+        AND createdAt < toDateTime('{{chunk_end}}')
+      
+  botId_timezone_mapping:
+    sql_query: |
+      SELECT *
+      FROM staging.botId_timezone_mapping
+      ORDER BY id ASC;
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.botId_timezone_mapping
+      ORDER BY id ASC
+
+  exchange_category:
+    sql_query: |
+      SELECT *
+      FROM staging.exchange_category
+      ORDER BY Id ASC;
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.exchange_category
+      ORDER BY Id ASC
+
+  exchange_subcategory:
+    sql_query: |
+      SELECT *
+      FROM staging.exchange_subcategory
+      ORDER BY Id ASC;
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.exchange_subcategory
+      ORDER BY Id ASC
+
+  gen_bi_conversation:
+    sql_query: |
+      SELECT *
+      FROM staging.gen_bi_conversation
+      WHERE created_at >= '{{chunk_start}}'
+        AND created_at < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.gen_bi_conversation
+       WHERE created_at >= toDateTime('{{chunk_start}}')
+        AND created_at < toDateTime('{{chunk_end}}')
+
+  sp_filters:
+    sql_query: |
+      SELECT *
+      FROM staging.sp_filters
+      ORDER BY id ASC;
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.sp_filters
+      ORDER BY id ASC
+
+  user_identity:
+    sql_query: |
+      SELECT *
+      FROM staging.user_identity
+      ORDER BY botReferenceId ASC, externalUserId ASC;
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.user_identity
+      ORDER BY botReferenceId ASC, externalUserId ASC
+
+  user_lifecycle:
+    sql_query: |
+      SELECT *
+      FROM staging.user_lifecycle
+      WHERE createdAt >= '{{chunk_start}}'
+        AND createdAt < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.user_lifecycle
+      WHERE createdAt >= toDateTime('{{chunk_start}}')
+        AND createdAt < toDateTime('{{chunk_end}}')
+
+  user_memory:
+    sql_query: |
+      SELECT *
+      FROM staging.user_memory
+      WHERE createdAt >= '{{chunk_start}}'
+        AND createdAt < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.user_memory
+      WHERE createdAt >= toDateTime('{{chunk_start}}')
+        AND createdAt < toDateTime('{{chunk_end}}')
+
+  bot_agent_memory_retention_config:
+    sql_query: |
+      SELECT *
+      FROM staging.bot_agent_memory_retention_config
+      ORDER BY botReferenceId ASC;
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.bot_agent_memory_retention_config
+      ORDER BY botReferenceId ASC
+
+  widget_query:
+    sql_query: |
+      SELECT *
+      FROM staging.widget_query
+      WHERE created_at >= '{{chunk_start}}'
+        AND created_at < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.widget_query
+      WHERE created_at >= toDateTime('{{chunk_start}}')
+        AND created_at < toDateTime('{{chunk_end}}')
+
+  widget_configuration:
+    sql_query: |
+      SELECT *
+      FROM staging.widget_configuration
+      WHERE createdAt >= '{{chunk_start}}'
+        AND createdAt < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.widget_configuration
+      WHERE createdAt >= toDateTime('{{chunk_start}}')
+        AND createdAt < toDateTime('{{chunk_end}}')
+
+  voice_tier_assignment_rules:
+    sql_query: |
+      SELECT *
+      FROM staging.voice_tier_assignment_rules
+      WHERE created_at >= '{{chunk_start}}'
+        AND created_at < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.voice_tier_assignment_rules
+      WHERE created_at >= toDateTime('{{chunk_start}}')
+        AND created_at < toDateTime('{{chunk_end}}')
+
+  voice_call_result_tier_mapping:
+    sql_query: |
+      SELECT *
+      FROM staging.voice_call_result_tier_mapping
+      ORDER BY botId ASC, callResult ASC;
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.voice_call_result_tier_mapping
+      ORDER BY botId ASC, callResult ASC
+
+  conversation_purge_requests:
+    sql_query: |
+      SELECT *
+      FROM staging.conversation_purge_requests
+      WHERE createdAt >= '{{chunk_start}}'
+        AND createdAt < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.conversation_purge_requests
+      WHERE createdAt >= toDateTime('{{chunk_start}}')
+        AND createdAt < toDateTime('{{chunk_end}}')
+
+  reports_job:
+    sql_query: |
+      SELECT *
+      FROM staging.reports_job
+      WHERE createdAt >= '{{chunk_start}}'
+        AND createdAt < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.reports_job
+      WHERE createdAt >= toDateTime('{{chunk_start}}')
+        AND createdAt < toDateTime('{{chunk_end}}')
+
+  widget_profile:
+    sql_query: |
+      SELECT *
+      FROM staging.widget_profile
+      WHERE createdAt >= '{{chunk_start}}'
+        AND createdAt < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_facts.widget_profile
+      WHERE createdAt >= toDateTime('{{chunk_start}}')
+        AND createdAt < toDateTime('{{chunk_end}}')
+
+  skills:
+    sql_query: |
+      SELECT *
+      FROM staging.skills
+      WHERE created_at >= '{{chunk_start}}'
+        AND created_at < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.skills
+      WHERE created_at >= toDateTime('{{chunk_start}}')
+        AND created_at < toDateTime('{{chunk_end}}')
+
+  intents:
+    sql_query: |
+      SELECT *
+      FROM staging.intents
+      WHERE created_at >= '{{chunk_start}}'
+        AND created_at < '{{chunk_end}}';
+
+    clickhouse_query: |
+      SELECT *
+      FROM ch_ref.intents
+      WHERE created_at >= toDateTime('{{chunk_start}}')
+        AND created_at < toDateTime('{{chunk_end}}')

@@ -1,0 +1,326 @@
+table_name,chunk_index,chunk_label,chunk_start,chunk_end_exclusive,evaluation_mode,status,sql_rows,ch_rows,applied_filters,sql_query,clickhouse_query,sql_base_query,clickhouse_base_query
+intents,1,"chunk 1/25 [2024-10-08 00:00:00, 2024-11-07 00:00:00)",2024-10-08 00:00:00,2024-11-07 00:00:00,FULL_VALIDATION,PASSED,3002,3002,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2024-10-08 00:00:00'
+  AND created_at < '2024-11-07 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2024-10-08 00:00:00')
+  AND created_at < toDateTime('2024-11-07 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2024-10-08 00:00:00'
+  AND created_at < '2024-11-07 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2024-10-08 00:00:00')
+  AND created_at < toDateTime('2024-11-07 00:00:00')"
+intents,2,"chunk 2/25 [2024-11-07 00:00:00, 2024-12-07 00:00:00)",2024-11-07 00:00:00,2024-12-07 00:00:00,FULL_VALIDATION,PASSED,1404,1404,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2024-11-07 00:00:00'
+  AND created_at < '2024-12-07 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2024-11-07 00:00:00')
+  AND created_at < toDateTime('2024-12-07 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2024-11-07 00:00:00'
+  AND created_at < '2024-12-07 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2024-11-07 00:00:00')
+  AND created_at < toDateTime('2024-12-07 00:00:00')"
+intents,3,"chunk 3/25 [2024-12-07 00:00:00, 2025-01-06 00:00:00)",2024-12-07 00:00:00,2025-01-06 00:00:00,FULL_VALIDATION,PASSED,1330,1330,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2024-12-07 00:00:00'
+  AND created_at < '2025-01-06 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2024-12-07 00:00:00')
+  AND created_at < toDateTime('2025-01-06 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2024-12-07 00:00:00'
+  AND created_at < '2025-01-06 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2024-12-07 00:00:00')
+  AND created_at < toDateTime('2025-01-06 00:00:00')"
+intents,4,"chunk 4/25 [2025-01-06 00:00:00, 2025-02-05 00:00:00)",2025-01-06 00:00:00,2025-02-05 00:00:00,FULL_VALIDATION,PASSED,930,930,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-01-06 00:00:00'
+  AND created_at < '2025-02-05 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-01-06 00:00:00')
+  AND created_at < toDateTime('2025-02-05 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-01-06 00:00:00'
+  AND created_at < '2025-02-05 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-01-06 00:00:00')
+  AND created_at < toDateTime('2025-02-05 00:00:00')"
+intents,5,"chunk 5/25 [2025-02-05 00:00:00, 2025-03-07 00:00:00)",2025-02-05 00:00:00,2025-03-07 00:00:00,FULL_VALIDATION,PASSED,3190,3190,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-02-05 00:00:00'
+  AND created_at < '2025-03-07 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-02-05 00:00:00')
+  AND created_at < toDateTime('2025-03-07 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-02-05 00:00:00'
+  AND created_at < '2025-03-07 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-02-05 00:00:00')
+  AND created_at < toDateTime('2025-03-07 00:00:00')"
+intents,6,"chunk 6/25 [2025-03-07 00:00:00, 2025-04-06 00:00:00)",2025-03-07 00:00:00,2025-04-06 00:00:00,FULL_VALIDATION,PASSED,1102,1102,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-03-07 00:00:00'
+  AND created_at < '2025-04-06 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-03-07 00:00:00')
+  AND created_at < toDateTime('2025-04-06 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-03-07 00:00:00'
+  AND created_at < '2025-04-06 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-03-07 00:00:00')
+  AND created_at < toDateTime('2025-04-06 00:00:00')"
+intents,7,"chunk 7/25 [2025-04-06 00:00:00, 2025-05-06 00:00:00)",2025-04-06 00:00:00,2025-05-06 00:00:00,FULL_VALIDATION,PASSED,3356,3356,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-04-06 00:00:00'
+  AND created_at < '2025-05-06 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-04-06 00:00:00')
+  AND created_at < toDateTime('2025-05-06 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-04-06 00:00:00'
+  AND created_at < '2025-05-06 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-04-06 00:00:00')
+  AND created_at < toDateTime('2025-05-06 00:00:00')"
+intents,8,"chunk 8/25 [2025-05-06 00:00:00, 2025-06-05 00:00:00)",2025-05-06 00:00:00,2025-06-05 00:00:00,FULL_VALIDATION,PASSED,2254,2254,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-05-06 00:00:00'
+  AND created_at < '2025-06-05 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-05-06 00:00:00')
+  AND created_at < toDateTime('2025-06-05 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-05-06 00:00:00'
+  AND created_at < '2025-06-05 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-05-06 00:00:00')
+  AND created_at < toDateTime('2025-06-05 00:00:00')"
+intents,9,"chunk 9/25 [2025-06-05 00:00:00, 2025-07-05 00:00:00)",2025-06-05 00:00:00,2025-07-05 00:00:00,FULL_VALIDATION,PASSED,2638,2638,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-06-05 00:00:00'
+  AND created_at < '2025-07-05 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-06-05 00:00:00')
+  AND created_at < toDateTime('2025-07-05 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-06-05 00:00:00'
+  AND created_at < '2025-07-05 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-06-05 00:00:00')
+  AND created_at < toDateTime('2025-07-05 00:00:00')"
+intents,10,"chunk 10/25 [2025-07-05 00:00:00, 2025-08-04 00:00:00)",2025-07-05 00:00:00,2025-08-04 00:00:00,FULL_VALIDATION,PASSED,662,662,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-07-05 00:00:00'
+  AND created_at < '2025-08-04 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-07-05 00:00:00')
+  AND created_at < toDateTime('2025-08-04 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-07-05 00:00:00'
+  AND created_at < '2025-08-04 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-07-05 00:00:00')
+  AND created_at < toDateTime('2025-08-04 00:00:00')"
+intents,11,"chunk 11/25 [2025-08-04 00:00:00, 2025-09-03 00:00:00)",2025-08-04 00:00:00,2025-09-03 00:00:00,FULL_VALIDATION,PASSED,1916,1916,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-08-04 00:00:00'
+  AND created_at < '2025-09-03 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-08-04 00:00:00')
+  AND created_at < toDateTime('2025-09-03 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-08-04 00:00:00'
+  AND created_at < '2025-09-03 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-08-04 00:00:00')
+  AND created_at < toDateTime('2025-09-03 00:00:00')"
+intents,12,"chunk 12/25 [2025-09-03 00:00:00, 2025-10-03 00:00:00)",2025-09-03 00:00:00,2025-10-03 00:00:00,FULL_VALIDATION,PASSED,1250,1250,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-09-03 00:00:00'
+  AND created_at < '2025-10-03 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-09-03 00:00:00')
+  AND created_at < toDateTime('2025-10-03 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-09-03 00:00:00'
+  AND created_at < '2025-10-03 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-09-03 00:00:00')
+  AND created_at < toDateTime('2025-10-03 00:00:00')"
+intents,13,"chunk 13/25 [2025-10-03 00:00:00, 2025-11-02 00:00:00)",2025-10-03 00:00:00,2025-11-02 00:00:00,FULL_VALIDATION,PASSED,1202,1202,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-10-03 00:00:00'
+  AND created_at < '2025-11-02 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-10-03 00:00:00')
+  AND created_at < toDateTime('2025-11-02 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-10-03 00:00:00'
+  AND created_at < '2025-11-02 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-10-03 00:00:00')
+  AND created_at < toDateTime('2025-11-02 00:00:00')"
+intents,14,"chunk 14/25 [2025-11-02 00:00:00, 2025-12-02 00:00:00)",2025-11-02 00:00:00,2025-12-02 00:00:00,FULL_VALIDATION,PASSED,1512,1512,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-11-02 00:00:00'
+  AND created_at < '2025-12-02 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-11-02 00:00:00')
+  AND created_at < toDateTime('2025-12-02 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-11-02 00:00:00'
+  AND created_at < '2025-12-02 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-11-02 00:00:00')
+  AND created_at < toDateTime('2025-12-02 00:00:00')"
+intents,15,"chunk 15/25 [2025-12-02 00:00:00, 2026-01-01 00:00:00)",2025-12-02 00:00:00,2026-01-01 00:00:00,FULL_VALIDATION,PASSED,362,362,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-12-02 00:00:00'
+  AND created_at < '2026-01-01 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-12-02 00:00:00')
+  AND created_at < toDateTime('2026-01-01 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2025-12-02 00:00:00'
+  AND created_at < '2026-01-01 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2025-12-02 00:00:00')
+  AND created_at < toDateTime('2026-01-01 00:00:00')"
+intents,16,"chunk 16/25 [2026-01-01 00:00:00, 2026-01-31 00:00:00)",2026-01-01 00:00:00,2026-01-31 00:00:00,FULL_VALIDATION,PASSED,612,612,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-01-01 00:00:00'
+  AND created_at < '2026-01-31 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-01-01 00:00:00')
+  AND created_at < toDateTime('2026-01-31 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-01-01 00:00:00'
+  AND created_at < '2026-01-31 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-01-01 00:00:00')
+  AND created_at < toDateTime('2026-01-31 00:00:00')"
+intents,17,"chunk 17/25 [2026-01-31 00:00:00, 2026-03-02 00:00:00)",2026-01-31 00:00:00,2026-03-02 00:00:00,FULL_VALIDATION,PASSED,612,612,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-01-31 00:00:00'
+  AND created_at < '2026-03-02 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-01-31 00:00:00')
+  AND created_at < toDateTime('2026-03-02 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-01-31 00:00:00'
+  AND created_at < '2026-03-02 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-01-31 00:00:00')
+  AND created_at < toDateTime('2026-03-02 00:00:00')"
+intents,18,"chunk 18/25 [2026-03-02 00:00:00, 2026-04-01 00:00:00)",2026-03-02 00:00:00,2026-04-01 00:00:00,FULL_VALIDATION,PASSED,642,642,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-03-02 00:00:00'
+  AND created_at < '2026-04-01 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-03-02 00:00:00')
+  AND created_at < toDateTime('2026-04-01 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-03-02 00:00:00'
+  AND created_at < '2026-04-01 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-03-02 00:00:00')
+  AND created_at < toDateTime('2026-04-01 00:00:00')"
+intents,19,"chunk 19/25 [2026-04-01 00:00:00, 2026-05-01 00:00:00)",2026-04-01 00:00:00,2026-05-01 00:00:00,FULL_VALIDATION,PASSED,3780,3780,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-04-01 00:00:00'
+  AND created_at < '2026-05-01 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-04-01 00:00:00')
+  AND created_at < toDateTime('2026-05-01 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-04-01 00:00:00'
+  AND created_at < '2026-05-01 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-04-01 00:00:00')
+  AND created_at < toDateTime('2026-05-01 00:00:00')"
+intents,20,"chunk 20/25 [2026-05-01 00:00:00, 2026-05-31 00:00:00)",2026-05-01 00:00:00,2026-05-31 00:00:00,FULL_VALIDATION,PASSED,2146,2146,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-05-01 00:00:00'
+  AND created_at < '2026-05-31 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-05-01 00:00:00')
+  AND created_at < toDateTime('2026-05-31 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-05-01 00:00:00'
+  AND created_at < '2026-05-31 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-05-01 00:00:00')
+  AND created_at < toDateTime('2026-05-31 00:00:00')"
+intents,21,"chunk 21/25 [2026-05-31 00:00:00, 2026-06-30 00:00:00)",2026-05-31 00:00:00,2026-06-30 00:00:00,FULL_VALIDATION,PASSED,1570,1570,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-05-31 00:00:00'
+  AND created_at < '2026-06-30 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-05-31 00:00:00')
+  AND created_at < toDateTime('2026-06-30 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-05-31 00:00:00'
+  AND created_at < '2026-06-30 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-05-31 00:00:00')
+  AND created_at < toDateTime('2026-06-30 00:00:00')"
+intents,22,"chunk 22/25 [2026-06-30 00:00:00, 2026-07-30 00:00:00)",2026-06-30 00:00:00,2026-07-30 00:00:00,FULL_VALIDATION,PASSED,1038,1038,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-06-30 00:00:00'
+  AND created_at < '2026-07-30 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-06-30 00:00:00')
+  AND created_at < toDateTime('2026-07-30 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-06-30 00:00:00'
+  AND created_at < '2026-07-30 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-06-30 00:00:00')
+  AND created_at < toDateTime('2026-07-30 00:00:00')"
+intents,23,"chunk 23/25 [2026-07-30 00:00:00, 2026-08-29 00:00:00)",2026-07-30 00:00:00,2026-08-29 00:00:00,FULL_VALIDATION,PASSED,1186,1186,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-07-30 00:00:00'
+  AND created_at < '2026-08-29 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-07-30 00:00:00')
+  AND created_at < toDateTime('2026-08-29 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-07-30 00:00:00'
+  AND created_at < '2026-08-29 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-07-30 00:00:00')
+  AND created_at < toDateTime('2026-08-29 00:00:00')"
+intents,24,"chunk 24/25 [2026-08-29 00:00:00, 2026-09-28 00:00:00)",2026-08-29 00:00:00,2026-09-28 00:00:00,FULL_VALIDATION,PASSED,1393,1393,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-08-29 00:00:00'
+  AND created_at < '2026-09-28 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-08-29 00:00:00')
+  AND created_at < toDateTime('2026-09-28 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-08-29 00:00:00'
+  AND created_at < '2026-09-28 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-08-29 00:00:00')
+  AND created_at < toDateTime('2026-09-28 00:00:00')"
+intents,25,"chunk 25/25 [2026-09-28 00:00:00, 2026-10-08 00:00:00)",2026-09-28 00:00:00,2026-10-08 00:00:00,FULL_VALIDATION,PASSED,1131,1131,,"SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-09-28 00:00:00'
+  AND created_at < '2026-10-08 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-09-28 00:00:00')
+  AND created_at < toDateTime('2026-10-08 00:00:00')","SELECT *
+FROM staging.intents
+WHERE created_at >= '2026-09-28 00:00:00'
+  AND created_at < '2026-10-08 00:00:00';","SELECT *
+FROM ch_ref.intents
+WHERE created_at >= toDateTime('2026-09-28 00:00:00')
+  AND created_at < toDateTime('2026-10-08 00:00:00')"

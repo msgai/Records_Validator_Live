@@ -1,0 +1,66 @@
+table_name,chunk_index,chunk_label,chunk_start,chunk_end_exclusive,evaluation_mode,status,sql_rows,ch_rows,applied_filters,sql_query,clickhouse_query,sql_base_query,clickhouse_base_query
+skills,1,"chunk 1/5 [2024-10-08 00:00:00, 2025-04-06 00:00:00)",2024-10-08 00:00:00,2025-04-06 00:00:00,FULL_VALIDATION,PASSED,2413,2413,,"SELECT *
+FROM staging.skills
+WHERE created_at >= '2024-10-08 00:00:00'
+  AND created_at < '2025-04-06 00:00:00';","SELECT *
+FROM ch_ref.skills
+WHERE created_at >= toDateTime('2024-10-08 00:00:00')
+  AND created_at < toDateTime('2025-04-06 00:00:00')","SELECT *
+FROM staging.skills
+WHERE created_at >= '2024-10-08 00:00:00'
+  AND created_at < '2025-04-06 00:00:00';","SELECT *
+FROM ch_ref.skills
+WHERE created_at >= toDateTime('2024-10-08 00:00:00')
+  AND created_at < toDateTime('2025-04-06 00:00:00')"
+skills,2,"chunk 2/5 [2025-04-06 00:00:00, 2025-10-03 00:00:00)",2025-04-06 00:00:00,2025-10-03 00:00:00,FULL_VALIDATION,PASSED,1890,1890,,"SELECT *
+FROM staging.skills
+WHERE created_at >= '2025-04-06 00:00:00'
+  AND created_at < '2025-10-03 00:00:00';","SELECT *
+FROM ch_ref.skills
+WHERE created_at >= toDateTime('2025-04-06 00:00:00')
+  AND created_at < toDateTime('2025-10-03 00:00:00')","SELECT *
+FROM staging.skills
+WHERE created_at >= '2025-04-06 00:00:00'
+  AND created_at < '2025-10-03 00:00:00';","SELECT *
+FROM ch_ref.skills
+WHERE created_at >= toDateTime('2025-04-06 00:00:00')
+  AND created_at < toDateTime('2025-10-03 00:00:00')"
+skills,3,"chunk 3/5 [2025-10-03 00:00:00, 2026-04-01 00:00:00)",2025-10-03 00:00:00,2026-04-01 00:00:00,FULL_VALIDATION,PASSED,1167,1167,,"SELECT *
+FROM staging.skills
+WHERE created_at >= '2025-10-03 00:00:00'
+  AND created_at < '2026-04-01 00:00:00';","SELECT *
+FROM ch_ref.skills
+WHERE created_at >= toDateTime('2025-10-03 00:00:00')
+  AND created_at < toDateTime('2026-04-01 00:00:00')","SELECT *
+FROM staging.skills
+WHERE created_at >= '2025-10-03 00:00:00'
+  AND created_at < '2026-04-01 00:00:00';","SELECT *
+FROM ch_ref.skills
+WHERE created_at >= toDateTime('2025-10-03 00:00:00')
+  AND created_at < toDateTime('2026-04-01 00:00:00')"
+skills,4,"chunk 4/5 [2026-04-01 00:00:00, 2026-09-28 00:00:00)",2026-04-01 00:00:00,2026-09-28 00:00:00,FULL_VALIDATION,PASSED,1737,1737,,"SELECT *
+FROM staging.skills
+WHERE created_at >= '2026-04-01 00:00:00'
+  AND created_at < '2026-09-28 00:00:00';","SELECT *
+FROM ch_ref.skills
+WHERE created_at >= toDateTime('2026-04-01 00:00:00')
+  AND created_at < toDateTime('2026-09-28 00:00:00')","SELECT *
+FROM staging.skills
+WHERE created_at >= '2026-04-01 00:00:00'
+  AND created_at < '2026-09-28 00:00:00';","SELECT *
+FROM ch_ref.skills
+WHERE created_at >= toDateTime('2026-04-01 00:00:00')
+  AND created_at < toDateTime('2026-09-28 00:00:00')"
+skills,5,"chunk 5/5 [2026-09-28 00:00:00, 2026-10-08 00:00:00)",2026-09-28 00:00:00,2026-10-08 00:00:00,FULL_VALIDATION,PASSED,381,381,,"SELECT *
+FROM staging.skills
+WHERE created_at >= '2026-09-28 00:00:00'
+  AND created_at < '2026-10-08 00:00:00';","SELECT *
+FROM ch_ref.skills
+WHERE created_at >= toDateTime('2026-09-28 00:00:00')
+  AND created_at < toDateTime('2026-10-08 00:00:00')","SELECT *
+FROM staging.skills
+WHERE created_at >= '2026-09-28 00:00:00'
+  AND created_at < '2026-10-08 00:00:00';","SELECT *
+FROM ch_ref.skills
+WHERE created_at >= toDateTime('2026-09-28 00:00:00')
+  AND created_at < toDateTime('2026-10-08 00:00:00')"

@@ -1,0 +1,2836 @@
+table_name,composite_key,column_name,sql_value,ch_value,diff_type,evaluation_mode,sql_count_query,clickhouse_count_query,chunk_start,chunk_end_exclusive
+transformed_data,"chunk 1/645 [2025-01-01 00:00:00, 2025-01-02 00:00:00)",RECORD_COUNT,135804,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-01 00:00:00'
+  AND dateHour < '2025-01-02 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-01 00:00:00')
+  AND dateHour < toDateTime('2025-01-02 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-01 00:00:00,2025-01-02 00:00:00
+transformed_data,"chunk 2/645 [2025-01-02 00:00:00, 2025-01-03 00:00:00)",RECORD_COUNT,201493,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-02 00:00:00'
+  AND dateHour < '2025-01-03 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-02 00:00:00')
+  AND dateHour < toDateTime('2025-01-03 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-02 00:00:00,2025-01-03 00:00:00
+transformed_data,"chunk 3/645 [2025-01-03 00:00:00, 2025-01-04 00:00:00)",RECORD_COUNT,194375,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-03 00:00:00'
+  AND dateHour < '2025-01-04 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-03 00:00:00')
+  AND dateHour < toDateTime('2025-01-04 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-03 00:00:00,2025-01-04 00:00:00
+transformed_data,"chunk 4/645 [2025-01-04 00:00:00, 2025-01-05 00:00:00)",RECORD_COUNT,153884,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-04 00:00:00'
+  AND dateHour < '2025-01-05 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-04 00:00:00')
+  AND dateHour < toDateTime('2025-01-05 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-04 00:00:00,2025-01-05 00:00:00
+transformed_data,"chunk 5/645 [2025-01-05 00:00:00, 2025-01-06 00:00:00)",RECORD_COUNT,156905,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-05 00:00:00'
+  AND dateHour < '2025-01-06 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-05 00:00:00')
+  AND dateHour < toDateTime('2025-01-06 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-05 00:00:00,2025-01-06 00:00:00
+transformed_data,"chunk 6/645 [2025-01-06 00:00:00, 2025-01-07 00:00:00)",RECORD_COUNT,206702,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-06 00:00:00'
+  AND dateHour < '2025-01-07 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-06 00:00:00')
+  AND dateHour < toDateTime('2025-01-07 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-06 00:00:00,2025-01-07 00:00:00
+transformed_data,"chunk 7/645 [2025-01-07 00:00:00, 2025-01-08 00:00:00)",RECORD_COUNT,202095,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-07 00:00:00'
+  AND dateHour < '2025-01-08 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-07 00:00:00')
+  AND dateHour < toDateTime('2025-01-08 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-07 00:00:00,2025-01-08 00:00:00
+transformed_data,"chunk 8/645 [2025-01-08 00:00:00, 2025-01-09 00:00:00)",RECORD_COUNT,184660,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-08 00:00:00'
+  AND dateHour < '2025-01-09 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-08 00:00:00')
+  AND dateHour < toDateTime('2025-01-09 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-08 00:00:00,2025-01-09 00:00:00
+transformed_data,"chunk 9/645 [2025-01-09 00:00:00, 2025-01-10 00:00:00)",RECORD_COUNT,195692,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-09 00:00:00'
+  AND dateHour < '2025-01-10 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-09 00:00:00')
+  AND dateHour < toDateTime('2025-01-10 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-09 00:00:00,2025-01-10 00:00:00
+transformed_data,"chunk 10/645 [2025-01-10 00:00:00, 2025-01-11 00:00:00)",RECORD_COUNT,187114,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-10 00:00:00'
+  AND dateHour < '2025-01-11 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-10 00:00:00')
+  AND dateHour < toDateTime('2025-01-11 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-10 00:00:00,2025-01-11 00:00:00
+transformed_data,"chunk 11/645 [2025-01-11 00:00:00, 2025-01-12 00:00:00)",RECORD_COUNT,163917,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-11 00:00:00'
+  AND dateHour < '2025-01-12 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-11 00:00:00')
+  AND dateHour < toDateTime('2025-01-12 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-11 00:00:00,2025-01-12 00:00:00
+transformed_data,"chunk 12/645 [2025-01-12 00:00:00, 2025-01-13 00:00:00)",RECORD_COUNT,155010,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-12 00:00:00'
+  AND dateHour < '2025-01-13 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-12 00:00:00')
+  AND dateHour < toDateTime('2025-01-13 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-12 00:00:00,2025-01-13 00:00:00
+transformed_data,"chunk 13/645 [2025-01-13 00:00:00, 2025-01-14 00:00:00)",RECORD_COUNT,203710,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-13 00:00:00'
+  AND dateHour < '2025-01-14 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-13 00:00:00')
+  AND dateHour < toDateTime('2025-01-14 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-13 00:00:00,2025-01-14 00:00:00
+transformed_data,"chunk 14/645 [2025-01-14 00:00:00, 2025-01-15 00:00:00)",RECORD_COUNT,199715,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-14 00:00:00'
+  AND dateHour < '2025-01-15 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-14 00:00:00')
+  AND dateHour < toDateTime('2025-01-15 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-14 00:00:00,2025-01-15 00:00:00
+transformed_data,"chunk 15/645 [2025-01-15 00:00:00, 2025-01-16 00:00:00)",RECORD_COUNT,190012,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-15 00:00:00'
+  AND dateHour < '2025-01-16 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-15 00:00:00')
+  AND dateHour < toDateTime('2025-01-16 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-15 00:00:00,2025-01-16 00:00:00
+transformed_data,"chunk 16/645 [2025-01-16 00:00:00, 2025-01-17 00:00:00)",RECORD_COUNT,201526,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-16 00:00:00'
+  AND dateHour < '2025-01-17 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-16 00:00:00')
+  AND dateHour < toDateTime('2025-01-17 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-16 00:00:00,2025-01-17 00:00:00
+transformed_data,"chunk 17/645 [2025-01-17 00:00:00, 2025-01-18 00:00:00)",RECORD_COUNT,191434,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-17 00:00:00'
+  AND dateHour < '2025-01-18 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-17 00:00:00')
+  AND dateHour < toDateTime('2025-01-18 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-17 00:00:00,2025-01-18 00:00:00
+transformed_data,"chunk 18/645 [2025-01-18 00:00:00, 2025-01-19 00:00:00)",RECORD_COUNT,184656,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-18 00:00:00'
+  AND dateHour < '2025-01-19 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-18 00:00:00')
+  AND dateHour < toDateTime('2025-01-19 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-18 00:00:00,2025-01-19 00:00:00
+transformed_data,"chunk 19/645 [2025-01-19 00:00:00, 2025-01-20 00:00:00)",RECORD_COUNT,171593,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-19 00:00:00'
+  AND dateHour < '2025-01-20 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-19 00:00:00')
+  AND dateHour < toDateTime('2025-01-20 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-19 00:00:00,2025-01-20 00:00:00
+transformed_data,"chunk 20/645 [2025-01-20 00:00:00, 2025-01-21 00:00:00)",RECORD_COUNT,196612,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-20 00:00:00'
+  AND dateHour < '2025-01-21 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-20 00:00:00')
+  AND dateHour < toDateTime('2025-01-21 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-20 00:00:00,2025-01-21 00:00:00
+transformed_data,"chunk 21/645 [2025-01-21 00:00:00, 2025-01-22 00:00:00)",RECORD_COUNT,180935,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-21 00:00:00'
+  AND dateHour < '2025-01-22 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-21 00:00:00')
+  AND dateHour < toDateTime('2025-01-22 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-21 00:00:00,2025-01-22 00:00:00
+transformed_data,"chunk 22/645 [2025-01-22 00:00:00, 2025-01-23 00:00:00)",RECORD_COUNT,202543,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-22 00:00:00'
+  AND dateHour < '2025-01-23 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-22 00:00:00')
+  AND dateHour < toDateTime('2025-01-23 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-22 00:00:00,2025-01-23 00:00:00
+transformed_data,"chunk 23/645 [2025-01-23 00:00:00, 2025-01-24 00:00:00)",RECORD_COUNT,188203,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-23 00:00:00'
+  AND dateHour < '2025-01-24 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-23 00:00:00')
+  AND dateHour < toDateTime('2025-01-24 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-23 00:00:00,2025-01-24 00:00:00
+transformed_data,"chunk 24/645 [2025-01-24 00:00:00, 2025-01-25 00:00:00)",RECORD_COUNT,173176,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-24 00:00:00'
+  AND dateHour < '2025-01-25 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-24 00:00:00')
+  AND dateHour < toDateTime('2025-01-25 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-24 00:00:00,2025-01-25 00:00:00
+transformed_data,"chunk 25/645 [2025-01-25 00:00:00, 2025-01-26 00:00:00)",RECORD_COUNT,125707,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-25 00:00:00'
+  AND dateHour < '2025-01-26 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-25 00:00:00')
+  AND dateHour < toDateTime('2025-01-26 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-25 00:00:00,2025-01-26 00:00:00
+transformed_data,"chunk 26/645 [2025-01-26 00:00:00, 2025-01-27 00:00:00)",RECORD_COUNT,182199,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-26 00:00:00'
+  AND dateHour < '2025-01-27 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-26 00:00:00')
+  AND dateHour < toDateTime('2025-01-27 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-26 00:00:00,2025-01-27 00:00:00
+transformed_data,"chunk 27/645 [2025-01-27 00:00:00, 2025-01-28 00:00:00)",RECORD_COUNT,200822,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-27 00:00:00'
+  AND dateHour < '2025-01-28 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-27 00:00:00')
+  AND dateHour < toDateTime('2025-01-28 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-27 00:00:00,2025-01-28 00:00:00
+transformed_data,"chunk 28/645 [2025-01-28 00:00:00, 2025-01-29 00:00:00)",RECORD_COUNT,197332,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-28 00:00:00'
+  AND dateHour < '2025-01-29 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-28 00:00:00')
+  AND dateHour < toDateTime('2025-01-29 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-28 00:00:00,2025-01-29 00:00:00
+transformed_data,"chunk 29/645 [2025-01-29 00:00:00, 2025-01-30 00:00:00)",RECORD_COUNT,190200,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-29 00:00:00'
+  AND dateHour < '2025-01-30 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-29 00:00:00')
+  AND dateHour < toDateTime('2025-01-30 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-29 00:00:00,2025-01-30 00:00:00
+transformed_data,"chunk 30/645 [2025-01-30 00:00:00, 2025-01-31 00:00:00)",RECORD_COUNT,189085,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-30 00:00:00'
+  AND dateHour < '2025-01-31 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-30 00:00:00')
+  AND dateHour < toDateTime('2025-01-31 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-30 00:00:00,2025-01-31 00:00:00
+transformed_data,"chunk 31/645 [2025-01-31 00:00:00, 2025-02-01 00:00:00)",RECORD_COUNT,176330,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-01-31 00:00:00'
+  AND dateHour < '2025-02-01 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-01-31 00:00:00')
+  AND dateHour < toDateTime('2025-02-01 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-01-31 00:00:00,2025-02-01 00:00:00
+transformed_data,"chunk 32/645 [2025-02-01 00:00:00, 2025-02-02 00:00:00)",RECORD_COUNT,130039,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-01 00:00:00'
+  AND dateHour < '2025-02-02 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-01 00:00:00')
+  AND dateHour < toDateTime('2025-02-02 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-01 00:00:00,2025-02-02 00:00:00
+transformed_data,"chunk 33/645 [2025-02-02 00:00:00, 2025-02-03 00:00:00)",RECORD_COUNT,112097,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-02 00:00:00'
+  AND dateHour < '2025-02-03 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-02 00:00:00')
+  AND dateHour < toDateTime('2025-02-03 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-02 00:00:00,2025-02-03 00:00:00
+transformed_data,"chunk 34/645 [2025-02-03 00:00:00, 2025-02-04 00:00:00)",RECORD_COUNT,191320,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-03 00:00:00'
+  AND dateHour < '2025-02-04 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-03 00:00:00')
+  AND dateHour < toDateTime('2025-02-04 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-03 00:00:00,2025-02-04 00:00:00
+transformed_data,"chunk 35/645 [2025-02-04 00:00:00, 2025-02-05 00:00:00)",RECORD_COUNT,189258,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-04 00:00:00'
+  AND dateHour < '2025-02-05 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-04 00:00:00')
+  AND dateHour < toDateTime('2025-02-05 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-04 00:00:00,2025-02-05 00:00:00
+transformed_data,"chunk 36/645 [2025-02-05 00:00:00, 2025-02-06 00:00:00)",RECORD_COUNT,181464,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-05 00:00:00'
+  AND dateHour < '2025-02-06 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-05 00:00:00')
+  AND dateHour < toDateTime('2025-02-06 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-05 00:00:00,2025-02-06 00:00:00
+transformed_data,"chunk 37/645 [2025-02-06 00:00:00, 2025-02-07 00:00:00)",RECORD_COUNT,196776,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-06 00:00:00'
+  AND dateHour < '2025-02-07 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-06 00:00:00')
+  AND dateHour < toDateTime('2025-02-07 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-06 00:00:00,2025-02-07 00:00:00
+transformed_data,"chunk 38/645 [2025-02-07 00:00:00, 2025-02-08 00:00:00)",RECORD_COUNT,191501,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-07 00:00:00'
+  AND dateHour < '2025-02-08 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-07 00:00:00')
+  AND dateHour < toDateTime('2025-02-08 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-07 00:00:00,2025-02-08 00:00:00
+transformed_data,"chunk 39/645 [2025-02-08 00:00:00, 2025-02-09 00:00:00)",RECORD_COUNT,178846,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-08 00:00:00'
+  AND dateHour < '2025-02-09 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-08 00:00:00')
+  AND dateHour < toDateTime('2025-02-09 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-08 00:00:00,2025-02-09 00:00:00
+transformed_data,"chunk 40/645 [2025-02-09 00:00:00, 2025-02-10 00:00:00)",RECORD_COUNT,333926,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-09 00:00:00'
+  AND dateHour < '2025-02-10 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-09 00:00:00')
+  AND dateHour < toDateTime('2025-02-10 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-09 00:00:00,2025-02-10 00:00:00
+transformed_data,"chunk 41/645 [2025-02-10 00:00:00, 2025-02-11 00:00:00)",RECORD_COUNT,236411,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-10 00:00:00'
+  AND dateHour < '2025-02-11 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-10 00:00:00')
+  AND dateHour < toDateTime('2025-02-11 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-10 00:00:00,2025-02-11 00:00:00
+transformed_data,"chunk 42/645 [2025-02-11 00:00:00, 2025-02-12 00:00:00)",RECORD_COUNT,206728,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-11 00:00:00'
+  AND dateHour < '2025-02-12 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-11 00:00:00')
+  AND dateHour < toDateTime('2025-02-12 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-11 00:00:00,2025-02-12 00:00:00
+transformed_data,"chunk 43/645 [2025-02-12 00:00:00, 2025-02-13 00:00:00)",RECORD_COUNT,206119,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-12 00:00:00'
+  AND dateHour < '2025-02-13 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-12 00:00:00')
+  AND dateHour < toDateTime('2025-02-13 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-12 00:00:00,2025-02-13 00:00:00
+transformed_data,"chunk 44/645 [2025-02-13 00:00:00, 2025-02-14 00:00:00)",RECORD_COUNT,191932,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-13 00:00:00'
+  AND dateHour < '2025-02-14 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-13 00:00:00')
+  AND dateHour < toDateTime('2025-02-14 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-13 00:00:00,2025-02-14 00:00:00
+transformed_data,"chunk 45/645 [2025-02-14 00:00:00, 2025-02-15 00:00:00)",RECORD_COUNT,173022,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-14 00:00:00'
+  AND dateHour < '2025-02-15 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-14 00:00:00')
+  AND dateHour < toDateTime('2025-02-15 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-14 00:00:00,2025-02-15 00:00:00
+transformed_data,"chunk 46/645 [2025-02-15 00:00:00, 2025-02-16 00:00:00)",RECORD_COUNT,116800,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-15 00:00:00'
+  AND dateHour < '2025-02-16 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-15 00:00:00')
+  AND dateHour < toDateTime('2025-02-16 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-15 00:00:00,2025-02-16 00:00:00
+transformed_data,"chunk 47/645 [2025-02-16 00:00:00, 2025-02-17 00:00:00)",RECORD_COUNT,108169,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-16 00:00:00'
+  AND dateHour < '2025-02-17 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-16 00:00:00')
+  AND dateHour < toDateTime('2025-02-17 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-16 00:00:00,2025-02-17 00:00:00
+transformed_data,"chunk 48/645 [2025-02-17 00:00:00, 2025-02-18 00:00:00)",RECORD_COUNT,169009,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-17 00:00:00'
+  AND dateHour < '2025-02-18 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-17 00:00:00')
+  AND dateHour < toDateTime('2025-02-18 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-17 00:00:00,2025-02-18 00:00:00
+transformed_data,"chunk 49/645 [2025-02-18 00:00:00, 2025-02-19 00:00:00)",RECORD_COUNT,162595,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-18 00:00:00'
+  AND dateHour < '2025-02-19 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-18 00:00:00')
+  AND dateHour < toDateTime('2025-02-19 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-18 00:00:00,2025-02-19 00:00:00
+transformed_data,"chunk 50/645 [2025-02-19 00:00:00, 2025-02-20 00:00:00)",RECORD_COUNT,175726,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-19 00:00:00'
+  AND dateHour < '2025-02-20 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-19 00:00:00')
+  AND dateHour < toDateTime('2025-02-20 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-19 00:00:00,2025-02-20 00:00:00
+transformed_data,"chunk 51/645 [2025-02-20 00:00:00, 2025-02-21 00:00:00)",RECORD_COUNT,178477,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-20 00:00:00'
+  AND dateHour < '2025-02-21 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-20 00:00:00')
+  AND dateHour < toDateTime('2025-02-21 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-20 00:00:00,2025-02-21 00:00:00
+transformed_data,"chunk 52/645 [2025-02-21 00:00:00, 2025-02-22 00:00:00)",RECORD_COUNT,171859,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-21 00:00:00'
+  AND dateHour < '2025-02-22 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-21 00:00:00')
+  AND dateHour < toDateTime('2025-02-22 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-21 00:00:00,2025-02-22 00:00:00
+transformed_data,"chunk 53/645 [2025-02-22 00:00:00, 2025-02-23 00:00:00)",RECORD_COUNT,111672,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-22 00:00:00'
+  AND dateHour < '2025-02-23 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-22 00:00:00')
+  AND dateHour < toDateTime('2025-02-23 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-22 00:00:00,2025-02-23 00:00:00
+transformed_data,"chunk 54/645 [2025-02-23 00:00:00, 2025-02-24 00:00:00)",RECORD_COUNT,101331,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-23 00:00:00'
+  AND dateHour < '2025-02-24 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-23 00:00:00')
+  AND dateHour < toDateTime('2025-02-24 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-23 00:00:00,2025-02-24 00:00:00
+transformed_data,"chunk 55/645 [2025-02-24 00:00:00, 2025-02-25 00:00:00)",RECORD_COUNT,157453,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-24 00:00:00'
+  AND dateHour < '2025-02-25 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-24 00:00:00')
+  AND dateHour < toDateTime('2025-02-25 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-24 00:00:00,2025-02-25 00:00:00
+transformed_data,"chunk 56/645 [2025-02-25 00:00:00, 2025-02-26 00:00:00)",RECORD_COUNT,163970,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-25 00:00:00'
+  AND dateHour < '2025-02-26 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-25 00:00:00')
+  AND dateHour < toDateTime('2025-02-26 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-25 00:00:00,2025-02-26 00:00:00
+transformed_data,"chunk 57/645 [2025-02-26 00:00:00, 2025-02-27 00:00:00)",RECORD_COUNT,170343,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-26 00:00:00'
+  AND dateHour < '2025-02-27 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-26 00:00:00')
+  AND dateHour < toDateTime('2025-02-27 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-26 00:00:00,2025-02-27 00:00:00
+transformed_data,"chunk 58/645 [2025-02-27 00:00:00, 2025-02-28 00:00:00)",RECORD_COUNT,160836,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-27 00:00:00'
+  AND dateHour < '2025-02-28 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-27 00:00:00')
+  AND dateHour < toDateTime('2025-02-28 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-27 00:00:00,2025-02-28 00:00:00
+transformed_data,"chunk 59/645 [2025-02-28 00:00:00, 2025-03-01 00:00:00)",RECORD_COUNT,163558,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-02-28 00:00:00'
+  AND dateHour < '2025-03-01 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-02-28 00:00:00')
+  AND dateHour < toDateTime('2025-03-01 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-02-28 00:00:00,2025-03-01 00:00:00
+transformed_data,"chunk 60/645 [2025-03-01 00:00:00, 2025-03-02 00:00:00)",RECORD_COUNT,124297,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-01 00:00:00'
+  AND dateHour < '2025-03-02 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-01 00:00:00')
+  AND dateHour < toDateTime('2025-03-02 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-01 00:00:00,2025-03-02 00:00:00
+transformed_data,"chunk 61/645 [2025-03-02 00:00:00, 2025-03-03 00:00:00)",RECORD_COUNT,110177,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-02 00:00:00'
+  AND dateHour < '2025-03-03 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-02 00:00:00')
+  AND dateHour < toDateTime('2025-03-03 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-02 00:00:00,2025-03-03 00:00:00
+transformed_data,"chunk 62/645 [2025-03-03 00:00:00, 2025-03-04 00:00:00)",RECORD_COUNT,168333,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-03 00:00:00'
+  AND dateHour < '2025-03-04 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-03 00:00:00')
+  AND dateHour < toDateTime('2025-03-04 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-03 00:00:00,2025-03-04 00:00:00
+transformed_data,"chunk 63/645 [2025-03-04 00:00:00, 2025-03-05 00:00:00)",RECORD_COUNT,171331,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-04 00:00:00'
+  AND dateHour < '2025-03-05 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-04 00:00:00')
+  AND dateHour < toDateTime('2025-03-05 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-04 00:00:00,2025-03-05 00:00:00
+transformed_data,"chunk 64/645 [2025-03-05 00:00:00, 2025-03-06 00:00:00)",RECORD_COUNT,175523,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-05 00:00:00'
+  AND dateHour < '2025-03-06 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-05 00:00:00')
+  AND dateHour < toDateTime('2025-03-06 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-05 00:00:00,2025-03-06 00:00:00
+transformed_data,"chunk 65/645 [2025-03-06 00:00:00, 2025-03-07 00:00:00)",RECORD_COUNT,170975,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-06 00:00:00'
+  AND dateHour < '2025-03-07 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-06 00:00:00')
+  AND dateHour < toDateTime('2025-03-07 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-06 00:00:00,2025-03-07 00:00:00
+transformed_data,"chunk 66/645 [2025-03-07 00:00:00, 2025-03-08 00:00:00)",RECORD_COUNT,160329,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-07 00:00:00'
+  AND dateHour < '2025-03-08 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-07 00:00:00')
+  AND dateHour < toDateTime('2025-03-08 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-07 00:00:00,2025-03-08 00:00:00
+transformed_data,"chunk 67/645 [2025-03-08 00:00:00, 2025-03-09 00:00:00)",RECORD_COUNT,126357,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-08 00:00:00'
+  AND dateHour < '2025-03-09 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-08 00:00:00')
+  AND dateHour < toDateTime('2025-03-09 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-08 00:00:00,2025-03-09 00:00:00
+transformed_data,"chunk 68/645 [2025-03-09 00:00:00, 2025-03-10 00:00:00)",RECORD_COUNT,101943,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-09 00:00:00'
+  AND dateHour < '2025-03-10 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-09 00:00:00')
+  AND dateHour < toDateTime('2025-03-10 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-09 00:00:00,2025-03-10 00:00:00
+transformed_data,"chunk 69/645 [2025-03-10 00:00:00, 2025-03-11 00:00:00)",RECORD_COUNT,167737,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-10 00:00:00'
+  AND dateHour < '2025-03-11 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-10 00:00:00')
+  AND dateHour < toDateTime('2025-03-11 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-10 00:00:00,2025-03-11 00:00:00
+transformed_data,"chunk 70/645 [2025-03-11 00:00:00, 2025-03-12 00:00:00)",RECORD_COUNT,178711,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-11 00:00:00'
+  AND dateHour < '2025-03-12 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-11 00:00:00')
+  AND dateHour < toDateTime('2025-03-12 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-11 00:00:00,2025-03-12 00:00:00
+transformed_data,"chunk 71/645 [2025-03-12 00:00:00, 2025-03-13 00:00:00)",RECORD_COUNT,162841,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-12 00:00:00'
+  AND dateHour < '2025-03-13 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-12 00:00:00')
+  AND dateHour < toDateTime('2025-03-13 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-12 00:00:00,2025-03-13 00:00:00
+transformed_data,"chunk 72/645 [2025-03-13 00:00:00, 2025-03-14 00:00:00)",RECORD_COUNT,152579,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-13 00:00:00'
+  AND dateHour < '2025-03-14 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-13 00:00:00')
+  AND dateHour < toDateTime('2025-03-14 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-13 00:00:00,2025-03-14 00:00:00
+transformed_data,"chunk 73/645 [2025-03-14 00:00:00, 2025-03-15 00:00:00)",RECORD_COUNT,157702,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-14 00:00:00'
+  AND dateHour < '2025-03-15 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-14 00:00:00')
+  AND dateHour < toDateTime('2025-03-15 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-14 00:00:00,2025-03-15 00:00:00
+transformed_data,"chunk 74/645 [2025-03-15 00:00:00, 2025-03-16 00:00:00)",RECORD_COUNT,113930,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-15 00:00:00'
+  AND dateHour < '2025-03-16 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-15 00:00:00')
+  AND dateHour < toDateTime('2025-03-16 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-15 00:00:00,2025-03-16 00:00:00
+transformed_data,"chunk 75/645 [2025-03-16 00:00:00, 2025-03-17 00:00:00)",RECORD_COUNT,113133,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-16 00:00:00'
+  AND dateHour < '2025-03-17 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-16 00:00:00')
+  AND dateHour < toDateTime('2025-03-17 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-16 00:00:00,2025-03-17 00:00:00
+transformed_data,"chunk 76/645 [2025-03-17 00:00:00, 2025-03-18 00:00:00)",RECORD_COUNT,174767,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-17 00:00:00'
+  AND dateHour < '2025-03-18 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-17 00:00:00')
+  AND dateHour < toDateTime('2025-03-18 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-17 00:00:00,2025-03-18 00:00:00
+transformed_data,"chunk 77/645 [2025-03-18 00:00:00, 2025-03-19 00:00:00)",RECORD_COUNT,170056,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-18 00:00:00'
+  AND dateHour < '2025-03-19 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-18 00:00:00')
+  AND dateHour < toDateTime('2025-03-19 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-18 00:00:00,2025-03-19 00:00:00
+transformed_data,"chunk 78/645 [2025-03-19 00:00:00, 2025-03-20 00:00:00)",RECORD_COUNT,171766,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-19 00:00:00'
+  AND dateHour < '2025-03-20 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-19 00:00:00')
+  AND dateHour < toDateTime('2025-03-20 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-19 00:00:00,2025-03-20 00:00:00
+transformed_data,"chunk 79/645 [2025-03-20 00:00:00, 2025-03-21 00:00:00)",RECORD_COUNT,166794,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-20 00:00:00'
+  AND dateHour < '2025-03-21 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-20 00:00:00')
+  AND dateHour < toDateTime('2025-03-21 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-20 00:00:00,2025-03-21 00:00:00
+transformed_data,"chunk 80/645 [2025-03-21 00:00:00, 2025-03-22 00:00:00)",RECORD_COUNT,163039,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-21 00:00:00'
+  AND dateHour < '2025-03-22 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-21 00:00:00')
+  AND dateHour < toDateTime('2025-03-22 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-21 00:00:00,2025-03-22 00:00:00
+transformed_data,"chunk 81/645 [2025-03-22 00:00:00, 2025-03-23 00:00:00)",RECORD_COUNT,117547,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-22 00:00:00'
+  AND dateHour < '2025-03-23 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-22 00:00:00')
+  AND dateHour < toDateTime('2025-03-23 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-22 00:00:00,2025-03-23 00:00:00
+transformed_data,"chunk 82/645 [2025-03-23 00:00:00, 2025-03-24 00:00:00)",RECORD_COUNT,109802,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-23 00:00:00'
+  AND dateHour < '2025-03-24 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-23 00:00:00')
+  AND dateHour < toDateTime('2025-03-24 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-23 00:00:00,2025-03-24 00:00:00
+transformed_data,"chunk 83/645 [2025-03-24 00:00:00, 2025-03-25 00:00:00)",RECORD_COUNT,177409,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-24 00:00:00'
+  AND dateHour < '2025-03-25 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-24 00:00:00')
+  AND dateHour < toDateTime('2025-03-25 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-24 00:00:00,2025-03-25 00:00:00
+transformed_data,"chunk 84/645 [2025-03-25 00:00:00, 2025-03-26 00:00:00)",RECORD_COUNT,174996,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-25 00:00:00'
+  AND dateHour < '2025-03-26 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-25 00:00:00')
+  AND dateHour < toDateTime('2025-03-26 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-25 00:00:00,2025-03-26 00:00:00
+transformed_data,"chunk 85/645 [2025-03-26 00:00:00, 2025-03-27 00:00:00)",RECORD_COUNT,174811,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-26 00:00:00'
+  AND dateHour < '2025-03-27 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-26 00:00:00')
+  AND dateHour < toDateTime('2025-03-27 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-26 00:00:00,2025-03-27 00:00:00
+transformed_data,"chunk 86/645 [2025-03-27 00:00:00, 2025-03-28 00:00:00)",RECORD_COUNT,188317,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-27 00:00:00'
+  AND dateHour < '2025-03-28 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-27 00:00:00')
+  AND dateHour < toDateTime('2025-03-28 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-27 00:00:00,2025-03-28 00:00:00
+transformed_data,"chunk 87/645 [2025-03-28 00:00:00, 2025-03-29 00:00:00)",RECORD_COUNT,171479,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-28 00:00:00'
+  AND dateHour < '2025-03-29 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-28 00:00:00')
+  AND dateHour < toDateTime('2025-03-29 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-28 00:00:00,2025-03-29 00:00:00
+transformed_data,"chunk 88/645 [2025-03-29 00:00:00, 2025-03-30 00:00:00)",RECORD_COUNT,132661,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-29 00:00:00'
+  AND dateHour < '2025-03-30 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-29 00:00:00')
+  AND dateHour < toDateTime('2025-03-30 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-29 00:00:00,2025-03-30 00:00:00
+transformed_data,"chunk 89/645 [2025-03-30 00:00:00, 2025-03-31 00:00:00)",RECORD_COUNT,123572,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-30 00:00:00'
+  AND dateHour < '2025-03-31 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-30 00:00:00')
+  AND dateHour < toDateTime('2025-03-31 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-30 00:00:00,2025-03-31 00:00:00
+transformed_data,"chunk 90/645 [2025-03-31 00:00:00, 2025-04-01 00:00:00)",RECORD_COUNT,191973,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-03-31 00:00:00'
+  AND dateHour < '2025-04-01 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-03-31 00:00:00')
+  AND dateHour < toDateTime('2025-04-01 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-03-31 00:00:00,2025-04-01 00:00:00
+transformed_data,"chunk 91/645 [2025-04-01 00:00:00, 2025-04-02 00:00:00)",RECORD_COUNT,193440,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-01 00:00:00'
+  AND dateHour < '2025-04-02 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-01 00:00:00')
+  AND dateHour < toDateTime('2025-04-02 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-01 00:00:00,2025-04-02 00:00:00
+transformed_data,"chunk 92/645 [2025-04-02 00:00:00, 2025-04-03 00:00:00)",RECORD_COUNT,195581,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-02 00:00:00'
+  AND dateHour < '2025-04-03 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-02 00:00:00')
+  AND dateHour < toDateTime('2025-04-03 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-02 00:00:00,2025-04-03 00:00:00
+transformed_data,"chunk 93/645 [2025-04-03 00:00:00, 2025-04-04 00:00:00)",RECORD_COUNT,183567,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-03 00:00:00'
+  AND dateHour < '2025-04-04 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-03 00:00:00')
+  AND dateHour < toDateTime('2025-04-04 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-03 00:00:00,2025-04-04 00:00:00
+transformed_data,"chunk 94/645 [2025-04-04 00:00:00, 2025-04-05 00:00:00)",RECORD_COUNT,206009,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-04 00:00:00'
+  AND dateHour < '2025-04-05 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-04 00:00:00')
+  AND dateHour < toDateTime('2025-04-05 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-04 00:00:00,2025-04-05 00:00:00
+transformed_data,"chunk 95/645 [2025-04-05 00:00:00, 2025-04-06 00:00:00)",RECORD_COUNT,167834,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-05 00:00:00'
+  AND dateHour < '2025-04-06 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-05 00:00:00')
+  AND dateHour < toDateTime('2025-04-06 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-05 00:00:00,2025-04-06 00:00:00
+transformed_data,"chunk 96/645 [2025-04-06 00:00:00, 2025-04-07 00:00:00)",RECORD_COUNT,145434,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-06 00:00:00'
+  AND dateHour < '2025-04-07 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-06 00:00:00')
+  AND dateHour < toDateTime('2025-04-07 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-06 00:00:00,2025-04-07 00:00:00
+transformed_data,"chunk 97/645 [2025-04-07 00:00:00, 2025-04-08 00:00:00)",RECORD_COUNT,191336,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-07 00:00:00'
+  AND dateHour < '2025-04-08 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-07 00:00:00')
+  AND dateHour < toDateTime('2025-04-08 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-07 00:00:00,2025-04-08 00:00:00
+transformed_data,"chunk 98/645 [2025-04-08 00:00:00, 2025-04-09 00:00:00)",RECORD_COUNT,183898,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-08 00:00:00'
+  AND dateHour < '2025-04-09 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-08 00:00:00')
+  AND dateHour < toDateTime('2025-04-09 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-08 00:00:00,2025-04-09 00:00:00
+transformed_data,"chunk 99/645 [2025-04-09 00:00:00, 2025-04-10 00:00:00)",RECORD_COUNT,188890,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-09 00:00:00'
+  AND dateHour < '2025-04-10 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-09 00:00:00')
+  AND dateHour < toDateTime('2025-04-10 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-09 00:00:00,2025-04-10 00:00:00
+transformed_data,"chunk 100/645 [2025-04-10 00:00:00, 2025-04-11 00:00:00)",RECORD_COUNT,177389,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-10 00:00:00'
+  AND dateHour < '2025-04-11 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-10 00:00:00')
+  AND dateHour < toDateTime('2025-04-11 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-10 00:00:00,2025-04-11 00:00:00
+transformed_data,"chunk 101/645 [2025-04-11 00:00:00, 2025-04-12 00:00:00)",RECORD_COUNT,167221,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-11 00:00:00'
+  AND dateHour < '2025-04-12 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-11 00:00:00')
+  AND dateHour < toDateTime('2025-04-12 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-11 00:00:00,2025-04-12 00:00:00
+transformed_data,"chunk 102/645 [2025-04-12 00:00:00, 2025-04-13 00:00:00)",RECORD_COUNT,117630,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-12 00:00:00'
+  AND dateHour < '2025-04-13 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-12 00:00:00')
+  AND dateHour < toDateTime('2025-04-13 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-12 00:00:00,2025-04-13 00:00:00
+transformed_data,"chunk 103/645 [2025-04-13 00:00:00, 2025-04-14 00:00:00)",RECORD_COUNT,110934,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-13 00:00:00'
+  AND dateHour < '2025-04-14 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-13 00:00:00')
+  AND dateHour < toDateTime('2025-04-14 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-13 00:00:00,2025-04-14 00:00:00
+transformed_data,"chunk 104/645 [2025-04-14 00:00:00, 2025-04-15 00:00:00)",RECORD_COUNT,177274,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-14 00:00:00'
+  AND dateHour < '2025-04-15 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-14 00:00:00')
+  AND dateHour < toDateTime('2025-04-15 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-14 00:00:00,2025-04-15 00:00:00
+transformed_data,"chunk 105/645 [2025-04-15 00:00:00, 2025-04-16 00:00:00)",RECORD_COUNT,179023,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-15 00:00:00'
+  AND dateHour < '2025-04-16 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-15 00:00:00')
+  AND dateHour < toDateTime('2025-04-16 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-15 00:00:00,2025-04-16 00:00:00
+transformed_data,"chunk 106/645 [2025-04-16 00:00:00, 2025-04-17 00:00:00)",RECORD_COUNT,177247,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-16 00:00:00'
+  AND dateHour < '2025-04-17 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-16 00:00:00')
+  AND dateHour < toDateTime('2025-04-17 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-16 00:00:00,2025-04-17 00:00:00
+transformed_data,"chunk 107/645 [2025-04-17 00:00:00, 2025-04-18 00:00:00)",RECORD_COUNT,169979,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-17 00:00:00'
+  AND dateHour < '2025-04-18 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-17 00:00:00')
+  AND dateHour < toDateTime('2025-04-18 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-17 00:00:00,2025-04-18 00:00:00
+transformed_data,"chunk 108/645 [2025-04-18 00:00:00, 2025-04-19 00:00:00)",RECORD_COUNT,149669,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-18 00:00:00'
+  AND dateHour < '2025-04-19 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-18 00:00:00')
+  AND dateHour < toDateTime('2025-04-19 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-18 00:00:00,2025-04-19 00:00:00
+transformed_data,"chunk 109/645 [2025-04-19 00:00:00, 2025-04-20 00:00:00)",RECORD_COUNT,120135,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-19 00:00:00'
+  AND dateHour < '2025-04-20 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-19 00:00:00')
+  AND dateHour < toDateTime('2025-04-20 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-19 00:00:00,2025-04-20 00:00:00
+transformed_data,"chunk 110/645 [2025-04-20 00:00:00, 2025-04-21 00:00:00)",RECORD_COUNT,98480,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-20 00:00:00'
+  AND dateHour < '2025-04-21 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-20 00:00:00')
+  AND dateHour < toDateTime('2025-04-21 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-20 00:00:00,2025-04-21 00:00:00
+transformed_data,"chunk 111/645 [2025-04-21 00:00:00, 2025-04-22 00:00:00)",RECORD_COUNT,175271,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-21 00:00:00'
+  AND dateHour < '2025-04-22 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-21 00:00:00')
+  AND dateHour < toDateTime('2025-04-22 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-21 00:00:00,2025-04-22 00:00:00
+transformed_data,"chunk 112/645 [2025-04-22 00:00:00, 2025-04-23 00:00:00)",RECORD_COUNT,206238,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-22 00:00:00'
+  AND dateHour < '2025-04-23 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-22 00:00:00')
+  AND dateHour < toDateTime('2025-04-23 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-22 00:00:00,2025-04-23 00:00:00
+transformed_data,"chunk 113/645 [2025-04-23 00:00:00, 2025-04-24 00:00:00)",RECORD_COUNT,185610,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-23 00:00:00'
+  AND dateHour < '2025-04-24 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-23 00:00:00')
+  AND dateHour < toDateTime('2025-04-24 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-23 00:00:00,2025-04-24 00:00:00
+transformed_data,"chunk 114/645 [2025-04-24 00:00:00, 2025-04-25 00:00:00)",RECORD_COUNT,194530,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-24 00:00:00'
+  AND dateHour < '2025-04-25 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-24 00:00:00')
+  AND dateHour < toDateTime('2025-04-25 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-24 00:00:00,2025-04-25 00:00:00
+transformed_data,"chunk 115/645 [2025-04-25 00:00:00, 2025-04-26 00:00:00)",RECORD_COUNT,164302,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-25 00:00:00'
+  AND dateHour < '2025-04-26 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-25 00:00:00')
+  AND dateHour < toDateTime('2025-04-26 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-25 00:00:00,2025-04-26 00:00:00
+transformed_data,"chunk 116/645 [2025-04-26 00:00:00, 2025-04-27 00:00:00)",RECORD_COUNT,118289,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-26 00:00:00'
+  AND dateHour < '2025-04-27 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-26 00:00:00')
+  AND dateHour < toDateTime('2025-04-27 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-26 00:00:00,2025-04-27 00:00:00
+transformed_data,"chunk 117/645 [2025-04-27 00:00:00, 2025-04-28 00:00:00)",RECORD_COUNT,111282,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-27 00:00:00'
+  AND dateHour < '2025-04-28 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-27 00:00:00')
+  AND dateHour < toDateTime('2025-04-28 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-27 00:00:00,2025-04-28 00:00:00
+transformed_data,"chunk 118/645 [2025-04-28 00:00:00, 2025-04-29 00:00:00)",RECORD_COUNT,175066,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-28 00:00:00'
+  AND dateHour < '2025-04-29 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-28 00:00:00')
+  AND dateHour < toDateTime('2025-04-29 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-28 00:00:00,2025-04-29 00:00:00
+transformed_data,"chunk 119/645 [2025-04-29 00:00:00, 2025-04-30 00:00:00)",RECORD_COUNT,187738,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-29 00:00:00'
+  AND dateHour < '2025-04-30 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-29 00:00:00')
+  AND dateHour < toDateTime('2025-04-30 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-29 00:00:00,2025-04-30 00:00:00
+transformed_data,"chunk 120/645 [2025-04-30 00:00:00, 2025-05-01 00:00:00)",RECORD_COUNT,200352,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-04-30 00:00:00'
+  AND dateHour < '2025-05-01 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-04-30 00:00:00')
+  AND dateHour < toDateTime('2025-05-01 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-04-30 00:00:00,2025-05-01 00:00:00
+transformed_data,"chunk 121/645 [2025-05-01 00:00:00, 2025-05-02 00:00:00)",RECORD_COUNT,209922,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-01 00:00:00'
+  AND dateHour < '2025-05-02 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-01 00:00:00')
+  AND dateHour < toDateTime('2025-05-02 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-01 00:00:00,2025-05-02 00:00:00
+transformed_data,"chunk 122/645 [2025-05-02 00:00:00, 2025-05-03 00:00:00)",RECORD_COUNT,202989,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-02 00:00:00'
+  AND dateHour < '2025-05-03 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-02 00:00:00')
+  AND dateHour < toDateTime('2025-05-03 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-02 00:00:00,2025-05-03 00:00:00
+transformed_data,"chunk 123/645 [2025-05-03 00:00:00, 2025-05-04 00:00:00)",RECORD_COUNT,170514,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-03 00:00:00'
+  AND dateHour < '2025-05-04 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-03 00:00:00')
+  AND dateHour < toDateTime('2025-05-04 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-03 00:00:00,2025-05-04 00:00:00
+transformed_data,"chunk 124/645 [2025-05-04 00:00:00, 2025-05-05 00:00:00)",RECORD_COUNT,148884,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-04 00:00:00'
+  AND dateHour < '2025-05-05 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-04 00:00:00')
+  AND dateHour < toDateTime('2025-05-05 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-04 00:00:00,2025-05-05 00:00:00
+transformed_data,"chunk 125/645 [2025-05-05 00:00:00, 2025-05-06 00:00:00)",RECORD_COUNT,200052,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-05 00:00:00'
+  AND dateHour < '2025-05-06 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-05 00:00:00')
+  AND dateHour < toDateTime('2025-05-06 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-05 00:00:00,2025-05-06 00:00:00
+transformed_data,"chunk 126/645 [2025-05-06 00:00:00, 2025-05-07 00:00:00)",RECORD_COUNT,264841,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-06 00:00:00'
+  AND dateHour < '2025-05-07 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-06 00:00:00')
+  AND dateHour < toDateTime('2025-05-07 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-06 00:00:00,2025-05-07 00:00:00
+transformed_data,"chunk 127/645 [2025-05-07 00:00:00, 2025-05-08 00:00:00)",RECORD_COUNT,244850,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-07 00:00:00'
+  AND dateHour < '2025-05-08 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-07 00:00:00')
+  AND dateHour < toDateTime('2025-05-08 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-07 00:00:00,2025-05-08 00:00:00
+transformed_data,"chunk 128/645 [2025-05-08 00:00:00, 2025-05-09 00:00:00)",RECORD_COUNT,207325,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-08 00:00:00'
+  AND dateHour < '2025-05-09 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-08 00:00:00')
+  AND dateHour < toDateTime('2025-05-09 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-08 00:00:00,2025-05-09 00:00:00
+transformed_data,"chunk 129/645 [2025-05-09 00:00:00, 2025-05-10 00:00:00)",RECORD_COUNT,221271,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-09 00:00:00'
+  AND dateHour < '2025-05-10 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-09 00:00:00')
+  AND dateHour < toDateTime('2025-05-10 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-09 00:00:00,2025-05-10 00:00:00
+transformed_data,"chunk 130/645 [2025-05-10 00:00:00, 2025-05-11 00:00:00)",RECORD_COUNT,147823,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-10 00:00:00'
+  AND dateHour < '2025-05-11 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-10 00:00:00')
+  AND dateHour < toDateTime('2025-05-11 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-10 00:00:00,2025-05-11 00:00:00
+transformed_data,"chunk 131/645 [2025-05-11 00:00:00, 2025-05-12 00:00:00)",RECORD_COUNT,125406,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-11 00:00:00'
+  AND dateHour < '2025-05-12 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-11 00:00:00')
+  AND dateHour < toDateTime('2025-05-12 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-11 00:00:00,2025-05-12 00:00:00
+transformed_data,"chunk 132/645 [2025-05-12 00:00:00, 2025-05-13 00:00:00)",RECORD_COUNT,216662,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-12 00:00:00'
+  AND dateHour < '2025-05-13 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-12 00:00:00')
+  AND dateHour < toDateTime('2025-05-13 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-12 00:00:00,2025-05-13 00:00:00
+transformed_data,"chunk 133/645 [2025-05-13 00:00:00, 2025-05-14 00:00:00)",RECORD_COUNT,214160,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-13 00:00:00'
+  AND dateHour < '2025-05-14 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-13 00:00:00')
+  AND dateHour < toDateTime('2025-05-14 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-13 00:00:00,2025-05-14 00:00:00
+transformed_data,"chunk 134/645 [2025-05-14 00:00:00, 2025-05-15 00:00:00)",RECORD_COUNT,246096,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-14 00:00:00'
+  AND dateHour < '2025-05-15 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-14 00:00:00')
+  AND dateHour < toDateTime('2025-05-15 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-14 00:00:00,2025-05-15 00:00:00
+transformed_data,"chunk 135/645 [2025-05-15 00:00:00, 2025-05-16 00:00:00)",RECORD_COUNT,226967,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-15 00:00:00'
+  AND dateHour < '2025-05-16 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-15 00:00:00')
+  AND dateHour < toDateTime('2025-05-16 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-15 00:00:00,2025-05-16 00:00:00
+transformed_data,"chunk 136/645 [2025-05-16 00:00:00, 2025-05-17 00:00:00)",RECORD_COUNT,218679,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-16 00:00:00'
+  AND dateHour < '2025-05-17 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-16 00:00:00')
+  AND dateHour < toDateTime('2025-05-17 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-16 00:00:00,2025-05-17 00:00:00
+transformed_data,"chunk 137/645 [2025-05-17 00:00:00, 2025-05-18 00:00:00)",RECORD_COUNT,150691,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-17 00:00:00'
+  AND dateHour < '2025-05-18 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-17 00:00:00')
+  AND dateHour < toDateTime('2025-05-18 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-17 00:00:00,2025-05-18 00:00:00
+transformed_data,"chunk 138/645 [2025-05-18 00:00:00, 2025-05-19 00:00:00)",RECORD_COUNT,141603,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-18 00:00:00'
+  AND dateHour < '2025-05-19 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-18 00:00:00')
+  AND dateHour < toDateTime('2025-05-19 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-18 00:00:00,2025-05-19 00:00:00
+transformed_data,"chunk 139/645 [2025-05-19 00:00:00, 2025-05-20 00:00:00)",RECORD_COUNT,196236,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-19 00:00:00'
+  AND dateHour < '2025-05-20 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-19 00:00:00')
+  AND dateHour < toDateTime('2025-05-20 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-19 00:00:00,2025-05-20 00:00:00
+transformed_data,"chunk 140/645 [2025-05-20 00:00:00, 2025-05-21 00:00:00)",RECORD_COUNT,236797,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-20 00:00:00'
+  AND dateHour < '2025-05-21 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-20 00:00:00')
+  AND dateHour < toDateTime('2025-05-21 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-20 00:00:00,2025-05-21 00:00:00
+transformed_data,"chunk 141/645 [2025-05-21 00:00:00, 2025-05-22 00:00:00)",RECORD_COUNT,232517,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-21 00:00:00'
+  AND dateHour < '2025-05-22 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-21 00:00:00')
+  AND dateHour < toDateTime('2025-05-22 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-21 00:00:00,2025-05-22 00:00:00
+transformed_data,"chunk 142/645 [2025-05-22 00:00:00, 2025-05-23 00:00:00)",RECORD_COUNT,221455,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-22 00:00:00'
+  AND dateHour < '2025-05-23 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-22 00:00:00')
+  AND dateHour < toDateTime('2025-05-23 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-22 00:00:00,2025-05-23 00:00:00
+transformed_data,"chunk 143/645 [2025-05-23 00:00:00, 2025-05-24 00:00:00)",RECORD_COUNT,206424,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-23 00:00:00'
+  AND dateHour < '2025-05-24 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-23 00:00:00')
+  AND dateHour < toDateTime('2025-05-24 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-23 00:00:00,2025-05-24 00:00:00
+transformed_data,"chunk 144/645 [2025-05-24 00:00:00, 2025-05-25 00:00:00)",RECORD_COUNT,139779,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-24 00:00:00'
+  AND dateHour < '2025-05-25 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-24 00:00:00')
+  AND dateHour < toDateTime('2025-05-25 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-24 00:00:00,2025-05-25 00:00:00
+transformed_data,"chunk 145/645 [2025-05-25 00:00:00, 2025-05-26 00:00:00)",RECORD_COUNT,129601,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-25 00:00:00'
+  AND dateHour < '2025-05-26 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-25 00:00:00')
+  AND dateHour < toDateTime('2025-05-26 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-25 00:00:00,2025-05-26 00:00:00
+transformed_data,"chunk 146/645 [2025-05-26 00:00:00, 2025-05-27 00:00:00)",RECORD_COUNT,153618,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-26 00:00:00'
+  AND dateHour < '2025-05-27 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-26 00:00:00')
+  AND dateHour < toDateTime('2025-05-27 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-26 00:00:00,2025-05-27 00:00:00
+transformed_data,"chunk 147/645 [2025-05-27 00:00:00, 2025-05-28 00:00:00)",RECORD_COUNT,245044,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-27 00:00:00'
+  AND dateHour < '2025-05-28 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-27 00:00:00')
+  AND dateHour < toDateTime('2025-05-28 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-27 00:00:00,2025-05-28 00:00:00
+transformed_data,"chunk 148/645 [2025-05-28 00:00:00, 2025-05-29 00:00:00)",RECORD_COUNT,224643,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-28 00:00:00'
+  AND dateHour < '2025-05-29 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-28 00:00:00')
+  AND dateHour < toDateTime('2025-05-29 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-28 00:00:00,2025-05-29 00:00:00
+transformed_data,"chunk 149/645 [2025-05-29 00:00:00, 2025-05-30 00:00:00)",RECORD_COUNT,226627,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-29 00:00:00'
+  AND dateHour < '2025-05-30 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-29 00:00:00')
+  AND dateHour < toDateTime('2025-05-30 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-29 00:00:00,2025-05-30 00:00:00
+transformed_data,"chunk 150/645 [2025-05-30 00:00:00, 2025-05-31 00:00:00)",RECORD_COUNT,209450,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-30 00:00:00'
+  AND dateHour < '2025-05-31 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-30 00:00:00')
+  AND dateHour < toDateTime('2025-05-31 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-30 00:00:00,2025-05-31 00:00:00
+transformed_data,"chunk 151/645 [2025-05-31 00:00:00, 2025-06-01 00:00:00)",RECORD_COUNT,149010,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-05-31 00:00:00'
+  AND dateHour < '2025-06-01 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-05-31 00:00:00')
+  AND dateHour < toDateTime('2025-06-01 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-05-31 00:00:00,2025-06-01 00:00:00
+transformed_data,"chunk 152/645 [2025-06-01 00:00:00, 2025-06-02 00:00:00)",RECORD_COUNT,129294,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-01 00:00:00'
+  AND dateHour < '2025-06-02 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-01 00:00:00')
+  AND dateHour < toDateTime('2025-06-02 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-01 00:00:00,2025-06-02 00:00:00
+transformed_data,"chunk 153/645 [2025-06-02 00:00:00, 2025-06-03 00:00:00)",RECORD_COUNT,208744,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-02 00:00:00'
+  AND dateHour < '2025-06-03 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-02 00:00:00')
+  AND dateHour < toDateTime('2025-06-03 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-02 00:00:00,2025-06-03 00:00:00
+transformed_data,"chunk 154/645 [2025-06-03 00:00:00, 2025-06-04 00:00:00)",RECORD_COUNT,213925,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-03 00:00:00'
+  AND dateHour < '2025-06-04 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-03 00:00:00')
+  AND dateHour < toDateTime('2025-06-04 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-03 00:00:00,2025-06-04 00:00:00
+transformed_data,"chunk 155/645 [2025-06-04 00:00:00, 2025-06-05 00:00:00)",RECORD_COUNT,209303,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-04 00:00:00'
+  AND dateHour < '2025-06-05 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-04 00:00:00')
+  AND dateHour < toDateTime('2025-06-05 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-04 00:00:00,2025-06-05 00:00:00
+transformed_data,"chunk 156/645 [2025-06-05 00:00:00, 2025-06-06 00:00:00)",RECORD_COUNT,231313,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-05 00:00:00'
+  AND dateHour < '2025-06-06 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-05 00:00:00')
+  AND dateHour < toDateTime('2025-06-06 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-05 00:00:00,2025-06-06 00:00:00
+transformed_data,"chunk 157/645 [2025-06-06 00:00:00, 2025-06-07 00:00:00)",RECORD_COUNT,213609,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-06 00:00:00'
+  AND dateHour < '2025-06-07 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-06 00:00:00')
+  AND dateHour < toDateTime('2025-06-07 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-06 00:00:00,2025-06-07 00:00:00
+transformed_data,"chunk 158/645 [2025-06-07 00:00:00, 2025-06-08 00:00:00)",RECORD_COUNT,149709,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-07 00:00:00'
+  AND dateHour < '2025-06-08 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-07 00:00:00')
+  AND dateHour < toDateTime('2025-06-08 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-07 00:00:00,2025-06-08 00:00:00
+transformed_data,"chunk 159/645 [2025-06-08 00:00:00, 2025-06-09 00:00:00)",RECORD_COUNT,141852,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-08 00:00:00'
+  AND dateHour < '2025-06-09 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-08 00:00:00')
+  AND dateHour < toDateTime('2025-06-09 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-08 00:00:00,2025-06-09 00:00:00
+transformed_data,"chunk 160/645 [2025-06-09 00:00:00, 2025-06-10 00:00:00)",RECORD_COUNT,219337,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-09 00:00:00'
+  AND dateHour < '2025-06-10 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-09 00:00:00')
+  AND dateHour < toDateTime('2025-06-10 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-09 00:00:00,2025-06-10 00:00:00
+transformed_data,"chunk 161/645 [2025-06-10 00:00:00, 2025-06-11 00:00:00)",RECORD_COUNT,232471,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-10 00:00:00'
+  AND dateHour < '2025-06-11 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-10 00:00:00')
+  AND dateHour < toDateTime('2025-06-11 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-10 00:00:00,2025-06-11 00:00:00
+transformed_data,"chunk 162/645 [2025-06-11 00:00:00, 2025-06-12 00:00:00)",RECORD_COUNT,244444,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-11 00:00:00'
+  AND dateHour < '2025-06-12 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-11 00:00:00')
+  AND dateHour < toDateTime('2025-06-12 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-11 00:00:00,2025-06-12 00:00:00
+transformed_data,"chunk 163/645 [2025-06-12 00:00:00, 2025-06-13 00:00:00)",RECORD_COUNT,230130,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-12 00:00:00'
+  AND dateHour < '2025-06-13 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-12 00:00:00')
+  AND dateHour < toDateTime('2025-06-13 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-12 00:00:00,2025-06-13 00:00:00
+transformed_data,"chunk 164/645 [2025-06-13 00:00:00, 2025-06-14 00:00:00)",RECORD_COUNT,218286,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-13 00:00:00'
+  AND dateHour < '2025-06-14 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-13 00:00:00')
+  AND dateHour < toDateTime('2025-06-14 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-13 00:00:00,2025-06-14 00:00:00
+transformed_data,"chunk 165/645 [2025-06-14 00:00:00, 2025-06-15 00:00:00)",RECORD_COUNT,157867,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-14 00:00:00'
+  AND dateHour < '2025-06-15 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-14 00:00:00')
+  AND dateHour < toDateTime('2025-06-15 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-14 00:00:00,2025-06-15 00:00:00
+transformed_data,"chunk 166/645 [2025-06-15 00:00:00, 2025-06-16 00:00:00)",RECORD_COUNT,160046,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-15 00:00:00'
+  AND dateHour < '2025-06-16 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-15 00:00:00')
+  AND dateHour < toDateTime('2025-06-16 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-15 00:00:00,2025-06-16 00:00:00
+transformed_data,"chunk 167/645 [2025-06-16 00:00:00, 2025-06-17 00:00:00)",RECORD_COUNT,270820,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-16 00:00:00'
+  AND dateHour < '2025-06-17 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-16 00:00:00')
+  AND dateHour < toDateTime('2025-06-17 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-16 00:00:00,2025-06-17 00:00:00
+transformed_data,"chunk 168/645 [2025-06-17 00:00:00, 2025-06-18 00:00:00)",RECORD_COUNT,249904,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-17 00:00:00'
+  AND dateHour < '2025-06-18 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-17 00:00:00')
+  AND dateHour < toDateTime('2025-06-18 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-17 00:00:00,2025-06-18 00:00:00
+transformed_data,"chunk 169/645 [2025-06-18 00:00:00, 2025-06-19 00:00:00)",RECORD_COUNT,241174,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-18 00:00:00'
+  AND dateHour < '2025-06-19 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-18 00:00:00')
+  AND dateHour < toDateTime('2025-06-19 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-18 00:00:00,2025-06-19 00:00:00
+transformed_data,"chunk 170/645 [2025-06-19 00:00:00, 2025-06-20 00:00:00)",RECORD_COUNT,248742,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-19 00:00:00'
+  AND dateHour < '2025-06-20 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-19 00:00:00')
+  AND dateHour < toDateTime('2025-06-20 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-19 00:00:00,2025-06-20 00:00:00
+transformed_data,"chunk 171/645 [2025-06-20 00:00:00, 2025-06-21 00:00:00)",RECORD_COUNT,221215,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-20 00:00:00'
+  AND dateHour < '2025-06-21 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-20 00:00:00')
+  AND dateHour < toDateTime('2025-06-21 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-20 00:00:00,2025-06-21 00:00:00
+transformed_data,"chunk 172/645 [2025-06-21 00:00:00, 2025-06-22 00:00:00)",RECORD_COUNT,160159,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-21 00:00:00'
+  AND dateHour < '2025-06-22 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-21 00:00:00')
+  AND dateHour < toDateTime('2025-06-22 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-21 00:00:00,2025-06-22 00:00:00
+transformed_data,"chunk 173/645 [2025-06-22 00:00:00, 2025-06-23 00:00:00)",RECORD_COUNT,178871,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-22 00:00:00'
+  AND dateHour < '2025-06-23 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-22 00:00:00')
+  AND dateHour < toDateTime('2025-06-23 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-22 00:00:00,2025-06-23 00:00:00
+transformed_data,"chunk 174/645 [2025-06-23 00:00:00, 2025-06-24 00:00:00)",RECORD_COUNT,240399,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-23 00:00:00'
+  AND dateHour < '2025-06-24 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-23 00:00:00')
+  AND dateHour < toDateTime('2025-06-24 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-23 00:00:00,2025-06-24 00:00:00
+transformed_data,"chunk 175/645 [2025-06-24 00:00:00, 2025-06-25 00:00:00)",RECORD_COUNT,240509,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-24 00:00:00'
+  AND dateHour < '2025-06-25 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-24 00:00:00')
+  AND dateHour < toDateTime('2025-06-25 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-24 00:00:00,2025-06-25 00:00:00
+transformed_data,"chunk 176/645 [2025-06-25 00:00:00, 2025-06-26 00:00:00)",RECORD_COUNT,235952,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-25 00:00:00'
+  AND dateHour < '2025-06-26 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-25 00:00:00')
+  AND dateHour < toDateTime('2025-06-26 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-25 00:00:00,2025-06-26 00:00:00
+transformed_data,"chunk 177/645 [2025-06-26 00:00:00, 2025-06-27 00:00:00)",RECORD_COUNT,262899,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-26 00:00:00'
+  AND dateHour < '2025-06-27 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-26 00:00:00')
+  AND dateHour < toDateTime('2025-06-27 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-26 00:00:00,2025-06-27 00:00:00
+transformed_data,"chunk 178/645 [2025-06-27 00:00:00, 2025-06-28 00:00:00)",RECORD_COUNT,253840,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-27 00:00:00'
+  AND dateHour < '2025-06-28 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-27 00:00:00')
+  AND dateHour < toDateTime('2025-06-28 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-27 00:00:00,2025-06-28 00:00:00
+transformed_data,"chunk 179/645 [2025-06-28 00:00:00, 2025-06-29 00:00:00)",RECORD_COUNT,188352,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-28 00:00:00'
+  AND dateHour < '2025-06-29 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-28 00:00:00')
+  AND dateHour < toDateTime('2025-06-29 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-28 00:00:00,2025-06-29 00:00:00
+transformed_data,"chunk 180/645 [2025-06-29 00:00:00, 2025-06-30 00:00:00)",RECORD_COUNT,175620,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-29 00:00:00'
+  AND dateHour < '2025-06-30 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-29 00:00:00')
+  AND dateHour < toDateTime('2025-06-30 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-29 00:00:00,2025-06-30 00:00:00
+transformed_data,"chunk 181/645 [2025-06-30 00:00:00, 2025-07-01 00:00:00)",RECORD_COUNT,271481,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-06-30 00:00:00'
+  AND dateHour < '2025-07-01 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-06-30 00:00:00')
+  AND dateHour < toDateTime('2025-07-01 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-06-30 00:00:00,2025-07-01 00:00:00
+transformed_data,"chunk 182/645 [2025-07-01 00:00:00, 2025-07-02 00:00:00)",RECORD_COUNT,294852,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-07-01 00:00:00'
+  AND dateHour < '2025-07-02 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-07-01 00:00:00')
+  AND dateHour < toDateTime('2025-07-02 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-07-01 00:00:00,2025-07-02 00:00:00
+transformed_data,"chunk 183/645 [2025-07-02 00:00:00, 2025-07-03 00:00:00)",RECORD_COUNT,301094,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-07-02 00:00:00'
+  AND dateHour < '2025-07-03 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-07-02 00:00:00')
+  AND dateHour < toDateTime('2025-07-03 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-07-02 00:00:00,2025-07-03 00:00:00
+transformed_data,"chunk 184/645 [2025-07-03 00:00:00, 2025-07-04 00:00:00)",RECORD_COUNT,247206,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-07-03 00:00:00'
+  AND dateHour < '2025-07-04 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-07-03 00:00:00')
+  AND dateHour < toDateTime('2025-07-04 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-07-03 00:00:00,2025-07-04 00:00:00
+transformed_data,"chunk 185/645 [2025-07-04 00:00:00, 2025-07-05 00:00:00)",RECORD_COUNT,153835,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-07-04 00:00:00'
+  AND dateHour < '2025-07-05 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-07-04 00:00:00')
+  AND dateHour < toDateTime('2025-07-05 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-07-04 00:00:00,2025-07-05 00:00:00
+transformed_data,"chunk 186/645 [2025-07-05 00:00:00, 2025-07-06 00:00:00)",RECORD_COUNT,147491,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-07-05 00:00:00'
+  AND dateHour < '2025-07-06 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-07-05 00:00:00')
+  AND dateHour < toDateTime('2025-07-06 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-07-05 00:00:00,2025-07-06 00:00:00
+transformed_data,"chunk 187/645 [2025-07-06 00:00:00, 2025-07-07 00:00:00)",RECORD_COUNT,167709,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-07-06 00:00:00'
+  AND dateHour < '2025-07-07 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-07-06 00:00:00')
+  AND dateHour < toDateTime('2025-07-07 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-07-06 00:00:00,2025-07-07 00:00:00
+transformed_data,"chunk 188/645 [2025-07-07 00:00:00, 2025-07-08 00:00:00)",RECORD_COUNT,282019,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-07-07 00:00:00'
+  AND dateHour < '2025-07-08 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-07-07 00:00:00')
+  AND dateHour < toDateTime('2025-07-08 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-07-07 00:00:00,2025-07-08 00:00:00
+transformed_data,"chunk 189/645 [2025-07-08 00:00:00, 2025-07-09 00:00:00)",RECORD_COUNT,282957,0,COUNT_MISMATCH,COUNT_ONLY_SMOKE_TEST,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2025-07-08 00:00:00'
+  AND dateHour < '2025-07-09 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2025-07-08 00:00:00')
+  AND dateHour < toDateTime('2025-07-09 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count",2025-07-08 00:00:00,2025-07-09 00:00:00

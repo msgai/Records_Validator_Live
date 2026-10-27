@@ -1,0 +1,137 @@
+table_name,chunk_index,chunk_label,chunk_start,chunk_end_exclusive,evaluation_mode,status,sql_rows,ch_rows,applied_filters,sql_query,clickhouse_query,sql_base_query,clickhouse_base_query
+conversation_metadata,1,"chunk 1/8 [2026-09-01 00:00:00, 2026-09-06 00:00:00)",2026-09-01 00:00:00,2026-09-06 00:00:00,FULL_VALIDATION,INTERRUPTED,,,,"SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-01 00:00:00'
+  AND startTime < '2026-09-06 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-01 00:00:00')
+  AND startTime < toDateTime('2026-09-06 00:00:00')","SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-01 00:00:00'
+  AND startTime < '2026-09-06 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-01 00:00:00')
+  AND startTime < toDateTime('2026-09-06 00:00:00')"
+conversation_metadata,2,"chunk 2/8 [2026-09-06 00:00:00, 2026-09-11 00:00:00)",2026-09-06 00:00:00,2026-09-11 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-06 00:00:00'
+  AND startTime < '2026-09-11 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-06 00:00:00')
+  AND startTime < toDateTime('2026-09-11 00:00:00')","SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-06 00:00:00'
+  AND startTime < '2026-09-11 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-06 00:00:00')
+  AND startTime < toDateTime('2026-09-11 00:00:00')"
+conversation_metadata,3,"chunk 3/8 [2026-09-11 00:00:00, 2026-09-16 00:00:00)",2026-09-11 00:00:00,2026-09-16 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-11 00:00:00'
+  AND startTime < '2026-09-16 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-11 00:00:00')
+  AND startTime < toDateTime('2026-09-16 00:00:00')","SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-11 00:00:00'
+  AND startTime < '2026-09-16 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-11 00:00:00')
+  AND startTime < toDateTime('2026-09-16 00:00:00')"
+conversation_metadata,4,"chunk 4/8 [2026-09-16 00:00:00, 2026-09-21 00:00:00)",2026-09-16 00:00:00,2026-09-21 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-16 00:00:00'
+  AND startTime < '2026-09-21 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-16 00:00:00')
+  AND startTime < toDateTime('2026-09-21 00:00:00')","SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-16 00:00:00'
+  AND startTime < '2026-09-21 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-16 00:00:00')
+  AND startTime < toDateTime('2026-09-21 00:00:00')"
+conversation_metadata,5,"chunk 5/8 [2026-09-21 00:00:00, 2026-09-26 00:00:00)",2026-09-21 00:00:00,2026-09-26 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-21 00:00:00'
+  AND startTime < '2026-09-26 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-21 00:00:00')
+  AND startTime < toDateTime('2026-09-26 00:00:00')","SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-21 00:00:00'
+  AND startTime < '2026-09-26 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-21 00:00:00')
+  AND startTime < toDateTime('2026-09-26 00:00:00')"
+conversation_metadata,6,"chunk 6/8 [2026-09-26 00:00:00, 2026-10-01 00:00:00)",2026-09-26 00:00:00,2026-10-01 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-26 00:00:00'
+  AND startTime < '2026-10-01 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-26 00:00:00')
+  AND startTime < toDateTime('2026-10-01 00:00:00')","SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-26 00:00:00'
+  AND startTime < '2026-10-01 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-26 00:00:00')
+  AND startTime < toDateTime('2026-10-01 00:00:00')"
+conversation_metadata,7,"chunk 7/8 [2026-10-01 00:00:00, 2026-10-06 00:00:00)",2026-10-01 00:00:00,2026-10-06 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-10-01 00:00:00'
+  AND startTime < '2026-10-06 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-10-01 00:00:00')
+  AND startTime < toDateTime('2026-10-06 00:00:00')","SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-10-01 00:00:00'
+  AND startTime < '2026-10-06 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-10-01 00:00:00')
+  AND startTime < toDateTime('2026-10-06 00:00:00')"
+conversation_metadata,8,"chunk 8/8 [2026-10-06 00:00:00, 2026-10-08 00:00:00)",2026-10-06 00:00:00,2026-10-08 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-10-06 00:00:00'
+  AND startTime < '2026-10-08 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-10-06 00:00:00')
+  AND startTime < toDateTime('2026-10-08 00:00:00')","SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-10-06 00:00:00'
+  AND startTime < '2026-10-08 00:00:00';","SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-10-06 00:00:00')
+  AND startTime < toDateTime('2026-10-08 00:00:00')"

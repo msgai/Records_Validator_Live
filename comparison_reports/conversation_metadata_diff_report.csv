@@ -1,0 +1,290 @@
+table_name,composite_key,column_name,sql_value,ch_value,diff_type,sql_debug_query,clickhouse_debug_query,chunk_start,chunk_end_exclusive,applied_filters
+conversation_metadata,conversationId=178a859c-ffae-4e85-a9fb-4f75f9023c63 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.2,0.20000000298023224,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-08-11 00:00:00'
+  AND startTime < '2026-08-16 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = '178a859c-ffae-4e85-a9fb-4f75f9023c63' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-08-11 00:00:00')
+  AND startTime < toDateTime('2026-08-16 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = '178a859c-ffae-4e85-a9fb-4f75f9023c63' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-08-11 00:00:00,2026-08-16 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=92ee6854-8dab-4547-89c1-967654dc27c5 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.111111,0.11111100018024445,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-08-11 00:00:00'
+  AND startTime < '2026-08-16 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = '92ee6854-8dab-4547-89c1-967654dc27c5' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-08-11 00:00:00')
+  AND startTime < toDateTime('2026-08-16 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = '92ee6854-8dab-4547-89c1-967654dc27c5' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-08-11 00:00:00,2026-08-16 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=bb825d63-8cd1-493e-a6af-1f60e1964f35 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.333333,0.33333298563957214,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-08-11 00:00:00'
+  AND startTime < '2026-08-16 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = 'bb825d63-8cd1-493e-a6af-1f60e1964f35' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-08-11 00:00:00')
+  AND startTime < toDateTime('2026-08-16 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = 'bb825d63-8cd1-493e-a6af-1f60e1964f35' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-08-11 00:00:00,2026-08-16 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=eccda03f-d885-42f4-bdac-fe4ff52abf95 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.333333,0.33333298563957214,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-08-16 00:00:00'
+  AND startTime < '2026-08-21 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = 'eccda03f-d885-42f4-bdac-fe4ff52abf95' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-08-16 00:00:00')
+  AND startTime < toDateTime('2026-08-21 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = 'eccda03f-d885-42f4-bdac-fe4ff52abf95' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-08-16 00:00:00,2026-08-21 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=98f90ab7-2870-4a1e-abe4-c2ad2890b6aa || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.666667,0.6666669845581055,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-08-31 00:00:00'
+  AND startTime < '2026-09-05 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = '98f90ab7-2870-4a1e-abe4-c2ad2890b6aa' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-08-31 00:00:00')
+  AND startTime < toDateTime('2026-09-05 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = '98f90ab7-2870-4a1e-abe4-c2ad2890b6aa' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-08-31 00:00:00,2026-09-05 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=a0c204ab-438f-4020-a224-7da3b1151146 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.333333,0.33333298563957214,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-10 00:00:00'
+  AND startTime < '2026-09-15 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = 'a0c204ab-438f-4020-a224-7da3b1151146' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-10 00:00:00')
+  AND startTime < toDateTime('2026-09-15 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = 'a0c204ab-438f-4020-a224-7da3b1151146' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-09-10 00:00:00,2026-09-15 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=13236444-811f-4034-99ff-56bd2a1adf43 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.333333,0.33333298563957214,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-15 00:00:00'
+  AND startTime < '2026-09-20 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = '13236444-811f-4034-99ff-56bd2a1adf43' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-15 00:00:00')
+  AND startTime < toDateTime('2026-09-20 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = '13236444-811f-4034-99ff-56bd2a1adf43' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-09-15 00:00:00,2026-09-20 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=2b3f3afb-2468-4e78-a9ec-025f2bc934ca || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.666667,0.6666669845581055,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-20 00:00:00'
+  AND startTime < '2026-09-25 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = '2b3f3afb-2468-4e78-a9ec-025f2bc934ca' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-20 00:00:00')
+  AND startTime < toDateTime('2026-09-25 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = '2b3f3afb-2468-4e78-a9ec-025f2bc934ca' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-09-20 00:00:00,2026-09-25 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=51ae29cd-22ba-46dc-88b5-1c6a477ae6d7 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.333333,0.33333298563957214,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-20 00:00:00'
+  AND startTime < '2026-09-25 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = '51ae29cd-22ba-46dc-88b5-1c6a477ae6d7' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-20 00:00:00')
+  AND startTime < toDateTime('2026-09-25 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = '51ae29cd-22ba-46dc-88b5-1c6a477ae6d7' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-09-20 00:00:00,2026-09-25 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=d7d98892-2d49-453a-b0d5-623d115f3d52 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.666667,0.6666669845581055,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-20 00:00:00'
+  AND startTime < '2026-09-25 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = 'd7d98892-2d49-453a-b0d5-623d115f3d52' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-20 00:00:00')
+  AND startTime < toDateTime('2026-09-25 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = 'd7d98892-2d49-453a-b0d5-623d115f3d52' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-09-20 00:00:00,2026-09-25 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=597013aa-5d1f-4c95-8e1b-6740baa4be50 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,backToBotTime,2026-10-27 08:44:54.386000,,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-25 00:00:00'
+  AND startTime < '2026-09-30 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = '597013aa-5d1f-4c95-8e1b-6740baa4be50' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-25 00:00:00')
+  AND startTime < toDateTime('2026-09-30 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = '597013aa-5d1f-4c95-8e1b-6740baa4be50' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-09-25 00:00:00,2026-09-30 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=e31cc8d4-b855-495e-9296-dcfae5405e98 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.714286,0.7142860293388367,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-25 00:00:00'
+  AND startTime < '2026-09-30 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = 'e31cc8d4-b855-495e-9296-dcfae5405e98' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-25 00:00:00')
+  AND startTime < toDateTime('2026-09-30 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = 'e31cc8d4-b855-495e-9296-dcfae5405e98' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-09-25 00:00:00,2026-09-30 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=006f940e-a597-496b-a70e-2b108c98f874 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.666667,0.6666669845581055,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-30 00:00:00'
+  AND startTime < '2026-10-05 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = '006f940e-a597-496b-a70e-2b108c98f874' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-30 00:00:00')
+  AND startTime < toDateTime('2026-10-05 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = '006f940e-a597-496b-a70e-2b108c98f874' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-09-30 00:00:00,2026-10-05 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=cc7c823d-49b2-4128-a120-81824f35b050 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.333333,0.33333298563957214,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-09-30 00:00:00'
+  AND startTime < '2026-10-05 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = 'cc7c823d-49b2-4128-a120-81824f35b050' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-09-30 00:00:00')
+  AND startTime < toDateTime('2026-10-05 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = 'cc7c823d-49b2-4128-a120-81824f35b050' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-09-30 00:00:00,2026-10-05 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=57042a0b-6502-42b7-b037-abb0cb563f06 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,summary,"{""description"":""The client received a package with items having wet spots smelling like detergent and a return bag covered in a blue sticky liquid. The client expressed disappointment in the condition of the clothes.\n"",""tone"":""Disappointment"",""sentiment"":""Negative""}",,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-10-05 00:00:00'
+  AND startTime < '2026-10-08 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = '57042a0b-6502-42b7-b037-abb0cb563f06' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-10-05 00:00:00')
+  AND startTime < toDateTime('2026-10-08 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = '57042a0b-6502-42b7-b037-abb0cb563f06' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-10-05 00:00:00,2026-10-08 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=94f0f720-080b-489c-b328-94eee17bfaf1 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,csatScore,0.666667,0.6666669845581055,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-10-05 00:00:00'
+  AND startTime < '2026-10-08 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = '94f0f720-080b-489c-b328-94eee17bfaf1' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-10-05 00:00:00')
+  AND startTime < toDateTime('2026-10-08 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = '94f0f720-080b-489c-b328-94eee17bfaf1' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-10-05 00:00:00,2026-10-08 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']
+conversation_metadata,conversationId=b4233435-b601-40c3-ae82-3457f4460aa7 || botId=4d7d2b6a-b355-4455-85bc-4d8897ea0853 || channel=NETOMI_WEB_WIDGET || env=LIVE,summary,"{""description"":""The client requested to delete their account, citing California law for immediate action. The Stitch Fix virtual assistant informed the client that a team member is needed for support.\n"",""tone"":""Assertive"",""sentiment"":""Neutral""}",,VALUE_MISMATCH,"SELECT *
+FROM (
+SELECT
+  *
+FROM staging.conversation_metadata
+WHERE startTime >= '2026-10-05 00:00:00'
+  AND startTime < '2026-10-08 00:00:00' AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE CAST(`conversationId` AS CHAR) = 'b4233435-b601-40c3-ae82-3457f4460aa7' AND CAST(`botId` AS CHAR) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND CAST(`channel` AS CHAR) = 'NETOMI_WEB_WIDGET' AND CAST(`env` AS CHAR) = 'LIVE'","SELECT *
+FROM (
+SELECT
+  *
+FROM ch_agg.conversation_metadata
+WHERE startTime >= toDateTime('2026-10-05 00:00:00')
+  AND startTime < toDateTime('2026-10-08 00:00:00') AND (`botId` = '4d7d2b6a-b355-4455-85bc-4d8897ea0853')
+) AS validator_debug_rows
+WHERE toString(`conversationId`) = 'b4233435-b601-40c3-ae82-3457f4460aa7' AND toString(`botId`) = '4d7d2b6a-b355-4455-85bc-4d8897ea0853' AND toString(`channel`) = 'NETOMI_WEB_WIDGET' AND toString(`env`) = 'LIVE'",2026-10-05 00:00:00,2026-10-08 00:00:00,botId=['4d7d2b6a-b355-4455-85bc-4d8897ea0853']

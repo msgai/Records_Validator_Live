@@ -1,0 +1,1701 @@
+table_name,chunk_index,chunk_label,chunk_start,chunk_end_exclusive,evaluation_mode,status,sql_rows,ch_rows,applied_filters,sql_query,clickhouse_query,sql_base_query,clickhouse_base_query
+transformed_data,1,"chunk 1/68 [2026-08-01 00:00:00, 2026-08-02 00:00:00)",2026-08-01 00:00:00,2026-08-02 00:00:00,COUNT_ONLY_SMOKE_TEST,INTERRUPTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-01 00:00:00'
+  AND dateHour < '2026-08-02 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-01 00:00:00')
+  AND dateHour < toDateTime('2026-08-02 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-01 00:00:00'
+  AND dateHour < '2026-08-02 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-01 00:00:00')
+  AND dateHour < toDateTime('2026-08-02 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,2,"chunk 2/68 [2026-08-02 00:00:00, 2026-08-03 00:00:00)",2026-08-02 00:00:00,2026-08-03 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-02 00:00:00'
+  AND dateHour < '2026-08-03 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-02 00:00:00')
+  AND dateHour < toDateTime('2026-08-03 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-02 00:00:00'
+  AND dateHour < '2026-08-03 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-02 00:00:00')
+  AND dateHour < toDateTime('2026-08-03 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,3,"chunk 3/68 [2026-08-03 00:00:00, 2026-08-04 00:00:00)",2026-08-03 00:00:00,2026-08-04 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-03 00:00:00'
+  AND dateHour < '2026-08-04 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-03 00:00:00')
+  AND dateHour < toDateTime('2026-08-04 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-03 00:00:00'
+  AND dateHour < '2026-08-04 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-03 00:00:00')
+  AND dateHour < toDateTime('2026-08-04 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,4,"chunk 4/68 [2026-08-04 00:00:00, 2026-08-05 00:00:00)",2026-08-04 00:00:00,2026-08-05 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-04 00:00:00'
+  AND dateHour < '2026-08-05 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-04 00:00:00')
+  AND dateHour < toDateTime('2026-08-05 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-04 00:00:00'
+  AND dateHour < '2026-08-05 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-04 00:00:00')
+  AND dateHour < toDateTime('2026-08-05 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,5,"chunk 5/68 [2026-08-05 00:00:00, 2026-08-06 00:00:00)",2026-08-05 00:00:00,2026-08-06 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-05 00:00:00'
+  AND dateHour < '2026-08-06 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-05 00:00:00')
+  AND dateHour < toDateTime('2026-08-06 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-05 00:00:00'
+  AND dateHour < '2026-08-06 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-05 00:00:00')
+  AND dateHour < toDateTime('2026-08-06 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,6,"chunk 6/68 [2026-08-06 00:00:00, 2026-08-07 00:00:00)",2026-08-06 00:00:00,2026-08-07 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-06 00:00:00'
+  AND dateHour < '2026-08-07 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-06 00:00:00')
+  AND dateHour < toDateTime('2026-08-07 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-06 00:00:00'
+  AND dateHour < '2026-08-07 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-06 00:00:00')
+  AND dateHour < toDateTime('2026-08-07 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,7,"chunk 7/68 [2026-08-07 00:00:00, 2026-08-08 00:00:00)",2026-08-07 00:00:00,2026-08-08 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-07 00:00:00'
+  AND dateHour < '2026-08-08 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-07 00:00:00')
+  AND dateHour < toDateTime('2026-08-08 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-07 00:00:00'
+  AND dateHour < '2026-08-08 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-07 00:00:00')
+  AND dateHour < toDateTime('2026-08-08 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,8,"chunk 8/68 [2026-08-08 00:00:00, 2026-08-09 00:00:00)",2026-08-08 00:00:00,2026-08-09 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-08 00:00:00'
+  AND dateHour < '2026-08-09 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-08 00:00:00')
+  AND dateHour < toDateTime('2026-08-09 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-08 00:00:00'
+  AND dateHour < '2026-08-09 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-08 00:00:00')
+  AND dateHour < toDateTime('2026-08-09 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,9,"chunk 9/68 [2026-08-09 00:00:00, 2026-08-10 00:00:00)",2026-08-09 00:00:00,2026-08-10 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-09 00:00:00'
+  AND dateHour < '2026-08-10 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-09 00:00:00')
+  AND dateHour < toDateTime('2026-08-10 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-09 00:00:00'
+  AND dateHour < '2026-08-10 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-09 00:00:00')
+  AND dateHour < toDateTime('2026-08-10 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,10,"chunk 10/68 [2026-08-10 00:00:00, 2026-08-11 00:00:00)",2026-08-10 00:00:00,2026-08-11 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-10 00:00:00'
+  AND dateHour < '2026-08-11 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-10 00:00:00')
+  AND dateHour < toDateTime('2026-08-11 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-10 00:00:00'
+  AND dateHour < '2026-08-11 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-10 00:00:00')
+  AND dateHour < toDateTime('2026-08-11 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,11,"chunk 11/68 [2026-08-11 00:00:00, 2026-08-12 00:00:00)",2026-08-11 00:00:00,2026-08-12 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-11 00:00:00'
+  AND dateHour < '2026-08-12 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-11 00:00:00')
+  AND dateHour < toDateTime('2026-08-12 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-11 00:00:00'
+  AND dateHour < '2026-08-12 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-11 00:00:00')
+  AND dateHour < toDateTime('2026-08-12 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,12,"chunk 12/68 [2026-08-12 00:00:00, 2026-08-13 00:00:00)",2026-08-12 00:00:00,2026-08-13 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-12 00:00:00'
+  AND dateHour < '2026-08-13 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-12 00:00:00')
+  AND dateHour < toDateTime('2026-08-13 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-12 00:00:00'
+  AND dateHour < '2026-08-13 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-12 00:00:00')
+  AND dateHour < toDateTime('2026-08-13 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,13,"chunk 13/68 [2026-08-13 00:00:00, 2026-08-14 00:00:00)",2026-08-13 00:00:00,2026-08-14 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-13 00:00:00'
+  AND dateHour < '2026-08-14 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-13 00:00:00')
+  AND dateHour < toDateTime('2026-08-14 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-13 00:00:00'
+  AND dateHour < '2026-08-14 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-13 00:00:00')
+  AND dateHour < toDateTime('2026-08-14 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,14,"chunk 14/68 [2026-08-14 00:00:00, 2026-08-15 00:00:00)",2026-08-14 00:00:00,2026-08-15 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-14 00:00:00'
+  AND dateHour < '2026-08-15 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-14 00:00:00')
+  AND dateHour < toDateTime('2026-08-15 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-14 00:00:00'
+  AND dateHour < '2026-08-15 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-14 00:00:00')
+  AND dateHour < toDateTime('2026-08-15 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,15,"chunk 15/68 [2026-08-15 00:00:00, 2026-08-16 00:00:00)",2026-08-15 00:00:00,2026-08-16 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-15 00:00:00'
+  AND dateHour < '2026-08-16 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-15 00:00:00')
+  AND dateHour < toDateTime('2026-08-16 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-15 00:00:00'
+  AND dateHour < '2026-08-16 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-15 00:00:00')
+  AND dateHour < toDateTime('2026-08-16 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,16,"chunk 16/68 [2026-08-16 00:00:00, 2026-08-17 00:00:00)",2026-08-16 00:00:00,2026-08-17 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-16 00:00:00'
+  AND dateHour < '2026-08-17 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-16 00:00:00')
+  AND dateHour < toDateTime('2026-08-17 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-16 00:00:00'
+  AND dateHour < '2026-08-17 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-16 00:00:00')
+  AND dateHour < toDateTime('2026-08-17 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,17,"chunk 17/68 [2026-08-17 00:00:00, 2026-08-18 00:00:00)",2026-08-17 00:00:00,2026-08-18 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-17 00:00:00'
+  AND dateHour < '2026-08-18 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-17 00:00:00')
+  AND dateHour < toDateTime('2026-08-18 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-17 00:00:00'
+  AND dateHour < '2026-08-18 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-17 00:00:00')
+  AND dateHour < toDateTime('2026-08-18 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,18,"chunk 18/68 [2026-08-18 00:00:00, 2026-08-19 00:00:00)",2026-08-18 00:00:00,2026-08-19 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-18 00:00:00'
+  AND dateHour < '2026-08-19 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-18 00:00:00')
+  AND dateHour < toDateTime('2026-08-19 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-18 00:00:00'
+  AND dateHour < '2026-08-19 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-18 00:00:00')
+  AND dateHour < toDateTime('2026-08-19 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,19,"chunk 19/68 [2026-08-19 00:00:00, 2026-08-20 00:00:00)",2026-08-19 00:00:00,2026-08-20 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-19 00:00:00'
+  AND dateHour < '2026-08-20 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-19 00:00:00')
+  AND dateHour < toDateTime('2026-08-20 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-19 00:00:00'
+  AND dateHour < '2026-08-20 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-19 00:00:00')
+  AND dateHour < toDateTime('2026-08-20 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,20,"chunk 20/68 [2026-08-20 00:00:00, 2026-08-21 00:00:00)",2026-08-20 00:00:00,2026-08-21 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-20 00:00:00'
+  AND dateHour < '2026-08-21 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-20 00:00:00')
+  AND dateHour < toDateTime('2026-08-21 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-20 00:00:00'
+  AND dateHour < '2026-08-21 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-20 00:00:00')
+  AND dateHour < toDateTime('2026-08-21 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,21,"chunk 21/68 [2026-08-21 00:00:00, 2026-08-22 00:00:00)",2026-08-21 00:00:00,2026-08-22 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-21 00:00:00'
+  AND dateHour < '2026-08-22 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-21 00:00:00')
+  AND dateHour < toDateTime('2026-08-22 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-21 00:00:00'
+  AND dateHour < '2026-08-22 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-21 00:00:00')
+  AND dateHour < toDateTime('2026-08-22 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,22,"chunk 22/68 [2026-08-22 00:00:00, 2026-08-23 00:00:00)",2026-08-22 00:00:00,2026-08-23 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-22 00:00:00'
+  AND dateHour < '2026-08-23 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-22 00:00:00')
+  AND dateHour < toDateTime('2026-08-23 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-22 00:00:00'
+  AND dateHour < '2026-08-23 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-22 00:00:00')
+  AND dateHour < toDateTime('2026-08-23 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,23,"chunk 23/68 [2026-08-23 00:00:00, 2026-08-24 00:00:00)",2026-08-23 00:00:00,2026-08-24 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-23 00:00:00'
+  AND dateHour < '2026-08-24 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-23 00:00:00')
+  AND dateHour < toDateTime('2026-08-24 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-23 00:00:00'
+  AND dateHour < '2026-08-24 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-23 00:00:00')
+  AND dateHour < toDateTime('2026-08-24 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,24,"chunk 24/68 [2026-08-24 00:00:00, 2026-08-25 00:00:00)",2026-08-24 00:00:00,2026-08-25 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-24 00:00:00'
+  AND dateHour < '2026-08-25 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-24 00:00:00')
+  AND dateHour < toDateTime('2026-08-25 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-24 00:00:00'
+  AND dateHour < '2026-08-25 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-24 00:00:00')
+  AND dateHour < toDateTime('2026-08-25 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,25,"chunk 25/68 [2026-08-25 00:00:00, 2026-08-26 00:00:00)",2026-08-25 00:00:00,2026-08-26 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-25 00:00:00'
+  AND dateHour < '2026-08-26 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-25 00:00:00')
+  AND dateHour < toDateTime('2026-08-26 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-25 00:00:00'
+  AND dateHour < '2026-08-26 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-25 00:00:00')
+  AND dateHour < toDateTime('2026-08-26 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,26,"chunk 26/68 [2026-08-26 00:00:00, 2026-08-27 00:00:00)",2026-08-26 00:00:00,2026-08-27 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-26 00:00:00'
+  AND dateHour < '2026-08-27 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-26 00:00:00')
+  AND dateHour < toDateTime('2026-08-27 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-26 00:00:00'
+  AND dateHour < '2026-08-27 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-26 00:00:00')
+  AND dateHour < toDateTime('2026-08-27 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,27,"chunk 27/68 [2026-08-27 00:00:00, 2026-08-28 00:00:00)",2026-08-27 00:00:00,2026-08-28 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-27 00:00:00'
+  AND dateHour < '2026-08-28 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-27 00:00:00')
+  AND dateHour < toDateTime('2026-08-28 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-27 00:00:00'
+  AND dateHour < '2026-08-28 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-27 00:00:00')
+  AND dateHour < toDateTime('2026-08-28 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,28,"chunk 28/68 [2026-08-28 00:00:00, 2026-08-29 00:00:00)",2026-08-28 00:00:00,2026-08-29 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-28 00:00:00'
+  AND dateHour < '2026-08-29 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-28 00:00:00')
+  AND dateHour < toDateTime('2026-08-29 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-28 00:00:00'
+  AND dateHour < '2026-08-29 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-28 00:00:00')
+  AND dateHour < toDateTime('2026-08-29 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,29,"chunk 29/68 [2026-08-29 00:00:00, 2026-08-30 00:00:00)",2026-08-29 00:00:00,2026-08-30 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-29 00:00:00'
+  AND dateHour < '2026-08-30 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-29 00:00:00')
+  AND dateHour < toDateTime('2026-08-30 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-29 00:00:00'
+  AND dateHour < '2026-08-30 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-29 00:00:00')
+  AND dateHour < toDateTime('2026-08-30 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,30,"chunk 30/68 [2026-08-30 00:00:00, 2026-08-31 00:00:00)",2026-08-30 00:00:00,2026-08-31 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-30 00:00:00'
+  AND dateHour < '2026-08-31 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-30 00:00:00')
+  AND dateHour < toDateTime('2026-08-31 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-30 00:00:00'
+  AND dateHour < '2026-08-31 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-30 00:00:00')
+  AND dateHour < toDateTime('2026-08-31 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,31,"chunk 31/68 [2026-08-31 00:00:00, 2026-09-01 00:00:00)",2026-08-31 00:00:00,2026-09-01 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-31 00:00:00'
+  AND dateHour < '2026-09-01 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-31 00:00:00')
+  AND dateHour < toDateTime('2026-09-01 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-08-31 00:00:00'
+  AND dateHour < '2026-09-01 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-08-31 00:00:00')
+  AND dateHour < toDateTime('2026-09-01 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,32,"chunk 32/68 [2026-09-01 00:00:00, 2026-09-02 00:00:00)",2026-09-01 00:00:00,2026-09-02 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-01 00:00:00'
+  AND dateHour < '2026-09-02 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-01 00:00:00')
+  AND dateHour < toDateTime('2026-09-02 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-01 00:00:00'
+  AND dateHour < '2026-09-02 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-01 00:00:00')
+  AND dateHour < toDateTime('2026-09-02 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,33,"chunk 33/68 [2026-09-02 00:00:00, 2026-09-03 00:00:00)",2026-09-02 00:00:00,2026-09-03 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-02 00:00:00'
+  AND dateHour < '2026-09-03 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-02 00:00:00')
+  AND dateHour < toDateTime('2026-09-03 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-02 00:00:00'
+  AND dateHour < '2026-09-03 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-02 00:00:00')
+  AND dateHour < toDateTime('2026-09-03 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,34,"chunk 34/68 [2026-09-03 00:00:00, 2026-09-04 00:00:00)",2026-09-03 00:00:00,2026-09-04 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-03 00:00:00'
+  AND dateHour < '2026-09-04 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-03 00:00:00')
+  AND dateHour < toDateTime('2026-09-04 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-03 00:00:00'
+  AND dateHour < '2026-09-04 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-03 00:00:00')
+  AND dateHour < toDateTime('2026-09-04 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,35,"chunk 35/68 [2026-09-04 00:00:00, 2026-09-05 00:00:00)",2026-09-04 00:00:00,2026-09-05 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-04 00:00:00'
+  AND dateHour < '2026-09-05 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-04 00:00:00')
+  AND dateHour < toDateTime('2026-09-05 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-04 00:00:00'
+  AND dateHour < '2026-09-05 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-04 00:00:00')
+  AND dateHour < toDateTime('2026-09-05 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,36,"chunk 36/68 [2026-09-05 00:00:00, 2026-09-06 00:00:00)",2026-09-05 00:00:00,2026-09-06 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-05 00:00:00'
+  AND dateHour < '2026-09-06 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-05 00:00:00')
+  AND dateHour < toDateTime('2026-09-06 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-05 00:00:00'
+  AND dateHour < '2026-09-06 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-05 00:00:00')
+  AND dateHour < toDateTime('2026-09-06 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,37,"chunk 37/68 [2026-09-06 00:00:00, 2026-09-07 00:00:00)",2026-09-06 00:00:00,2026-09-07 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-06 00:00:00'
+  AND dateHour < '2026-09-07 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-06 00:00:00')
+  AND dateHour < toDateTime('2026-09-07 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-06 00:00:00'
+  AND dateHour < '2026-09-07 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-06 00:00:00')
+  AND dateHour < toDateTime('2026-09-07 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,38,"chunk 38/68 [2026-09-07 00:00:00, 2026-09-08 00:00:00)",2026-09-07 00:00:00,2026-09-08 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-07 00:00:00'
+  AND dateHour < '2026-09-08 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-07 00:00:00')
+  AND dateHour < toDateTime('2026-09-08 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-07 00:00:00'
+  AND dateHour < '2026-09-08 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-07 00:00:00')
+  AND dateHour < toDateTime('2026-09-08 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,39,"chunk 39/68 [2026-09-08 00:00:00, 2026-09-09 00:00:00)",2026-09-08 00:00:00,2026-09-09 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-08 00:00:00'
+  AND dateHour < '2026-09-09 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-08 00:00:00')
+  AND dateHour < toDateTime('2026-09-09 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-08 00:00:00'
+  AND dateHour < '2026-09-09 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-08 00:00:00')
+  AND dateHour < toDateTime('2026-09-09 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,40,"chunk 40/68 [2026-09-09 00:00:00, 2026-09-10 00:00:00)",2026-09-09 00:00:00,2026-09-10 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-09 00:00:00'
+  AND dateHour < '2026-09-10 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-09 00:00:00')
+  AND dateHour < toDateTime('2026-09-10 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-09 00:00:00'
+  AND dateHour < '2026-09-10 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-09 00:00:00')
+  AND dateHour < toDateTime('2026-09-10 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,41,"chunk 41/68 [2026-09-10 00:00:00, 2026-09-11 00:00:00)",2026-09-10 00:00:00,2026-09-11 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-10 00:00:00'
+  AND dateHour < '2026-09-11 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-10 00:00:00')
+  AND dateHour < toDateTime('2026-09-11 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-10 00:00:00'
+  AND dateHour < '2026-09-11 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-10 00:00:00')
+  AND dateHour < toDateTime('2026-09-11 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,42,"chunk 42/68 [2026-09-11 00:00:00, 2026-09-12 00:00:00)",2026-09-11 00:00:00,2026-09-12 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-11 00:00:00'
+  AND dateHour < '2026-09-12 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-11 00:00:00')
+  AND dateHour < toDateTime('2026-09-12 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-11 00:00:00'
+  AND dateHour < '2026-09-12 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-11 00:00:00')
+  AND dateHour < toDateTime('2026-09-12 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,43,"chunk 43/68 [2026-09-12 00:00:00, 2026-09-13 00:00:00)",2026-09-12 00:00:00,2026-09-13 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-12 00:00:00'
+  AND dateHour < '2026-09-13 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-12 00:00:00')
+  AND dateHour < toDateTime('2026-09-13 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-12 00:00:00'
+  AND dateHour < '2026-09-13 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-12 00:00:00')
+  AND dateHour < toDateTime('2026-09-13 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,44,"chunk 44/68 [2026-09-13 00:00:00, 2026-09-14 00:00:00)",2026-09-13 00:00:00,2026-09-14 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-13 00:00:00'
+  AND dateHour < '2026-09-14 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-13 00:00:00')
+  AND dateHour < toDateTime('2026-09-14 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-13 00:00:00'
+  AND dateHour < '2026-09-14 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-13 00:00:00')
+  AND dateHour < toDateTime('2026-09-14 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,45,"chunk 45/68 [2026-09-14 00:00:00, 2026-09-15 00:00:00)",2026-09-14 00:00:00,2026-09-15 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-14 00:00:00'
+  AND dateHour < '2026-09-15 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-14 00:00:00')
+  AND dateHour < toDateTime('2026-09-15 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-14 00:00:00'
+  AND dateHour < '2026-09-15 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-14 00:00:00')
+  AND dateHour < toDateTime('2026-09-15 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,46,"chunk 46/68 [2026-09-15 00:00:00, 2026-09-16 00:00:00)",2026-09-15 00:00:00,2026-09-16 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-15 00:00:00'
+  AND dateHour < '2026-09-16 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-15 00:00:00')
+  AND dateHour < toDateTime('2026-09-16 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-15 00:00:00'
+  AND dateHour < '2026-09-16 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-15 00:00:00')
+  AND dateHour < toDateTime('2026-09-16 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,47,"chunk 47/68 [2026-09-16 00:00:00, 2026-09-17 00:00:00)",2026-09-16 00:00:00,2026-09-17 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-16 00:00:00'
+  AND dateHour < '2026-09-17 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-16 00:00:00')
+  AND dateHour < toDateTime('2026-09-17 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-16 00:00:00'
+  AND dateHour < '2026-09-17 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-16 00:00:00')
+  AND dateHour < toDateTime('2026-09-17 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,48,"chunk 48/68 [2026-09-17 00:00:00, 2026-09-18 00:00:00)",2026-09-17 00:00:00,2026-09-18 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-17 00:00:00'
+  AND dateHour < '2026-09-18 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-17 00:00:00')
+  AND dateHour < toDateTime('2026-09-18 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-17 00:00:00'
+  AND dateHour < '2026-09-18 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-17 00:00:00')
+  AND dateHour < toDateTime('2026-09-18 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,49,"chunk 49/68 [2026-09-18 00:00:00, 2026-09-19 00:00:00)",2026-09-18 00:00:00,2026-09-19 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-18 00:00:00'
+  AND dateHour < '2026-09-19 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-18 00:00:00')
+  AND dateHour < toDateTime('2026-09-19 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-18 00:00:00'
+  AND dateHour < '2026-09-19 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-18 00:00:00')
+  AND dateHour < toDateTime('2026-09-19 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,50,"chunk 50/68 [2026-09-19 00:00:00, 2026-09-20 00:00:00)",2026-09-19 00:00:00,2026-09-20 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-19 00:00:00'
+  AND dateHour < '2026-09-20 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-19 00:00:00')
+  AND dateHour < toDateTime('2026-09-20 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-19 00:00:00'
+  AND dateHour < '2026-09-20 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-19 00:00:00')
+  AND dateHour < toDateTime('2026-09-20 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,51,"chunk 51/68 [2026-09-20 00:00:00, 2026-09-21 00:00:00)",2026-09-20 00:00:00,2026-09-21 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-20 00:00:00'
+  AND dateHour < '2026-09-21 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-20 00:00:00')
+  AND dateHour < toDateTime('2026-09-21 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-20 00:00:00'
+  AND dateHour < '2026-09-21 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-20 00:00:00')
+  AND dateHour < toDateTime('2026-09-21 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,52,"chunk 52/68 [2026-09-21 00:00:00, 2026-09-22 00:00:00)",2026-09-21 00:00:00,2026-09-22 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-21 00:00:00'
+  AND dateHour < '2026-09-22 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-21 00:00:00')
+  AND dateHour < toDateTime('2026-09-22 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-21 00:00:00'
+  AND dateHour < '2026-09-22 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-21 00:00:00')
+  AND dateHour < toDateTime('2026-09-22 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,53,"chunk 53/68 [2026-09-22 00:00:00, 2026-09-23 00:00:00)",2026-09-22 00:00:00,2026-09-23 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-22 00:00:00'
+  AND dateHour < '2026-09-23 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-22 00:00:00')
+  AND dateHour < toDateTime('2026-09-23 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-22 00:00:00'
+  AND dateHour < '2026-09-23 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-22 00:00:00')
+  AND dateHour < toDateTime('2026-09-23 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,54,"chunk 54/68 [2026-09-23 00:00:00, 2026-09-24 00:00:00)",2026-09-23 00:00:00,2026-09-24 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-23 00:00:00'
+  AND dateHour < '2026-09-24 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-23 00:00:00')
+  AND dateHour < toDateTime('2026-09-24 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-23 00:00:00'
+  AND dateHour < '2026-09-24 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-23 00:00:00')
+  AND dateHour < toDateTime('2026-09-24 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,55,"chunk 55/68 [2026-09-24 00:00:00, 2026-09-25 00:00:00)",2026-09-24 00:00:00,2026-09-25 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-24 00:00:00'
+  AND dateHour < '2026-09-25 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-24 00:00:00')
+  AND dateHour < toDateTime('2026-09-25 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-24 00:00:00'
+  AND dateHour < '2026-09-25 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-24 00:00:00')
+  AND dateHour < toDateTime('2026-09-25 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,56,"chunk 56/68 [2026-09-25 00:00:00, 2026-09-26 00:00:00)",2026-09-25 00:00:00,2026-09-26 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-25 00:00:00'
+  AND dateHour < '2026-09-26 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-25 00:00:00')
+  AND dateHour < toDateTime('2026-09-26 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-25 00:00:00'
+  AND dateHour < '2026-09-26 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-25 00:00:00')
+  AND dateHour < toDateTime('2026-09-26 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,57,"chunk 57/68 [2026-09-26 00:00:00, 2026-09-27 00:00:00)",2026-09-26 00:00:00,2026-09-27 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-26 00:00:00'
+  AND dateHour < '2026-09-27 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-26 00:00:00')
+  AND dateHour < toDateTime('2026-09-27 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-26 00:00:00'
+  AND dateHour < '2026-09-27 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-26 00:00:00')
+  AND dateHour < toDateTime('2026-09-27 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,58,"chunk 58/68 [2026-09-27 00:00:00, 2026-09-28 00:00:00)",2026-09-27 00:00:00,2026-09-28 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-27 00:00:00'
+  AND dateHour < '2026-09-28 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-27 00:00:00')
+  AND dateHour < toDateTime('2026-09-28 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-27 00:00:00'
+  AND dateHour < '2026-09-28 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-27 00:00:00')
+  AND dateHour < toDateTime('2026-09-28 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,59,"chunk 59/68 [2026-09-28 00:00:00, 2026-09-29 00:00:00)",2026-09-28 00:00:00,2026-09-29 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-28 00:00:00'
+  AND dateHour < '2026-09-29 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-28 00:00:00')
+  AND dateHour < toDateTime('2026-09-29 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-28 00:00:00'
+  AND dateHour < '2026-09-29 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-28 00:00:00')
+  AND dateHour < toDateTime('2026-09-29 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,60,"chunk 60/68 [2026-09-29 00:00:00, 2026-09-30 00:00:00)",2026-09-29 00:00:00,2026-09-30 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-29 00:00:00'
+  AND dateHour < '2026-09-30 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-29 00:00:00')
+  AND dateHour < toDateTime('2026-09-30 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-29 00:00:00'
+  AND dateHour < '2026-09-30 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-29 00:00:00')
+  AND dateHour < toDateTime('2026-09-30 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,61,"chunk 61/68 [2026-09-30 00:00:00, 2026-10-01 00:00:00)",2026-09-30 00:00:00,2026-10-01 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-30 00:00:00'
+  AND dateHour < '2026-10-01 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-30 00:00:00')
+  AND dateHour < toDateTime('2026-10-01 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-09-30 00:00:00'
+  AND dateHour < '2026-10-01 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-09-30 00:00:00')
+  AND dateHour < toDateTime('2026-10-01 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,62,"chunk 62/68 [2026-10-01 00:00:00, 2026-10-02 00:00:00)",2026-10-01 00:00:00,2026-10-02 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-01 00:00:00'
+  AND dateHour < '2026-10-02 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-01 00:00:00')
+  AND dateHour < toDateTime('2026-10-02 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-01 00:00:00'
+  AND dateHour < '2026-10-02 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-01 00:00:00')
+  AND dateHour < toDateTime('2026-10-02 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,63,"chunk 63/68 [2026-10-02 00:00:00, 2026-10-03 00:00:00)",2026-10-02 00:00:00,2026-10-03 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-02 00:00:00'
+  AND dateHour < '2026-10-03 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-02 00:00:00')
+  AND dateHour < toDateTime('2026-10-03 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-02 00:00:00'
+  AND dateHour < '2026-10-03 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-02 00:00:00')
+  AND dateHour < toDateTime('2026-10-03 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,64,"chunk 64/68 [2026-10-03 00:00:00, 2026-10-04 00:00:00)",2026-10-03 00:00:00,2026-10-04 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-03 00:00:00'
+  AND dateHour < '2026-10-04 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-03 00:00:00')
+  AND dateHour < toDateTime('2026-10-04 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-03 00:00:00'
+  AND dateHour < '2026-10-04 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-03 00:00:00')
+  AND dateHour < toDateTime('2026-10-04 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,65,"chunk 65/68 [2026-10-04 00:00:00, 2026-10-05 00:00:00)",2026-10-04 00:00:00,2026-10-05 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-04 00:00:00'
+  AND dateHour < '2026-10-05 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-04 00:00:00')
+  AND dateHour < toDateTime('2026-10-05 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-04 00:00:00'
+  AND dateHour < '2026-10-05 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-04 00:00:00')
+  AND dateHour < toDateTime('2026-10-05 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,66,"chunk 66/68 [2026-10-05 00:00:00, 2026-10-06 00:00:00)",2026-10-05 00:00:00,2026-10-06 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-05 00:00:00'
+  AND dateHour < '2026-10-06 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-05 00:00:00')
+  AND dateHour < toDateTime('2026-10-06 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-05 00:00:00'
+  AND dateHour < '2026-10-06 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-05 00:00:00')
+  AND dateHour < toDateTime('2026-10-06 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,67,"chunk 67/68 [2026-10-06 00:00:00, 2026-10-07 00:00:00)",2026-10-06 00:00:00,2026-10-07 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-06 00:00:00'
+  AND dateHour < '2026-10-07 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-06 00:00:00')
+  AND dateHour < toDateTime('2026-10-07 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-06 00:00:00'
+  AND dateHour < '2026-10-07 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-06 00:00:00')
+  AND dateHour < toDateTime('2026-10-07 00:00:00')
+ORDER BY uuid ASC"
+transformed_data,68,"chunk 68/68 [2026-10-07 00:00:00, 2026-10-08 00:00:00)",2026-10-07 00:00:00,2026-10-08 00:00:00,COUNT_ONLY_SMOKE_TEST,NOT_EXECUTED,,,,"SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-07 00:00:00'
+  AND dateHour < '2026-10-08 00:00:00'
+ORDER BY uuid ASC
+) AS validator_count","SELECT COUNT(*) AS total_count FROM (
+SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-07 00:00:00')
+  AND dateHour < toDateTime('2026-10-08 00:00:00')
+ORDER BY uuid ASC
+) AS validator_count","SELECT
+  *
+FROM staging.transformed_data
+WHERE dateHour >= '2026-10-07 00:00:00'
+  AND dateHour < '2026-10-08 00:00:00'
+ORDER BY uuid ASC;","SELECT
+  *
+FROM ch_facts.transformed_data
+WHERE dateHour >= toDateTime('2026-10-07 00:00:00')
+  AND dateHour < toDateTime('2026-10-08 00:00:00')
+ORDER BY uuid ASC"

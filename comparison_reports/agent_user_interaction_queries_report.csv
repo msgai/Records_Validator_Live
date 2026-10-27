@@ -1,0 +1,638 @@
+table_name,chunk_index,chunk_label,chunk_start,chunk_end_exclusive,evaluation_mode,status,sql_rows,ch_rows,applied_filters,sql_query,clickhouse_query,sql_base_query,clickhouse_base_query
+agent_user_interaction,1,"chunk 1/49 [2024-10-08 00:00:00, 2024-10-23 00:00:00)",2024-10-08 00:00:00,2024-10-23 00:00:00,FULL_VALIDATION,INTERRUPTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-10-08 00:00:00'
+  AND dateHour < '2024-10-23 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-10-08 00:00:00'
+  AND dateHour < '2024-10-23 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-10-08 00:00:00'
+  AND dateHour < '2024-10-23 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-10-08 00:00:00'
+  AND dateHour < '2024-10-23 00:00:00'"
+agent_user_interaction,2,"chunk 2/49 [2024-10-23 00:00:00, 2024-11-07 00:00:00)",2024-10-23 00:00:00,2024-11-07 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-10-23 00:00:00'
+  AND dateHour < '2024-11-07 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-10-23 00:00:00'
+  AND dateHour < '2024-11-07 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-10-23 00:00:00'
+  AND dateHour < '2024-11-07 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-10-23 00:00:00'
+  AND dateHour < '2024-11-07 00:00:00'"
+agent_user_interaction,3,"chunk 3/49 [2024-11-07 00:00:00, 2024-11-22 00:00:00)",2024-11-07 00:00:00,2024-11-22 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-11-07 00:00:00'
+  AND dateHour < '2024-11-22 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-11-07 00:00:00'
+  AND dateHour < '2024-11-22 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-11-07 00:00:00'
+  AND dateHour < '2024-11-22 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-11-07 00:00:00'
+  AND dateHour < '2024-11-22 00:00:00'"
+agent_user_interaction,4,"chunk 4/49 [2024-11-22 00:00:00, 2024-12-07 00:00:00)",2024-11-22 00:00:00,2024-12-07 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-11-22 00:00:00'
+  AND dateHour < '2024-12-07 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-11-22 00:00:00'
+  AND dateHour < '2024-12-07 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-11-22 00:00:00'
+  AND dateHour < '2024-12-07 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-11-22 00:00:00'
+  AND dateHour < '2024-12-07 00:00:00'"
+agent_user_interaction,5,"chunk 5/49 [2024-12-07 00:00:00, 2024-12-22 00:00:00)",2024-12-07 00:00:00,2024-12-22 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-12-07 00:00:00'
+  AND dateHour < '2024-12-22 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-12-07 00:00:00'
+  AND dateHour < '2024-12-22 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-12-07 00:00:00'
+  AND dateHour < '2024-12-22 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-12-07 00:00:00'
+  AND dateHour < '2024-12-22 00:00:00'"
+agent_user_interaction,6,"chunk 6/49 [2024-12-22 00:00:00, 2025-01-06 00:00:00)",2024-12-22 00:00:00,2025-01-06 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-12-22 00:00:00'
+  AND dateHour < '2025-01-06 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-12-22 00:00:00'
+  AND dateHour < '2025-01-06 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2024-12-22 00:00:00'
+  AND dateHour < '2025-01-06 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2024-12-22 00:00:00'
+  AND dateHour < '2025-01-06 00:00:00'"
+agent_user_interaction,7,"chunk 7/49 [2025-01-06 00:00:00, 2025-01-21 00:00:00)",2025-01-06 00:00:00,2025-01-21 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-01-06 00:00:00'
+  AND dateHour < '2025-01-21 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-01-06 00:00:00'
+  AND dateHour < '2025-01-21 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-01-06 00:00:00'
+  AND dateHour < '2025-01-21 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-01-06 00:00:00'
+  AND dateHour < '2025-01-21 00:00:00'"
+agent_user_interaction,8,"chunk 8/49 [2025-01-21 00:00:00, 2025-02-05 00:00:00)",2025-01-21 00:00:00,2025-02-05 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-01-21 00:00:00'
+  AND dateHour < '2025-02-05 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-01-21 00:00:00'
+  AND dateHour < '2025-02-05 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-01-21 00:00:00'
+  AND dateHour < '2025-02-05 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-01-21 00:00:00'
+  AND dateHour < '2025-02-05 00:00:00'"
+agent_user_interaction,9,"chunk 9/49 [2025-02-05 00:00:00, 2025-02-20 00:00:00)",2025-02-05 00:00:00,2025-02-20 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-02-05 00:00:00'
+  AND dateHour < '2025-02-20 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-02-05 00:00:00'
+  AND dateHour < '2025-02-20 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-02-05 00:00:00'
+  AND dateHour < '2025-02-20 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-02-05 00:00:00'
+  AND dateHour < '2025-02-20 00:00:00'"
+agent_user_interaction,10,"chunk 10/49 [2025-02-20 00:00:00, 2025-03-07 00:00:00)",2025-02-20 00:00:00,2025-03-07 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-02-20 00:00:00'
+  AND dateHour < '2025-03-07 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-02-20 00:00:00'
+  AND dateHour < '2025-03-07 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-02-20 00:00:00'
+  AND dateHour < '2025-03-07 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-02-20 00:00:00'
+  AND dateHour < '2025-03-07 00:00:00'"
+agent_user_interaction,11,"chunk 11/49 [2025-03-07 00:00:00, 2025-03-22 00:00:00)",2025-03-07 00:00:00,2025-03-22 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-03-07 00:00:00'
+  AND dateHour < '2025-03-22 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-03-07 00:00:00'
+  AND dateHour < '2025-03-22 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-03-07 00:00:00'
+  AND dateHour < '2025-03-22 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-03-07 00:00:00'
+  AND dateHour < '2025-03-22 00:00:00'"
+agent_user_interaction,12,"chunk 12/49 [2025-03-22 00:00:00, 2025-04-06 00:00:00)",2025-03-22 00:00:00,2025-04-06 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-03-22 00:00:00'
+  AND dateHour < '2025-04-06 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-03-22 00:00:00'
+  AND dateHour < '2025-04-06 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-03-22 00:00:00'
+  AND dateHour < '2025-04-06 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-03-22 00:00:00'
+  AND dateHour < '2025-04-06 00:00:00'"
+agent_user_interaction,13,"chunk 13/49 [2025-04-06 00:00:00, 2025-04-21 00:00:00)",2025-04-06 00:00:00,2025-04-21 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-04-06 00:00:00'
+  AND dateHour < '2025-04-21 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-04-06 00:00:00'
+  AND dateHour < '2025-04-21 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-04-06 00:00:00'
+  AND dateHour < '2025-04-21 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-04-06 00:00:00'
+  AND dateHour < '2025-04-21 00:00:00'"
+agent_user_interaction,14,"chunk 14/49 [2025-04-21 00:00:00, 2025-05-06 00:00:00)",2025-04-21 00:00:00,2025-05-06 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-04-21 00:00:00'
+  AND dateHour < '2025-05-06 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-04-21 00:00:00'
+  AND dateHour < '2025-05-06 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-04-21 00:00:00'
+  AND dateHour < '2025-05-06 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-04-21 00:00:00'
+  AND dateHour < '2025-05-06 00:00:00'"
+agent_user_interaction,15,"chunk 15/49 [2025-05-06 00:00:00, 2025-05-21 00:00:00)",2025-05-06 00:00:00,2025-05-21 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-05-06 00:00:00'
+  AND dateHour < '2025-05-21 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-05-06 00:00:00'
+  AND dateHour < '2025-05-21 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-05-06 00:00:00'
+  AND dateHour < '2025-05-21 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-05-06 00:00:00'
+  AND dateHour < '2025-05-21 00:00:00'"
+agent_user_interaction,16,"chunk 16/49 [2025-05-21 00:00:00, 2025-06-05 00:00:00)",2025-05-21 00:00:00,2025-06-05 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-05-21 00:00:00'
+  AND dateHour < '2025-06-05 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-05-21 00:00:00'
+  AND dateHour < '2025-06-05 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-05-21 00:00:00'
+  AND dateHour < '2025-06-05 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-05-21 00:00:00'
+  AND dateHour < '2025-06-05 00:00:00'"
+agent_user_interaction,17,"chunk 17/49 [2025-06-05 00:00:00, 2025-06-20 00:00:00)",2025-06-05 00:00:00,2025-06-20 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-06-05 00:00:00'
+  AND dateHour < '2025-06-20 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-06-05 00:00:00'
+  AND dateHour < '2025-06-20 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-06-05 00:00:00'
+  AND dateHour < '2025-06-20 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-06-05 00:00:00'
+  AND dateHour < '2025-06-20 00:00:00'"
+agent_user_interaction,18,"chunk 18/49 [2025-06-20 00:00:00, 2025-07-05 00:00:00)",2025-06-20 00:00:00,2025-07-05 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-06-20 00:00:00'
+  AND dateHour < '2025-07-05 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-06-20 00:00:00'
+  AND dateHour < '2025-07-05 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-06-20 00:00:00'
+  AND dateHour < '2025-07-05 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-06-20 00:00:00'
+  AND dateHour < '2025-07-05 00:00:00'"
+agent_user_interaction,19,"chunk 19/49 [2025-07-05 00:00:00, 2025-07-20 00:00:00)",2025-07-05 00:00:00,2025-07-20 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-07-05 00:00:00'
+  AND dateHour < '2025-07-20 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-07-05 00:00:00'
+  AND dateHour < '2025-07-20 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-07-05 00:00:00'
+  AND dateHour < '2025-07-20 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-07-05 00:00:00'
+  AND dateHour < '2025-07-20 00:00:00'"
+agent_user_interaction,20,"chunk 20/49 [2025-07-20 00:00:00, 2025-08-04 00:00:00)",2025-07-20 00:00:00,2025-08-04 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-07-20 00:00:00'
+  AND dateHour < '2025-08-04 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-07-20 00:00:00'
+  AND dateHour < '2025-08-04 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-07-20 00:00:00'
+  AND dateHour < '2025-08-04 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-07-20 00:00:00'
+  AND dateHour < '2025-08-04 00:00:00'"
+agent_user_interaction,21,"chunk 21/49 [2025-08-04 00:00:00, 2025-08-19 00:00:00)",2025-08-04 00:00:00,2025-08-19 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-08-04 00:00:00'
+  AND dateHour < '2025-08-19 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-08-04 00:00:00'
+  AND dateHour < '2025-08-19 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-08-04 00:00:00'
+  AND dateHour < '2025-08-19 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-08-04 00:00:00'
+  AND dateHour < '2025-08-19 00:00:00'"
+agent_user_interaction,22,"chunk 22/49 [2025-08-19 00:00:00, 2025-09-03 00:00:00)",2025-08-19 00:00:00,2025-09-03 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-08-19 00:00:00'
+  AND dateHour < '2025-09-03 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-08-19 00:00:00'
+  AND dateHour < '2025-09-03 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-08-19 00:00:00'
+  AND dateHour < '2025-09-03 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-08-19 00:00:00'
+  AND dateHour < '2025-09-03 00:00:00'"
+agent_user_interaction,23,"chunk 23/49 [2025-09-03 00:00:00, 2025-09-18 00:00:00)",2025-09-03 00:00:00,2025-09-18 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-09-03 00:00:00'
+  AND dateHour < '2025-09-18 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-09-03 00:00:00'
+  AND dateHour < '2025-09-18 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-09-03 00:00:00'
+  AND dateHour < '2025-09-18 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-09-03 00:00:00'
+  AND dateHour < '2025-09-18 00:00:00'"
+agent_user_interaction,24,"chunk 24/49 [2025-09-18 00:00:00, 2025-10-03 00:00:00)",2025-09-18 00:00:00,2025-10-03 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-09-18 00:00:00'
+  AND dateHour < '2025-10-03 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-09-18 00:00:00'
+  AND dateHour < '2025-10-03 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-09-18 00:00:00'
+  AND dateHour < '2025-10-03 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-09-18 00:00:00'
+  AND dateHour < '2025-10-03 00:00:00'"
+agent_user_interaction,25,"chunk 25/49 [2025-10-03 00:00:00, 2025-10-18 00:00:00)",2025-10-03 00:00:00,2025-10-18 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-10-03 00:00:00'
+  AND dateHour < '2025-10-18 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-10-03 00:00:00'
+  AND dateHour < '2025-10-18 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-10-03 00:00:00'
+  AND dateHour < '2025-10-18 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-10-03 00:00:00'
+  AND dateHour < '2025-10-18 00:00:00'"
+agent_user_interaction,26,"chunk 26/49 [2025-10-18 00:00:00, 2025-11-02 00:00:00)",2025-10-18 00:00:00,2025-11-02 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-10-18 00:00:00'
+  AND dateHour < '2025-11-02 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-10-18 00:00:00'
+  AND dateHour < '2025-11-02 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-10-18 00:00:00'
+  AND dateHour < '2025-11-02 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-10-18 00:00:00'
+  AND dateHour < '2025-11-02 00:00:00'"
+agent_user_interaction,27,"chunk 27/49 [2025-11-02 00:00:00, 2025-11-17 00:00:00)",2025-11-02 00:00:00,2025-11-17 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-11-02 00:00:00'
+  AND dateHour < '2025-11-17 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-11-02 00:00:00'
+  AND dateHour < '2025-11-17 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-11-02 00:00:00'
+  AND dateHour < '2025-11-17 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-11-02 00:00:00'
+  AND dateHour < '2025-11-17 00:00:00'"
+agent_user_interaction,28,"chunk 28/49 [2025-11-17 00:00:00, 2025-12-02 00:00:00)",2025-11-17 00:00:00,2025-12-02 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-11-17 00:00:00'
+  AND dateHour < '2025-12-02 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-11-17 00:00:00'
+  AND dateHour < '2025-12-02 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-11-17 00:00:00'
+  AND dateHour < '2025-12-02 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-11-17 00:00:00'
+  AND dateHour < '2025-12-02 00:00:00'"
+agent_user_interaction,29,"chunk 29/49 [2025-12-02 00:00:00, 2025-12-17 00:00:00)",2025-12-02 00:00:00,2025-12-17 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-12-02 00:00:00'
+  AND dateHour < '2025-12-17 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-12-02 00:00:00'
+  AND dateHour < '2025-12-17 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-12-02 00:00:00'
+  AND dateHour < '2025-12-17 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-12-02 00:00:00'
+  AND dateHour < '2025-12-17 00:00:00'"
+agent_user_interaction,30,"chunk 30/49 [2025-12-17 00:00:00, 2026-01-01 00:00:00)",2025-12-17 00:00:00,2026-01-01 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-12-17 00:00:00'
+  AND dateHour < '2026-01-01 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-12-17 00:00:00'
+  AND dateHour < '2026-01-01 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2025-12-17 00:00:00'
+  AND dateHour < '2026-01-01 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2025-12-17 00:00:00'
+  AND dateHour < '2026-01-01 00:00:00'"
+agent_user_interaction,31,"chunk 31/49 [2026-01-01 00:00:00, 2026-01-16 00:00:00)",2026-01-01 00:00:00,2026-01-16 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-01-01 00:00:00'
+  AND dateHour < '2026-01-16 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-01-01 00:00:00'
+  AND dateHour < '2026-01-16 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-01-01 00:00:00'
+  AND dateHour < '2026-01-16 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-01-01 00:00:00'
+  AND dateHour < '2026-01-16 00:00:00'"
+agent_user_interaction,32,"chunk 32/49 [2026-01-16 00:00:00, 2026-01-31 00:00:00)",2026-01-16 00:00:00,2026-01-31 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-01-16 00:00:00'
+  AND dateHour < '2026-01-31 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-01-16 00:00:00'
+  AND dateHour < '2026-01-31 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-01-16 00:00:00'
+  AND dateHour < '2026-01-31 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-01-16 00:00:00'
+  AND dateHour < '2026-01-31 00:00:00'"
+agent_user_interaction,33,"chunk 33/49 [2026-01-31 00:00:00, 2026-02-15 00:00:00)",2026-01-31 00:00:00,2026-02-15 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-01-31 00:00:00'
+  AND dateHour < '2026-02-15 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-01-31 00:00:00'
+  AND dateHour < '2026-02-15 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-01-31 00:00:00'
+  AND dateHour < '2026-02-15 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-01-31 00:00:00'
+  AND dateHour < '2026-02-15 00:00:00'"
+agent_user_interaction,34,"chunk 34/49 [2026-02-15 00:00:00, 2026-03-02 00:00:00)",2026-02-15 00:00:00,2026-03-02 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-02-15 00:00:00'
+  AND dateHour < '2026-03-02 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-02-15 00:00:00'
+  AND dateHour < '2026-03-02 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-02-15 00:00:00'
+  AND dateHour < '2026-03-02 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-02-15 00:00:00'
+  AND dateHour < '2026-03-02 00:00:00'"
+agent_user_interaction,35,"chunk 35/49 [2026-03-02 00:00:00, 2026-03-17 00:00:00)",2026-03-02 00:00:00,2026-03-17 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-03-02 00:00:00'
+  AND dateHour < '2026-03-17 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-03-02 00:00:00'
+  AND dateHour < '2026-03-17 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-03-02 00:00:00'
+  AND dateHour < '2026-03-17 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-03-02 00:00:00'
+  AND dateHour < '2026-03-17 00:00:00'"
+agent_user_interaction,36,"chunk 36/49 [2026-03-17 00:00:00, 2026-04-01 00:00:00)",2026-03-17 00:00:00,2026-04-01 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-03-17 00:00:00'
+  AND dateHour < '2026-04-01 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-03-17 00:00:00'
+  AND dateHour < '2026-04-01 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-03-17 00:00:00'
+  AND dateHour < '2026-04-01 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-03-17 00:00:00'
+  AND dateHour < '2026-04-01 00:00:00'"
+agent_user_interaction,37,"chunk 37/49 [2026-04-01 00:00:00, 2026-04-16 00:00:00)",2026-04-01 00:00:00,2026-04-16 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-04-01 00:00:00'
+  AND dateHour < '2026-04-16 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-04-01 00:00:00'
+  AND dateHour < '2026-04-16 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-04-01 00:00:00'
+  AND dateHour < '2026-04-16 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-04-01 00:00:00'
+  AND dateHour < '2026-04-16 00:00:00'"
+agent_user_interaction,38,"chunk 38/49 [2026-04-16 00:00:00, 2026-05-01 00:00:00)",2026-04-16 00:00:00,2026-05-01 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-04-16 00:00:00'
+  AND dateHour < '2026-05-01 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-04-16 00:00:00'
+  AND dateHour < '2026-05-01 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-04-16 00:00:00'
+  AND dateHour < '2026-05-01 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-04-16 00:00:00'
+  AND dateHour < '2026-05-01 00:00:00'"
+agent_user_interaction,39,"chunk 39/49 [2026-05-01 00:00:00, 2026-05-16 00:00:00)",2026-05-01 00:00:00,2026-05-16 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-05-01 00:00:00'
+  AND dateHour < '2026-05-16 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-05-01 00:00:00'
+  AND dateHour < '2026-05-16 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-05-01 00:00:00'
+  AND dateHour < '2026-05-16 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-05-01 00:00:00'
+  AND dateHour < '2026-05-16 00:00:00'"
+agent_user_interaction,40,"chunk 40/49 [2026-05-16 00:00:00, 2026-05-31 00:00:00)",2026-05-16 00:00:00,2026-05-31 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-05-16 00:00:00'
+  AND dateHour < '2026-05-31 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-05-16 00:00:00'
+  AND dateHour < '2026-05-31 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-05-16 00:00:00'
+  AND dateHour < '2026-05-31 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-05-16 00:00:00'
+  AND dateHour < '2026-05-31 00:00:00'"
+agent_user_interaction,41,"chunk 41/49 [2026-05-31 00:00:00, 2026-06-15 00:00:00)",2026-05-31 00:00:00,2026-06-15 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-05-31 00:00:00'
+  AND dateHour < '2026-06-15 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-05-31 00:00:00'
+  AND dateHour < '2026-06-15 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-05-31 00:00:00'
+  AND dateHour < '2026-06-15 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-05-31 00:00:00'
+  AND dateHour < '2026-06-15 00:00:00'"
+agent_user_interaction,42,"chunk 42/49 [2026-06-15 00:00:00, 2026-06-30 00:00:00)",2026-06-15 00:00:00,2026-06-30 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-06-15 00:00:00'
+  AND dateHour < '2026-06-30 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-06-15 00:00:00'
+  AND dateHour < '2026-06-30 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-06-15 00:00:00'
+  AND dateHour < '2026-06-30 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-06-15 00:00:00'
+  AND dateHour < '2026-06-30 00:00:00'"
+agent_user_interaction,43,"chunk 43/49 [2026-06-30 00:00:00, 2026-07-15 00:00:00)",2026-06-30 00:00:00,2026-07-15 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-06-30 00:00:00'
+  AND dateHour < '2026-07-15 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-06-30 00:00:00'
+  AND dateHour < '2026-07-15 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-06-30 00:00:00'
+  AND dateHour < '2026-07-15 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-06-30 00:00:00'
+  AND dateHour < '2026-07-15 00:00:00'"
+agent_user_interaction,44,"chunk 44/49 [2026-07-15 00:00:00, 2026-07-30 00:00:00)",2026-07-15 00:00:00,2026-07-30 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-07-15 00:00:00'
+  AND dateHour < '2026-07-30 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-07-15 00:00:00'
+  AND dateHour < '2026-07-30 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-07-15 00:00:00'
+  AND dateHour < '2026-07-30 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-07-15 00:00:00'
+  AND dateHour < '2026-07-30 00:00:00'"
+agent_user_interaction,45,"chunk 45/49 [2026-07-30 00:00:00, 2026-08-14 00:00:00)",2026-07-30 00:00:00,2026-08-14 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-07-30 00:00:00'
+  AND dateHour < '2026-08-14 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-07-30 00:00:00'
+  AND dateHour < '2026-08-14 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-07-30 00:00:00'
+  AND dateHour < '2026-08-14 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-07-30 00:00:00'
+  AND dateHour < '2026-08-14 00:00:00'"
+agent_user_interaction,46,"chunk 46/49 [2026-08-14 00:00:00, 2026-08-29 00:00:00)",2026-08-14 00:00:00,2026-08-29 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-08-14 00:00:00'
+  AND dateHour < '2026-08-29 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-08-14 00:00:00'
+  AND dateHour < '2026-08-29 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-08-14 00:00:00'
+  AND dateHour < '2026-08-29 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-08-14 00:00:00'
+  AND dateHour < '2026-08-29 00:00:00'"
+agent_user_interaction,47,"chunk 47/49 [2026-08-29 00:00:00, 2026-09-13 00:00:00)",2026-08-29 00:00:00,2026-09-13 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-08-29 00:00:00'
+  AND dateHour < '2026-09-13 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-08-29 00:00:00'
+  AND dateHour < '2026-09-13 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-08-29 00:00:00'
+  AND dateHour < '2026-09-13 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-08-29 00:00:00'
+  AND dateHour < '2026-09-13 00:00:00'"
+agent_user_interaction,48,"chunk 48/49 [2026-09-13 00:00:00, 2026-09-28 00:00:00)",2026-09-13 00:00:00,2026-09-28 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-09-13 00:00:00'
+  AND dateHour < '2026-09-28 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-09-13 00:00:00'
+  AND dateHour < '2026-09-28 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-09-13 00:00:00'
+  AND dateHour < '2026-09-28 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-09-13 00:00:00'
+  AND dateHour < '2026-09-28 00:00:00'"
+agent_user_interaction,49,"chunk 49/49 [2026-09-28 00:00:00, 2026-10-08 00:00:00)",2026-09-28 00:00:00,2026-10-08 00:00:00,FULL_VALIDATION,NOT_EXECUTED,,,,"SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-09-28 00:00:00'
+  AND dateHour < '2026-10-08 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-09-28 00:00:00'
+  AND dateHour < '2026-10-08 00:00:00'","SELECT *
+FROM staging.agent_user_interaction
+WHERE dateHour >= '2026-09-28 00:00:00'
+  AND dateHour < '2026-10-08 00:00:00';","SELECT *
+FROM ch_facts.agent_user_interaction
+WHERE dateHour  >= '2026-09-28 00:00:00'
+  AND dateHour < '2026-10-08 00:00:00'"
