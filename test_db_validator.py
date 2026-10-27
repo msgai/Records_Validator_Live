@@ -1,9 +1,11 @@
 import csv
 from datetime import datetime
+from decimal import Decimal
 
 import db_validator
 import pytest
 from db_validator import (
+    DEFAULT_NUMERIC_TOLERANCE,
     add_bot_filters_to_query,
     build_count_query,
     build_date_chunks,
@@ -19,6 +21,7 @@ from db_validator import (
     print_run_summary,
     print_table_summary,
     resolve_environment,
+    resolve_tolerance,
     select_bot_filter_columns,
     validate_bot_filters,
     write_queries_report,
@@ -35,6 +38,95 @@ def test_equivalent_compares_numeric_values_exactly():
     assert not equivalent("1.0000001", 1)
     assert equivalent(None, "NULL")
     assert not equivalent(None, 0)
+
+
+def test_equivalent_supports_numeric_tolerance():
+    # Without tolerance: fails exact comparison
+    assert not equivalent(10.307, 10.307000160217300)
+    assert not equivalent("39.332", "39.332000732421900")
+
+    # With default tolerance flag (0.001)
+    tol = DEFAULT_NUMERIC_TOLERANCE
+    assert equivalent(10.307, 10.307000160217300, tolerance=tol)
+    assert equivalent("39.332", "39.332000732421900", tolerance=tol)
+    assert equivalent(238.988, 238.98800659179700, tolerance=tol)
+    assert equivalent(54.169, 54.16899871826170, tolerance=tol)
+    assert equivalent(146.061, 146.06100463867200, tolerance=tol)
+    assert equivalent(220.398, 220.3979949951170, tolerance=tol)
+
+    # Real mismatch exceeding tolerance still fails
+    assert not equivalent(10.307, 10.315, tolerance=tol)
+
+    # Non-numeric values strictly match
+    assert not equivalent("uuid-123", "uuid-124", tolerance=tol)
+
+
+def test_resolve_tolerance_handles_various_formats():
+    assert resolve_tolerance({"numeric_tolerance": True}) == Decimal("0.001")
+    assert resolve_tolerance({"float_tolerance": True}) == Decimal("0.001")
+    assert resolve_tolerance({"numeric_tolerance": False}) is None
+    assert resolve_tolerance({"numeric_tolerance": None}) is None
+    assert resolve_tolerance({}) is None
+    assert resolve_tolerance({"numeric_tolerance": 0.0001}) == Decimal("0.0001")
+    assert resolve_tolerance({"numeric_tolerance": "0.005"}) == Decimal("0.005")
+
+    with pytest.raises(ValueError, match="numeric_tolerance must be non-negative"):
+        resolve_tolerance({"numeric_tolerance": -0.01})
+
+    with pytest.raises(ValueError, match="Invalid numeric_tolerance value"):
+        resolve_tolerance({"numeric_tolerance": "invalid"})
+
+
+def test_compare_rows_with_numeric_tolerance():
+    table_cfg_without_tol = {
+        "table_name": "voice_billing",
+        "primary_keys": ["sessionId"],
+    }
+    table_cfg_with_tol = {
+        "table_name": "voice_billing",
+        "primary_keys": ["sessionId"],
+        "numeric_tolerance": True,
+    }
+
+    sql_rows = [{"sessionId": "s1", "durationInSecs": 10.307}]
+    ch_rows = [{"sessionId": "s1", "durationInSecs": 10.307000160217300}]
+
+    # Without tolerance -> FAILS
+    result_fail = compare_rows(table_cfg_without_tol, sql_rows, ch_rows)
+    assert result_fail["status"] == "FAILED"
+    assert result_fail["cell_mismatches"] == 1
+
+    # With tolerance -> PASSES
+    result_pass = compare_rows(table_cfg_with_tol, sql_rows, ch_rows)
+    assert result_pass["status"] == "PASSED"
+    assert result_pass["cell_mismatches"] == 0
+    assert result_pass["row_mismatches"] == 0
+
+
+def test_load_table_configs_propagates_global_tolerance(tmp_path):
+    query_file = tmp_path / "queries.yaml"
+    query_file.write_text(
+        "queries:\n"
+        "  t1:\n"
+        "    sql_query: SELECT 1\n"
+        "    clickhouse_query: SELECT 1\n"
+        "  t2:\n"
+        "    sql_query: SELECT 2\n"
+        "    clickhouse_query: SELECT 2\n",
+        encoding="utf-8",
+    )
+    config = {
+        "queries_file": "queries.yaml",
+        "numeric_tolerance": True,
+        "tables": [
+            {"table_name": "t1"},
+            {"table_name": "t2", "numeric_tolerance": False},
+        ],
+    }
+
+    tables = load_table_configs(config, tmp_path / "config.yaml")
+    assert tables[0]["numeric_tolerance"] is True
+    assert tables[1]["numeric_tolerance"] is False
 
 
 def test_equivalent_normalizes_timestamps_and_json_empty_values():
@@ -359,6 +451,88 @@ def test_build_date_chunks_uses_half_open_equal_intervals():
         (datetime(2026, 8, 2), datetime(2026, 8, 3)),
         (datetime(2026, 8, 3), datetime(2026, 8, 3, 6)),
     ]
+
+
+def test_build_date_chunks_supports_hourly_intervals():
+    chunks = build_date_chunks({
+        "start": "2026-08-01 09:00:00",
+        "end_exclusive": "2026-08-01 12:00:00",
+        "chunk_size_hours": 1,
+    })
+
+    assert chunks == [
+        (datetime(2026, 8, 1, 9), datetime(2026, 8, 1, 10)),
+        (datetime(2026, 8, 1, 10), datetime(2026, 8, 1, 11)),
+        (datetime(2026, 8, 1, 11), datetime(2026, 8, 1, 12)),
+    ]
+
+
+def test_build_date_chunks_supports_multi_hour_intervals_with_remainder():
+    chunks = build_date_chunks({
+        "start": "2026-08-01 10:00:00",
+        "end_exclusive": "2026-08-01 23:30:00",
+        "chunk_size_hours": 6,
+    })
+
+    assert chunks == [
+        (datetime(2026, 8, 1, 10), datetime(2026, 8, 1, 16)),
+        (datetime(2026, 8, 1, 16), datetime(2026, 8, 1, 22)),
+        (datetime(2026, 8, 1, 22), datetime(2026, 8, 1, 23, 30)),
+    ]
+
+
+def test_build_date_chunks_validates_size_inputs():
+    with pytest.raises(ValueError, match="chunking must specify 'chunk_size_days' or 'chunk_size_hours'"):
+        build_date_chunks({
+            "start": "2026-08-01 00:00:00",
+            "end_exclusive": "2026-08-02 00:00:00",
+        })
+
+    with pytest.raises(ValueError, match="chunking.chunk_size_hours must be a positive integer"):
+        build_date_chunks({
+            "start": "2026-08-01 00:00:00",
+            "end_exclusive": "2026-08-02 00:00:00",
+            "chunk_size_hours": 0,
+        })
+
+    with pytest.raises(ValueError, match="chunking.chunk_size_hours must be a positive integer"):
+        build_date_chunks({
+            "start": "2026-08-01 00:00:00",
+            "end_exclusive": "2026-08-02 00:00:00",
+            "chunk_size_hours": "1",
+        })
+
+    with pytest.raises(ValueError, match="chunking.chunk_size_days must be a positive integer"):
+        build_date_chunks({
+            "start": "2026-08-01 00:00:00",
+            "end_exclusive": "2026-08-02 00:00:00",
+            "chunk_size_days": -1,
+        })
+
+
+def test_chunk_queries_render_hourly_placeholders():
+    query_chunks = build_table_query_chunks({
+        "table_name": "sample",
+        "sql_query": "dateHour >= '{{chunk_start}}' AND dateHour < '{{chunk_end}}'",
+        "clickhouse_query": (
+            "dateHour >= toDateTime('{{chunk_start}}') "
+            "AND dateHour < toDateTime('{{chunk_end}}')"
+        ),
+        "chunking": {
+            "start": "2026-08-01 10:00:00",
+            "end_exclusive": "2026-08-01 12:00:00",
+            "chunk_size_hours": 1,
+        },
+    })
+
+    assert len(query_chunks) == 2
+    start1, end1, sql_q1, ch_q1 = query_chunks[0]
+    assert start1 == datetime(2026, 8, 1, 10)
+    assert end1 == datetime(2026, 8, 1, 11)
+    assert "dateHour >= '2026-08-01 10:00:00'" in sql_q1
+    assert "dateHour < '2026-08-01 11:00:00'" in sql_q1
+    assert "toDateTime('2026-08-01 10:00:00')" in ch_q1
+    assert "toDateTime('2026-08-01 11:00:00')" in ch_q1
 
 
 def test_chunk_queries_render_source_specific_date_literals():

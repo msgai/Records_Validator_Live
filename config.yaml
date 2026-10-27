@@ -64,21 +64,21 @@ bot_filters:
   # env: 'LIVE' # 'SANDBOX' or 'LIVE'
 
 tables:
-  - table_name: bot_conversationIds
-    primary_keys: [botId, conversationId, env, feature]
-    count_duplicate_records: true
-    exclude_null_primary_key_rows: true
-    chunking:
-      start: '2024-10-08 00:00:00'
-      end_exclusive: '2026-10-08 00:00:00'
-      chunk_size_days: 1
+  # - table_name: bot_conversationIds
+  #   primary_keys: [botId, conversationId, env, feature]
+  #   count_duplicate_records: true
+  #   exclude_null_primary_key_rows: true
+  #   chunking:
+  #     start: '2024-10-08 00:00:00'
+  #     end_exclusive: '2026-10-08 00:00:00'
+  #     chunk_size_days: 1
 
   # - table_name: transformed_data
   #   primary_keys: [uuid]
   #   chunking:
-  #     start: '2026-08-01 00:00:00'
+  #     start: '2026-10-01 00:00:00'
   #     end_exclusive: '2026-10-08 00:00:00'
-  #     chunk_size_days: 1
+  #     chunk_size_hours: 1
 
   # - table_name: asset_data
   #   primary_keys: [id]
@@ -96,29 +96,30 @@ tables:
   #     end_exclusive: '2026-09-02 00:00:00'
   #     chunk_size_days: 1
 
-  # - table_name: transformed_data
-  #   primary_keys: [uuid]
-  #   count_duplicate_records: true
-  #   chunking:
-  #     start: '2026-10-07 00:00:00'
-  #     end_exclusive: '2026-10-08 00:00:00'
-  #     chunk_size_days: 30
-
-
-  - table_name: conversation_metadata
-    primary_keys: [conversationId, botId, channel, env]
+  - table_name: transformed_data
+    primary_keys: [uuid]
     count_duplicate_records: true
     chunking:
-      start: '2026-09-01 00:00:00'
+      start: '2026-10-07 00:00:00'
       end_exclusive: '2026-10-08 00:00:00'
-      chunk_size_days: 5
+      chunk_size_days: 30
 
-  # - table_name: voice_billing
-  #   primary_keys: [sessionId]
+
+  # - table_name: conversation_metadata
+  #   primary_keys: [conversationId, botId, channel, env]
+  #   count_duplicate_records: true
   #   chunking:
-  #     start: '2024-10-08 00:00:00'
+  #     start: '2026-09-01 00:00:00'
   #     end_exclusive: '2026-10-08 00:00:00'
-  #     chunk_size_days: 15
+  #     chunk_size_days: 5
+
+  - table_name: voice_billing
+    primary_keys: [sessionId]
+    numeric_tolerance: true # Ignores float precision differences <= 0.001 (e.g. ClickHouse Float32 vs MySQL)
+    chunking:
+      start: '2026-10-01 00:00:00'
+      end_exclusive: '2026-10-08 00:00:00'
+      chunk_size_days: 1
 
   # - table_name: feedback_survey
   #   primary_keys: [uuid]

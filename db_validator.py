@@ -28,7 +28,27 @@ def is_null(value):
     return value is None or str(value).strip().lower() in NULL_VALUES
 
 
-def equivalent(sql_value, ch_value):
+DEFAULT_NUMERIC_TOLERANCE = Decimal("0.001")
+
+
+def resolve_tolerance(table_cfg):
+    tol_setting = table_cfg.get("numeric_tolerance")
+    if tol_setting is None:
+        tol_setting = table_cfg.get("float_tolerance")
+    if tol_setting is None or tol_setting is False:
+        return None
+    if tol_setting is True:
+        return DEFAULT_NUMERIC_TOLERANCE
+    try:
+        dec_tol = Decimal(str(tol_setting).strip())
+        if dec_tol < 0:
+            raise ValueError(f"numeric_tolerance must be non-negative, got {tol_setting}")
+        return dec_tol
+    except (InvalidOperation, TypeError, ValueError) as exc:
+        raise ValueError(f"Invalid numeric_tolerance value '{tol_setting}': {exc}") from exc
+
+
+def equivalent(sql_value, ch_value, tolerance=None):
     if is_null(sql_value) and is_null(ch_value):
         return True
     if is_null(sql_value) or is_null(ch_value):
@@ -38,8 +58,14 @@ def equivalent(sql_value, ch_value):
     if str(sql_value).strip() == str(ch_value).strip():
         return True
     try:
-        if Decimal(str(sql_value).strip()) == Decimal(str(ch_value).strip()):
+        sql_dec = Decimal(str(sql_value).strip())
+        ch_dec = Decimal(str(ch_value).strip())
+        if sql_dec == ch_dec:
             return True
+        if tolerance is not None:
+            tol_dec = tolerance if isinstance(tolerance, Decimal) else Decimal(str(tolerance).strip())
+            if abs(sql_dec - ch_dec) <= tol_dec:
+                return True
     except (InvalidOperation, TypeError, ValueError):
         pass
 
@@ -99,6 +125,7 @@ def _debug_query(query, primary_keys, key_values, dialect):
 
 
 def _compare_rows_by_key(result, table_cfg, sql_rows, ch_rows, sql_columns, ch_columns):
+    tolerance = resolve_tolerance(table_cfg)
     primary_keys = table_cfg["primary_keys"]
     if (not isinstance(primary_keys, list) or not primary_keys
             or any(not isinstance(key, str) or not key for key in primary_keys)):
@@ -192,7 +219,7 @@ def _compare_rows_by_key(result, table_cfg, sql_rows, ch_rows, sql_columns, ch_c
             for sql_row in left:
                 match_index = next((
                     index for index, ch_row in enumerate(remaining)
-                    if all(equivalent(sql_row.get(column), ch_row.get(column))
+                    if all(equivalent(sql_row.get(column), ch_row.get(column), tolerance)
                            for column in value_columns)
                 ), None)
                 if match_index is None:
@@ -217,7 +244,7 @@ def _compare_rows_by_key(result, table_cfg, sql_rows, ch_rows, sql_columns, ch_c
         for column in value_columns:
             sql_value = left[0].get(column)
             ch_value = right[0].get(column)
-            if equivalent(sql_value, ch_value):
+            if equivalent(sql_value, ch_value, tolerance):
                 continue
             row_mismatched = True
             result["cell_mismatches"] += 1
@@ -284,6 +311,7 @@ def compare_rows(
                 clickhouse_query, table_cfg["primary_keys"], key_values, "clickhouse"
             )
     else:
+        tolerance = resolve_tolerance(table_cfg)
         shared_columns = [column for column in sql_columns if column in ch_columns]
         shared_row_count = min(len(sql_rows), len(ch_rows))
         for index in range(shared_row_count):
@@ -293,7 +321,7 @@ def compare_rows(
             for column in shared_columns:
                 sql_value = sql_row.get(column)
                 ch_value = ch_row.get(column)
-                if equivalent(sql_value, ch_value):
+                if equivalent(sql_value, ch_value, tolerance):
                     continue
                 row_mismatched = True
                 result["cell_mismatches"] += 1
@@ -352,15 +380,25 @@ def build_date_chunks(chunking):
     start = parse_chunk_boundary(chunking.get("start"), "start")
     end_exclusive = parse_chunk_boundary(chunking.get("end_exclusive"), "end_exclusive")
     chunk_size_days = chunking.get("chunk_size_days")
-    if type(chunk_size_days) is not int or chunk_size_days <= 0:
+    chunk_size_hours = chunking.get("chunk_size_hours")
+    if chunk_size_days is None and chunk_size_hours is None:
+        raise ValueError("chunking must specify 'chunk_size_days' or 'chunk_size_hours'")
+    if chunk_size_days is not None and (type(chunk_size_days) is not int or chunk_size_days <= 0):
         raise ValueError("chunking.chunk_size_days must be a positive integer")
+    if chunk_size_hours is not None and (type(chunk_size_hours) is not int or chunk_size_hours <= 0):
+        raise ValueError("chunking.chunk_size_hours must be a positive integer")
     if end_exclusive <= start:
         raise ValueError("chunking.end_exclusive must be after chunking.start")
+
+    step = timedelta(
+        days=chunk_size_days if chunk_size_days is not None else 0,
+        hours=chunk_size_hours if chunk_size_hours is not None else 0,
+    )
 
     chunks = []
     chunk_start = start
     while chunk_start < end_exclusive:
-        chunk_end = min(chunk_start + timedelta(days=chunk_size_days), end_exclusive)
+        chunk_end = min(chunk_start + step, end_exclusive)
         chunks.append((chunk_start, chunk_end))
         chunk_start = chunk_end
     return chunks
@@ -786,8 +824,22 @@ def finalize_table_summary(
 
 def load_table_configs(config, config_path):
     tables = config.get("tables", [])
+    global_tolerance = config.get("numeric_tolerance")
+    if global_tolerance is None:
+        global_tolerance = config.get("float_tolerance")
+
     queries_file = config.get("queries_file")
     if queries_file is None:
+        if global_tolerance is not None:
+            return [
+                {
+                    **t,
+                    "numeric_tolerance": t.get(
+                        "numeric_tolerance", t.get("float_tolerance", global_tolerance)
+                    ),
+                }
+                for t in tables
+            ]
         return tables
 
     query_path = Path(config_path).resolve().parent / queries_file
@@ -799,7 +851,10 @@ def load_table_configs(config, config_path):
 
     loaded_tables = []
     for table_cfg in tables:
-        query_key = table_cfg.get("query_key", table_cfg["table_name"])
+        cfg = dict(table_cfg)
+        if global_tolerance is not None and "numeric_tolerance" not in cfg and "float_tolerance" not in cfg:
+            cfg["numeric_tolerance"] = global_tolerance
+        query_key = cfg.get("query_key", cfg["table_name"])
         query_definition = queries.get(query_key)
         if not isinstance(query_definition, dict):
             raise ValueError(f"No query definition '{query_key}' found in {query_path}")
@@ -808,7 +863,7 @@ def load_table_configs(config, config_path):
             raise ValueError(
                 f"Query definition '{query_key}' is missing: {', '.join(sorted(missing_queries))}"
             )
-        loaded_tables.append({**query_definition, **table_cfg})
+        loaded_tables.append({**query_definition, **cfg})
     return loaded_tables
 
 
@@ -1347,12 +1402,15 @@ def run(config_path):
                         bot_filter_warning = f"Could not probe/apply filters for {table_name}: {exc}"
 
                 applied_filters_for_summary = [(s_col, vals) for s_col, _, vals in selected_filters]
+                table_tolerance = resolve_tolerance(table_cfg)
 
                 rule_badges = []
                 if count_only:
                     rule_badges.append("[bold black on yellow] ⚡ COUNT-ONLY SMOKE TEST ⚡ [/bold black on yellow]")
                 if selected_filters:
                     rule_badges.append("[bold black on magenta] 🎯 FILTERED 🎯 [/bold black on magenta]")
+                if table_tolerance is not None:
+                    rule_badges.append(f"[bold black on cyan] ≈ TOLERANCE (±{table_tolerance}) [/bold black on cyan]")
 
                 rule_prefix = (" ".join(rule_badges) + " ") if rule_badges else ""
                 rule_style = "yellow" if count_only else ("magenta" if selected_filters else "cyan")
@@ -1366,6 +1424,11 @@ def run(config_path):
                     console.print(
                         "[yellow]⚡ Mode: [bold]COUNT ONLY (SMOKE TEST)[/bold] "
                         "— Fast count validation via SELECT COUNT(*). Row values and keys are NOT checked.[/yellow]"
+                    )
+                if table_tolerance is not None and not count_only:
+                    console.print(
+                        f"[cyan]≈ Numeric Tolerance:[/] [bold cyan]±{table_tolerance}[/bold cyan] "
+                        f"[dim](Float discrepancies ≤ ±{table_tolerance} are treated as matching)[/dim]"
                     )
                 if selected_filters:
                     filter_items = [f"{s_col}={vals}" for s_col, _, vals in selected_filters]
@@ -1383,6 +1446,8 @@ def run(config_path):
                     tags_list.append("[bold yellow][COUNT ONLY][/bold yellow]")
                 if selected_filters:
                     tags_list.append("[bold magenta][FILTERED][/bold magenta]")
+                if table_tolerance is not None and not count_only:
+                    tags_list.append(f"[bold cyan][±{table_tolerance}][/bold cyan]")
                 prefix_tags = (" ".join(tags_list) + " ") if tags_list else ""
 
                 for chunk_index, (start, end, sql_query, clickhouse_query) in enumerate(query_chunks, 1):
